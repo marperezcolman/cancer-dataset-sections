@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5c6374b35dbd23baa1ac1ec41594360c">
+		["MD5-CAM-1.0.1"] = <"47ce5c8c37f9d86b3561d5bcde924448">
 		["build_uid"] = <"048f9574-f7b4-35bf-a592-ff9411257611">
 	>
 
@@ -37,7 +37,18 @@ definition
 			}
 		}
 		context matches {
-			EVENT_CONTEXT matches {*}
+			EVENT_CONTEXT matches {
+				other_context matches {
+					ITEM_TREE matches {
+						items cardinality matches {0..*; unordered} matches {
+							allow_archetype ELEMENT[at0001] occurrences matches {0..*} matches {    -- Site where diagnosis was made
+								include
+									archetype_id/value matches {/.*/}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -48,6 +59,10 @@ ontology
 				["at0000"] = <
 					text = <"Cancer Dataset Section">
 					description = <"Cancer Dataset Section">
+				>
+				["at0001"] = <
+					text = <"Site where diagnosis was made">
+					description = <"Site/Location where a diagnosis was made">
 				>
 			>
 		>
