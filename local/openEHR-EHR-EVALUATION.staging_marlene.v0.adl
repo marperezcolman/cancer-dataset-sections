@@ -1,0 +1,195 @@
+archetype (adl_version=1.4; uid=f72c4131-b936-41fa-b41c-180e19d5d26d)
+	openEHR-EHR-EVALUATION.staging_marlene.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-07-13">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"905b4f7cbd9919116e009d73d778c1d4">
+		["build_uid"] = <"3621c918-def3-3122-a1fe-f672273f400d">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Staging_Marlene
+		data matches {
+			ITEM_TREE matches {
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Date of staging
+						value matches {
+							DV_DATE matches {*}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Primary diagnosis
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Type
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					CLUSTER[at0013] occurrences matches {0..*} matches {    -- Staging system
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0017] occurrences matches {0..1} matches {    -- Staging system name
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0015] occurrences matches {0..1} matches {    -- System version
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							allow_archetype CLUSTER[at0016] occurrences matches {0..*} matches {    -- System details
+								include
+									archetype_id/value matches {/.*/}
+							}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Stage
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Patient status
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0009] occurrences matches {0..*} matches {    -- Metastasis
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0012] occurrences matches {0..*} matches {    -- Signs/Symptoms
+						include
+							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.symptom_sign\.v2/}
+					}
+					allow_archetype CLUSTER[at0019] occurrences matches {0..*} matches {    -- Specific details
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0018] occurrences matches {0..1} matches {    -- Comments
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {    -- Clinical interpretation
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE matches {
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0003] occurrences matches {0..*} matches {    -- Organisation
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0004] occurrences matches {0..*} matches {    -- Professional
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Staging_Marlene">
+					description = <"Staging_Marlene">
+				>
+				["at0002"] = <
+					text = <"Date of staging">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Organisation">
+					description = <"Organisation in which the staging is being done">
+				>
+				["at0004"] = <
+					text = <"Professional">
+					description = <"Professional done the evaluation on the stage">
+				>
+				["at0005"] = <
+					text = <"Patient status">
+					description = <"Describe at which stage of the diagnostic/treatment process the evaluation is being done">
+					comment = <"ie: pre treatment, post surgical, post chemotherapy, post radiotherapy, or other relevant status that is relevant to the staging.">
+				>
+				["at0007"] = <
+					text = <"Type">
+					description = <"Source describing the type of staging">
+					comment = <"Ie: clinical, radiological, pathological.">
+				>
+				["at0008"] = <
+					text = <"Stage">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Metastasis">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Clinical interpretation">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Primary diagnosis">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Signs/Symptoms">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Staging system">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"System version">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"System details">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Staging system name">
+					description = <"Name given to the staging system (ie TNM, Figo, Duke, Breslow)">
+				>
+				["at0018"] = <
+					text = <"Comments">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Specific details">
+					description = <"">
+				>
+			>
+		>
+	>
