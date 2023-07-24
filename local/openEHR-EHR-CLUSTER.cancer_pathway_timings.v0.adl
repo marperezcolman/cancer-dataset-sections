@@ -26,6 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["current_contact"] = <"marlene.perezcolman@wales.nhs.uk">
 		["MD5-CAM-1.0.1"] = <"c44325714edf4c7bbaa85e7eec8190b9">
 		["build_uid"] = <"40c95698-7fab-33c3-b6d8-8a66f6d1a641">
 	>
