@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.10",
+      "sem_ver" : "0.1.11",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "0b989af40ddb1f54b94c37a748047569",
+      "MD5-CAM-1.0.1" : "07095f51850df0041d1db396dad68fa6",
       "PARENT:MD5-CAM-1.0.1" : "47ce5c8c37f9d86b3561d5bcde924448"
     },
     "details" : {
@@ -10485,6 +10485,15 @@
           "attributeTuples" : [ ],
           "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-alcohol_intake-002.v0",
           "referenceType" : "archetypeOverlay"
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "OBSERVATION",
+          "occurrences" : "0..1",
+          "nodeId" : "at0.12",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-condition_screening-001.v0",
+          "referenceType" : "archetypeOverlay"
         } ]
       } ],
       "attributeTuples" : [ ]
@@ -10727,7 +10736,99 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "2652A8203C37B165FD58EC69634FFBF6"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung zusammenfassender Informationen über das individuelle Rauchverhalten von Tabak und tabakhaltigen Produkten.",
+          "keywords" : [ "Tabak", "Zigarette", "Zigarre", "Pfeife", "rauchen", "Raucher", "Zigarillo", "Wasserpfeife", "Shisha", "handgedrehte Zigaretten", "hookah", "Narguileh", "hubble-bubble", "roll-up", "rollie", "kretek", "beedi", "bidi", "Nelkenzigarette" ],
+          "use" : "Zur Darstellung zusammenfassender Informationen über das individuelle Rauchverhalten von Tabak und tabakhaltigen Produkten. \r\n\r\nDieser Archetyp soll genutzt werden, um Informationen über das aktuelle und frühere Rauchverhalten darzustellen.\r\n\r\nDer spezifische Anwendungsbereich dieses Archetyps liegt in der Dokumentation über die Verwendung aller Arten von inhaliertem Tabakrauch aufgrund der damit verbundenen Gesundheitsrisiken durch das direkte Einatmen von Tabak und damit verbundenen Chemikalien. Die Menge an Nikotin und Teer und die Verwendung von Filtern und Additiven wurden für den Kernarchetyp nicht berücksichtigt, könnten aber bei Bedarf in den Episoden-SLOT aufgenommen werden. Bitte beachten Sie, dass der Anwendungsbereich dieses Archetyps keine unbeabsichtigte Exposition gegenüber Tabakrauch umfasst (siehe Missbrauch). \r\n\r\nDer Cluster \"Pro Art\" von Datenelementen ermöglicht die Aufzeichnung von spezifischen Details und Episoden über jede Art von Tabak und kann einmal pro Art wiederholt werden. \r\n\r\nIn vielen Situationen raucht der Einzelne nur eine Art von Tabak, wie z.B. Zigaretten. Werden andere Arten von Tabak geraucht, werden die Details in einer anderen Instanz des Clusters \"Pro Art\" aufgezeichnet.\r\n\r\nDie Entwicklung des zu- und abnehmenden Gebrauchs für jede Art von Tabak im Laufe der Zeit kann mit dem wiederholbaren Cluster \"Pro Episode\" dargestellt werden. Diese Gruppe von Datenelementen ermöglicht es, ein sehr detailliertes Muster des Rauchverhaltens für jede Art von Tabak darzustellen, wie z.B. das tägliche Rauchen von selbstgedrehten Zigaretten, neben dem wöchentlichen Rauchen von Zigarren jeden Freitagabend und dem gelegentlichen Bidi-Rauchen im Urlaub auf Bali. \r\n\r\nAuslöser für das Ende einer Episode und den Beginn einer neuen Episode spiegeln weitgehend die lokalen Datenerfassungspräferenzen wider, einschließlich wenn die Person: \r\n- für einen längeren Zeitraum (der wahrscheinlich lokal definiert wird) das Rauchen aufgibt; oder\r\n- ihre Nutzung oder ihr Rauchverhalten signifikant verändert.\r\n\r\nWenn nur eine Tabakart geraucht wird, ist der Wert für \"Packungsjahre\" identisch mit dem im Datenelement \"Packungsjahre gesamt\". Wenn mehr als eine Tabakart geraucht wird, erfordert die Berechnung des Wertes für \"Packungsjahre gesamt\" einen komplexeren Algorithmus wie http://smokingpackyears.com/.\r\n\r\nDas Datenelemet \"Allgemeine Beschreibung\" wird verwendet, um die Beschreibungen der Tabakrauchgewohnheiten in bestehenden oder älteren klinischen Systemen in ein Archetypenformat zu übertragen.\r\n\r\nAchtung: Die Definition \"Derzeitiger Raucher\" kann variieren. Zum Beispiel: das CDC verwendet einen Monat / 31 Tage als Grenzwert, während es in Neuseeland 28 Tage sind.",
+          "misuse" : "Nicht zur Darstellung von ereignis- oder zeitabhängigen Informationen über das Rauchen, wie z.B. dem tatsächlichen täglichen Gebrauch oder dem durchschnittlichen Gebrauch über einen bestimmten Zeitraum - verwenden Sie den Archetyp OBSERVATION.tobacco_smoking.\r\n\r\nNicht zur Darstellung von Informationen über rauchfreien Tabakkonsum - zum Beispiel: Schnupftabak; Kautabak; Dip; und Gutka. Verwenden Sie dazu den Archetyp EVALUATION.smokeless_tobacco_summary.\r\n\r\nNicht zur Darstellung einer Beurteilung der Zigaretten- oder Nikotinabhängigkeit verwenden. Verwenden Sie dazu den Archetyp OBSERVATION.fagerstrom.\r\n\r\nNicht zur Darstellung von Details über unbeabsichtigte Exposition gegenüber Tabakrauch oder Passivrauchen verwenden. Verwenden Sie dazu den Archetyp EVALUATION.exposure.\r\n\r\nNicht zur Darstellung von anderen Verabreichungen von Nikotin wie e-Zigaretten, Nikotinpflaster oder Nikotinkaugummi. Verwenden sie einen separaten Archetyp für diesen Zweck.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera sammanfattande information om rökvanor gällande tobak och produkter som innehåller tobak.",
+          "keywords" : [ "rökning", "rökanamnes", "tobak", "cigarett", "cigarr", "pipa", "kretek", "bidi", "cigarill", "rökare", "vattenpipa", "shisha", "hookah", "narguileh", "n'arghile", "ghelion", "bong", "rulltobak" ],
+          "use" : "Används för att beskriva sammanfattad information om individens rökvanor gällande tobak och tobaks-innehållande produkter.\r\n\r\nDenna arketyp kan användas för att beskriva både nuvarande och tidigare rökvanor.\r\n\r\nArketypen omfattar dokumentation av rökvanor för alla sorters tobaksbruk där man andas in tobaksröken eftersom det finns specifika hälsorisker associerade till direkt inandning av tobaksrök och tillhörande kemikalier. \r\n\r\nMängden nikotin och tjära, användning av filter och tillsatser har lämnats utanför vad kärnan av arketypen omfattar, men kan t.ex. läggas till (med hjälp av ytterligare arketyper) under rubriken \"Episoddetaljer\"\r\n\r\nObservera att denna arketyp inte omfattar oavsiktlig exponering för tobaksrök (se \"Misuse\"/felaktig användning).\r\n\r\nI många fall kommer individen bara röka en typ av tobak, till exempel vanliga cigaretter. Om flera sorters tobaksprodukter röks så repeteras \"Per typ\"-delträdet (\"cluster\") på ett sätt som gör det möjligt att registrera specifika detaljer och episoder om varje typ av tobak som röks. Det kan upprepas för varje typ som behöver dokumenteras. \r\n\r\nAtt rökvanor varierar i omfattning och typ av rökning kan fångas med det repeterbara \"Per episod\"-klustret (delträdet). Detta kluster av dataelement gör det möjligt att beskriva mönster av rökvanor mycket detaljerat för varje typ av tobak som röks, exempelvis daglig rökning av handrullade cigaretter, kombinerat med veckovis cigarrrökning varje fredagskväll och ibland Bidi-rökning på semester på Bali.\r\n\r\nAnledningar för att stänga en episod och starta en ny kommer i hög grad att återspegla lokala datainsamlingspreferenser, inklusive om personen:\r\n- slutar röka under en betydande tidsperiod (vilket sannolikt kommer att vara lokalt definierat) eller\r\n- signifikant ändrar rökmönster eller mängd\r\n\r\nOm endast en typ av tobak rökts, kommer värdet för \"Paketår\" att vara identiskt med värdet för \"Totala paketår\". Om mer än en typ av tobak har rökts så kommer beräkningen för värdet för \"Totala paketår\" att kräva en mer komplex algoritm, exempelvis från http://smokingpackyears.com/.\r\n\r\nFör att införliva beskrivande information (t.ex. fritext) om rökvanor från befintliga eller gamla vård-IT-system till arketyp-baserade system, används lämpligen dataelementet \"Övergripande beskrivning\".\r\n\r\nNotera att definitionen av \"rökare\" och \"före detta rökare\" t.ex. kan variera avseende perioder. Exempelvis använder amerikanska CDC 1 månad/31 dagar och nya Zealand använder 28 dagar.",
+          "misuse" : "Använd inte denna arketyp för att registrera specifik händelse- eller periodbaserad information om rökning, till exempel faktisk daglig användning eller genomsnittlig användning under en viss tidsperiod - använd då istället arketypen OBSERVATION.tobacco_smoking\r\n\r\nAnvänd inte denna arketyp för att registrera information om rökfri tobaksanvändning, exempelvis snus, tuggtobak eller gutka - använd då istället arketypen EVALUATION.smokeless_tobacco_summary\r\n\r\nAnvänd inte denna arketyp för att registrera evidens eller bedömning av cigarett- eller nikotinberoende. Använd då istället arketypen OBSERVATION.fagerstrom\r\n\r\nAnvänd inte denna arketyp för att registrera detaljer om oavsiktilg tobaksröksexponering eller passiv rökning. Använd då istället arketypen EVALUATION.exposure.\r\n\r\nAnvänd inte denna arketyp för att registrera annat nikotinbruk, exempelvis e-cigaretter, nikotinplåster eller nikotintuggummi. Använd separata arketyper för de ändamålen.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere et sammendrag om individets mønster for røyking av tobakk og produkter som inneholder tobakk.",
+          "keywords" : [ "tobakk", "sigarett", "sigar", "pipe", "røyking", "kretek", "beedi", "bidi", "sigarillo", "røyker", "vannpipe", "shisha", "hookah", "narguileh", "rulletobakk", "rullings", "røyk" ],
+          "use" : "Brukes for å registrere et sammendrag om individets mønster for røyking av tobakk og produkter som inneholder tobakk.\r\n\r\nDenne arketypen brukes for å registrere både nåværende og tidligere tobakksrøyking.\r\n\r\nArketypen fokuserer spesifikt på dokumentasjon om bruk av alle typer inhalert tobakksrøyk, på grunn av helserisikoen knyttet til inhalering og kjemikaliene tilknyttet dette. Mengden av nikotin og tjære, filterbruk og tilsetningstoffer er ikke dekket av arketypen, men kan legges til i SLOTet \"Episodedetaljer\" ved behov. Arketypen omfatter ikke utilsiktet eksponering for tobakksrøyk (se Feil bruk).\r\n\r\nClusteret \"Per type\" tillater registrering av spesifikke detaljer og episoder om hver enkelt ulik type tobakk som røykes og kan repeteres en gang per type. \r\n\r\nI mange tilfeller vil individet bare røyke en type tobakk, for eksempel filtersigaretter. Røykes også andre typer tobakk, legges detaljene om dette i en annen instans av Clusteret \"Per type\".\r\n\r\nHistorikken knyttet til økt eller redusert bruk av hver enkelt tobakkstype over tid kan registreres ved å bruke Clusteret \"Per episode\". Denne samlingen av dataelementer åpner for en veldig detaljert registrering av røykeadferd, for eksempel kan en registrere at man daglig røyker rullings, en sigar hver fredag og Bidi-røyking når man er på ferie på Bali.\r\n\r\nHva som trigger en avslutning av en episode og start av en ny avhenger av behovet, for eksempel:\r\n- Individet slutter å røyke en periode (kan defineres lokalt).\r\n- Betydningsfulle endringer i mengde eller røykemønster.\r\n\r\nRøyker individet kun en type tobakk vil verdien for dataelementet \"Pakkeår\" være identisk med dataelementet \"Overordnet pakkeår\". Røykes mer enn en type tobakk vil kalkulasjonen av verdien for \"Overordnet pakkeår\" kreve en mer kompleks algoritme som http://smokingpackyears.com/.\r\n\r\nDataelementet \"Overordnet beskrivelse\" brukes til å overføre fritekstbeskrivelser fra eksisterende eller tidligere kliniske systemer til arketypeformat.\r\n\r\nMerk: Definisjon av verdien \"Røyker\" i dataelementet \"Status\" kan variere fra land til land. For eksempel refererer USAs Center for Disease Control til røyking den siste måneden, og New Zealand Ministry of Health til røyking i løpet av de siste 28 dagene.",
+          "misuse" : "Brukes ikke for å registrere informasjon som ikke handler om tobakksrøyking eller som handler om tobakk blandet med andre rusmidler, bruk egne arketyper for dette formålet.\r\n\r\nBrukes ikke for å registrere hendelses- eller periodisk informasjon om tobakksrøyking, for eksempel: faktisk daglig bruk eller gjennomsnittlig bruk over en spesifisert tidsperiode. Bruk arketypen OBSERVATION.tobacco_smoking for dette formålet.\r\n\r\nBrukes ikke for å registrere informasjon om bruk av røykfri tobakk, for eksempel snus, luktsnus/snuff, tyggetobakk, dip og gutka. Bruk arketypen EVALUATION.smokeless_tobacco_summary for dette formålet.\r\n\r\nBrukes ikke for å registrere informasjon om nikotinavhengighet. Bruk arketypen OBSERVATION.fagerstrom til dette formålet.\r\n\r\nBrukes ikke for å registrere detaljer om passiv røyking. Bruk arketypen EVALUATION.exposure for dette formålet.\r\n\r\nBrukes heller ikke for annen tilførsel av nikotin som e-sigarett, nikotinplaster eller niktotintyggegummi. Bruk egne arketyper for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record summary information about the individual's pattern of smoking of tobacco and tobacco-containing products.",
+          "keywords" : [ "tobacco", "cigarette", "cigar", "pipe", "smoking", "kretek", "beedi", "bidi", "cigarillo", "smoker", "waterpipe", "shisha", "hookah", "narguileh", "hubble-bubble", "roll-up", "RYO", "rollie", "roll-your-own" ],
+          "use" : "Use to record summary information about the individual's pattern of smoking of tobacco and tobacco-containing products.\r\n\r\nThis archetype is to be used to record information about both current and previous smoking behaviour.\r\n\r\nThe specific scope of this archetype is on documentation about the use of all types of inhaled tobacco smoke because of the associated health risks from direct inhalation of tobacco and associated chemicals. Amount of nicotine and tar, use of filters and additives has been left outside of scope for the core archetype, but could be added into the Episode SLOT if required. Please note that the scope of this archetype does not include unintentional exposure to tobacco smoke (see Misuse). \r\n\r\nThe 'Per type' cluster of data elements allows for recording of specific details and episodes about each type of tobacco smoked and can be repeated once per type.\r\n\r\nIn many situations the individual will only smoke one type of tobacco, such as manufactured cigarettes.  If other types of tobacco are smoked, the details will be recorded in another instance of the 'Per type' cluster.\r\n\r\nThe history of waxing and waning of use for each type of tobacco over time can be captured using the repeatable 'Per episode' cluster. This cluster of data elements allows for a very detailed pattern of smoking behaviour to be recorded for each type of tobacco smoked such as daily 'roll-your-own' cigarette smoking, alongside weekly cigar smoking every Friday night and occasional Bidi smoking while on holiday in Bali. \r\n\r\nTriggers for closing one episode and commencing a new one will largely reflect local data collection preferences, including if the individual: \r\n- quits for a significant period of time (which will likely be locally defined); or\r\n- significantly changes their amount of use or pattern of their smoking.\r\n\r\nIf only one type of tobacco is smoked, the value for 'Pack years' will be identical to the 'Overall pack years' data element. If more than one type of tobacco is smoked, the calculation for the value for 'Overall pack years' will require a more complex algorithm such as http://smokingpackyears.com/.\r\n\r\nUse to incorporate the narrative descriptions of tobacco smoking habits within existing or legacy clinical systems into an archetyped format, using the 'Overall description' data element.\r\n\r\nNote: Definitions of 'Current smoker' may vary. For example: the CDC uses 1 month/31 days and New Zealand uses 28 days.",
+          "misuse" : "Not to be used to record event-or period-based information about tobacco smoking, such as actual daily use or the average use over a specified period of time - use the OBSERVATION.tobacco_smoking archetype.\r\n\r\nNot to be used to record information about smokeless tobacco use - for example: snus; snuff; chewing tobacco; dip; and gutka. Use the archetype EVALUATION.smokeless_tobacco_summary archetype for this purpose.\r\n\r\nNot to be used to record evidence of nicotine dependency. Use the OBSERVATION.fagerstrom for this purpose.\r\n\r\nNot to be used to record details about unintended exposure to tobacco smoke or passive smoking. Use the archetype EVALUATION.exposure for this purpose.\r\n\r\nNot to be used for recording any other administration of nicotine, such as e-cigarettes, nicotine patches or nicotine chewing gum. Use separate archetypes for this purpose.",
+          "copyright" : "© openEHR Foundation, Australian Digital Health Agency, Nasjonal IKT (Norway)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "*To record summary information about the individual's pattern of smoking of tobacco and tobacco-containing products.(en)",
+          "keywords" : [ "le tabac", "cigarette", "cigare", "tuyau", "fumeur", "kretek", "beedi", "bidi", "cigarillo", "fumeur", "conduite d'eau", "chicha", "narguilé", "narguileh", "hubble-bubble", "enrouler", "RYO", "Rollie", "roule toi-même" ],
+          "use" : "*Use to record summary information about the individual's pattern of smoking of tobacco and tobacco-containing products.\r\n\r\nThis archetype is to be used to record information about both current and previous smoking behaviour.\r\n\r\nThe specific scope of this archetype is on documentation about the use of all types of inhaled tobacco smoke because of the associated health risks from direct inhalation of tobacco and associated chemicals. Amount of nicotine and tar, use of filters and additives has been left outside of scope for the core archetype, but could be added into the Episode SLOT if required. Please note that the scope of this archetype does not include unintentional exposure to tobacco smoke (see Misuse). \r\n\r\nThe 'Per type' cluster of data elements allows for recording of specific details and episodes about each type of tobacco smoked and can be repeated once per type.\r\n\r\nIn many situations the individual will only smoke one type of tobacco, such as manufactured cigarettes. If other types of tobacco are smoked, the details will be recorded in another instance of the 'Per type' cluster.\r\n\r\nThe history of waxing and waning of use for each type of tobacco over time can be captured using the repeatable 'Per episode' cluster. This cluster of data elements allows for a very detailed pattern of smoking behaviour to be recorded for each type of tobacco smoked such as daily 'roll-your-own' cigarette smoking, alongside weekly cigar smoking every Friday night and occasional Bidi smoking while on holiday in Bali. \r\n\r\nTriggers for closing one episode and commencing a new one will largely reflect local data collection preferences, including if the individual: \r\n- quits for a significant period of time (which will likely be locally defined); or\r\n- significantly changes their amount of use or pattern of their smoking.\r\n\r\nIf only one type of tobacco is smoked, the value for 'Pack years' will be identical to the 'Overall pack years' data element. If more than one type of tobacco is smoked, the calculation for the value for 'Overall pack years' will require a more complex algorithm such as http://smokingpackyears.com/.\r\n\r\nUse to incorporate the narrative descriptions of tobacco smoking habits within existing or legacy clinical systems into an archetyped format, using the 'Overall description' data element.\r\n\r\nNote: Definitions of 'Current smoker' may vary. For example: the CDC uses 1 month/31 days and New Zealand uses 28 days.(en)",
+          "misuse" : "*Not to be used to record event-or period-based information about tobacco smoking, such as actual daily use or the average use over a specified period of time - use the OBSERVATION.tobacco_smoking archetype.\r\n\r\nNot to be used to record information about smokeless tobacco use - for example: snus; snuff; chewing tobacco; dip; and gutka. Use the archetype EVALUATION.smokeless_tobacco_summary archetype for this purpose.\r\n\r\nNot to be used to record evidence of nicotine dependency. Use the OBSERVATION.fagerstrom for this purpose.\r\n\r\nNot to be used to record details about unintended exposure to tobacco smoke or passive smoking. Use the archetype EVALUATION.exposure for this purpose.\r\n\r\nNot to be used for recording any other administration of nicotine, such as e-cigarettes, nicotine patches or nicotine chewing gum. Use separate archetypes for this purpose.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nl"
+          },
+          "purpose" : "Voor het vastleggen van samenvattende informatie over een individu's gedrag in het roken van tabak en tabak-bevattende producten.",
+          "keywords" : [ "tabak", "sigaretten", "sigaar", "pijp", "roken", "kretek", "beedi", "bidi", "cigarillo", "roker", "waterpijp", "shisha", "hookah", "narguileh", "hubble-bubble", "roll-up", "sjek", "roltabak", "shag" ],
+          "use" : "Gebruik voor het vastleggen van samenvattende informatie over een individu's gedrag in het roken van tabak en tabak-bevattende producten.\r\n\r\nDit archetype dient gebruikt te worden om informatie over zowel het huidige als het voormalige rookgedrag vast te leggen.\r\n\r\nDe strekking van dit archetype is het vastleggen van het gebruik van alle typen geïnhaleerde tabaksrook in verband met de bijgaande gezondheidsrisico's bij het direct inademen van tabak en aanverwante chemicaliën. Hoeveelheid nicotine en teer, gebruik van filters en toevoegingen zijn buiten de scope van dit kernarchetype, maar kunnen in het Episode SLOT toegevoegd worden indien nodig. Merk op dat dit archetype onbedoelde blootstelling aan tabaksrook buiten beschouwing laat (zie Misuse).\r\n\r\nHet 'Per type' cluster met data elementen staat het vastleggen van specifieke details en episodes over ieder type tabak toe, en kan herhaald worden voor ieder type.\r\n\r\nIn veel gevallen rookt een individu maar één type tabak, zoals bijvoorbeeld gefabriceerde sigaretten. Als andere typen tabak worden gerookt, zullen de details hiervan vastgelegd worden in een andere instantie van het 'Per type' cluster.\r\n\r\nDe geschiedenis van toename en afname van het gebruik van elk type tabak door de tijd heen kan vastgelegd worden door het herhaalbare 'Per episode' cluster te gebruiken. Dit cluster met data elementen staat toe om een zeer gedetaileerd patroon van rookgedrag vast te leggen voor elk type tabak. Bijvoorbeeld dagelijkse 'roll-your-own' sigaretten, in combinatie met weekelijks sigaarroken op vrijdagavond en het af-en-toe roken van een Bidi gedurende vakantie op Bali.\r\n\r\nHet sluiten van een episode en starten van een nieuwe episode hangt af van hoe men lokaal de data wenst te verzamelen, en of het individu:\r\n- voor een significante tijd gestopt is (waarbij de definitie lokaal vastgesteld is); of\r\n- significante veranderingen in het patroon of de hoeveelheid van het rookgedrag vertoont.\r\n\r\nAls er maar één type tabak gerookt wordt, dan is de waarde voor 'Packyears' gelijk aan de waarde voor het 'Totaal aantal packyears' data element. Als meerdere typen tabak gerookt zijn, dan vereist de 'Totaal aantal packyears' berekening een complexer algoritme zoals beschreven op http://smokingpackyears.com/.\r\n\r\nGebruik om de aanvullende beschrijvingen van tabak rookgedrag in bestaande of legacy klinische systemen in een archetype-formaat te vatten doormiddel van het 'Algemene beschrijving' data element.\r\n\r\nNoot: de definitie van 'huidige roker' kan veriëren. Bijvoorbeeld, het CDC gebruikt 1 maand/31 dagen, terwijl men in Nieuw Zeeland 28 dagen hanteert.",
+          "misuse" : "Niet te gebruiken voor het vastleggen van gebeurtenis- of periode-gebasseerde informatie over het roken van tabak, zoals de daadwerkelijke dagelijkse dosis of het gemiddelde gebruik over een bepaalde periode - gebruik hiervoor het OBSERVATION.tobacco_smoking archetype.\r\n\r\nNiet te gebruiken voor het vastleggen van informatie over het gebruik van rookloos tabak - zoals bijvoorbeeld: snus; snuiftabak; pruimtabak; dip; and gutka. Gebruik hiervoor het archetype EVALUATION.smokeless_tobacco_summary.\r\n\r\nNiet te gebruiken voor het vastleggen van bewijs voor nicotineafhankelijkheid. Gebruik hiervoor het archetype OBSERVATION.fagerstrom.\r\n\r\nNiet te gebruiken voor het vastleggen van onbedoelde blootstelling aan tabaksrook of passief roken. Gebruik hiervoor het archetype EVALUATION.exposure.\r\n\r\nNiet te gebruiken voor het vastleggen van enige andere vorm van toediening van nicotine, zoals e-cigaretten, nicotine pleisters of nicotine kauwgom. Gebruik hiervoor losstaande archetypes.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.tobacco_smoking_summary.v1",
     "differential" : true,
@@ -11723,7 +11824,39 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "CD838D55CFC3EDBB32A50299B32ED4F8"
       },
-      "details" : { }
+      "details" : {
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para gravar detalhes sobre o consumo real de álcool em um determinado período.",
+          "keywords" : [ "álcool", "cerveja", "vinho", "destilados", "fortificado", "consumo", "uso", "abuso", "compulsão" ],
+          "use" : "Usado para gravar detalhes sobre o consumo real de álcool e comportamentos associados em um determinado período.\r\n\r\nUm consumo diário de álcool pode ser construído no decorrer de um período pelo registro do consumo de álcool em dias sequenciais - gravar consumos reais usando o evento \"Dia específico\" para cada entrada diária.\r\n\r\nOs dados que podem ser usados para acessar o risco de abuso ou dependência de álcool serão gravados usando dois arquétipos: este arquétipo OBSERVATION (gravando medidas e observações repetitivas) e o arquétipo EVALUATION.alcohol_consumption_summary (para gravar o sumário e dados persistentes).\r\n\r\nUm registro do consumo médio de álcool durante um período pode ser gravado pela quantidade de álcool consumido usando o evento \"Uso médio\" - o uso médio em um ponto específico no tempo.\r\n\r\n\r\n",
+          "misuse" : "Não deve ser usado para registro de detalhes persistentes sobre padrões típicos de consumo de álcool. Use o arquétipo EVALUATION.alcohol_consumption_summary para este propósito.\r\n\r\nNão deve ser usado para gravar uma análise sobre dependência de álcool. Use arquétipos específicos para este propósito, por exemplo para auditoria - openEHR-EHR-OBSERVATION.alcohol_audit.\r\n\r\nNão deve ser usado para gravar informação sobre consumo de outras substâncias a não ser álcool.\r\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about actual consumption of alcohol at a specified point in time or over an identified period of time.",
+          "keywords" : [ "alcohol", "beer", "wine", "spirits", "fortified", "consumption", "use", "abuse", "binge" ],
+          "use" : "Use to record details about actual consumption of alcohol and associated behaviour at a specified point in time or over an identified period of time.\r\n\r\nAn alcohol consumption diary could be built up over time by recording the consumption of alcohol on multiple, sequential days - recording actual consumptions using the 'Specified Day' event for each daily entry.\r\n\r\nA record of average alcohol use during a period can be recorded by recording the amount of alcohol consumed using the 'Average use' event - the mean use over a specified period of time.\r\n\r\nData that might be used to assess the risk of alcohol abuse or dependence will be recorded using two archetypes: this OBSERVATION archetype (recording the repeatable observations/measurements)  and in the EVALUATION.alcohol_consumption_summary archetype (recording the summary and persisting data).\r\n\r\nBinge drinking is not directly referred to in this archetype, yet this archetype will be a key resource used to support the identification of binge drinking through the accurate recording of the amount and frequency of drinking, triggers and social/cultureal context of consumption. The assessment of 'binge drinking' may be recorded as part of a 'Problem List'.",
+          "misuse" : "Not to be used for recording persistent, summary details about typical patterns of alcohol drinking. Use the EVALUATION.alcohol_consumption_summary archetype for this purpose.\r\n\r\nNot to be used to record an assessment about alcohol dependence. Use specific archetypes for this purpose, for example the AUDIT assessment - openEHR-EHR-OBSERVATION.alcohol_audit.\r\n\r\nNot to be used to record information about consumption of other substances other than alcohol.",
+          "copyright" : "© Australian Digital Health Agency, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.alcohol_intake.v0",
     "differential" : true,
@@ -11779,6 +11912,28 @@
                       "occurrences" : "0..0",
                       "nodeId" : "at0005.1",
                       "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "name",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.2" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      }, {
                         "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "items",
                         "children" : [ {
@@ -11944,28 +12099,6 @@
                           "attributes" : [ ],
                           "attributeTuples" : [ ]
                         } ]
-                      }, {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "name",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "ac0.2" ],
-                              "selectedTerminologies" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
                       } ],
                       "attributeTuples" : [ ]
                     }, {
@@ -11994,6 +12127,31 @@
               "occurrences" : "0..0",
               "nodeId" : "at0023.1",
               "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "width",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DURATION",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_DURATION",
+                      "rmTypeName" : "DURATION",
+                      "occurrences" : "1..1",
+                      "constraint" : [ {
+                        "lower" : "PT24H",
+                        "upper" : "PT24H",
+                        "lowerIncluded" : true,
+                        "upperIncluded" : true,
+                        "lowerUnbounded" : false,
+                        "upperUnbounded" : false
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "data",
                 "children" : [ {
@@ -12229,31 +12387,6 @@
                   } ],
                   "attributeTuples" : [ ]
                 } ]
-              }, {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "width",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DURATION",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_DURATION",
-                      "rmTypeName" : "DURATION",
-                      "occurrences" : "1..1",
-                      "constraint" : [ {
-                        "lower" : "PT24H",
-                        "upper" : "PT24H",
-                        "lowerIncluded" : true,
-                        "upperIncluded" : true,
-                        "lowerUnbounded" : false,
-                        "upperUnbounded" : false
-                      } ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
               } ],
               "attributeTuples" : [ ]
             }, {
@@ -12311,6 +12444,28 @@
                       "occurrences" : "0..0",
                       "nodeId" : "at0005.2",
                       "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "name",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.4" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      }, {
                         "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "items",
                         "children" : [ {
@@ -12474,28 +12629,6 @@
                           "occurrences" : "0..0",
                           "nodeId" : "at0018.3",
                           "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      }, {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "name",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "ac0.4" ],
-                              "selectedTerminologies" : [ ]
-                            } ]
-                          } ],
                           "attributeTuples" : [ ]
                         } ]
                       } ],
@@ -12719,7 +12852,39 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "CD838D55CFC3EDBB32A50299B32ED4F8"
       },
-      "details" : { }
+      "details" : {
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para gravar detalhes sobre o consumo real de álcool em um determinado período.",
+          "keywords" : [ "álcool", "cerveja", "vinho", "destilados", "fortificado", "consumo", "uso", "abuso", "compulsão" ],
+          "use" : "Usado para gravar detalhes sobre o consumo real de álcool e comportamentos associados em um determinado período.\r\n\r\nUm consumo diário de álcool pode ser construído no decorrer de um período pelo registro do consumo de álcool em dias sequenciais - gravar consumos reais usando o evento \"Dia específico\" para cada entrada diária.\r\n\r\nOs dados que podem ser usados para acessar o risco de abuso ou dependência de álcool serão gravados usando dois arquétipos: este arquétipo OBSERVATION (gravando medidas e observações repetitivas) e o arquétipo EVALUATION.alcohol_consumption_summary (para gravar o sumário e dados persistentes).\r\n\r\nUm registro do consumo médio de álcool durante um período pode ser gravado pela quantidade de álcool consumido usando o evento \"Uso médio\" - o uso médio em um ponto específico no tempo.\r\n\r\n\r\n",
+          "misuse" : "Não deve ser usado para registro de detalhes persistentes sobre padrões típicos de consumo de álcool. Use o arquétipo EVALUATION.alcohol_consumption_summary para este propósito.\r\n\r\nNão deve ser usado para gravar uma análise sobre dependência de álcool. Use arquétipos específicos para este propósito, por exemplo para auditoria - openEHR-EHR-OBSERVATION.alcohol_audit.\r\n\r\nNão deve ser usado para gravar informação sobre consumo de outras substâncias a não ser álcool.\r\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about actual consumption of alcohol at a specified point in time or over an identified period of time.",
+          "keywords" : [ "alcohol", "beer", "wine", "spirits", "fortified", "consumption", "use", "abuse", "binge" ],
+          "use" : "Use to record details about actual consumption of alcohol and associated behaviour at a specified point in time or over an identified period of time.\r\n\r\nAn alcohol consumption diary could be built up over time by recording the consumption of alcohol on multiple, sequential days - recording actual consumptions using the 'Specified Day' event for each daily entry.\r\n\r\nA record of average alcohol use during a period can be recorded by recording the amount of alcohol consumed using the 'Average use' event - the mean use over a specified period of time.\r\n\r\nData that might be used to assess the risk of alcohol abuse or dependence will be recorded using two archetypes: this OBSERVATION archetype (recording the repeatable observations/measurements)  and in the EVALUATION.alcohol_consumption_summary archetype (recording the summary and persisting data).\r\n\r\nBinge drinking is not directly referred to in this archetype, yet this archetype will be a key resource used to support the identification of binge drinking through the accurate recording of the amount and frequency of drinking, triggers and social/cultureal context of consumption. The assessment of 'binge drinking' may be recorded as part of a 'Problem List'.",
+          "misuse" : "Not to be used for recording persistent, summary details about typical patterns of alcohol drinking. Use the EVALUATION.alcohol_consumption_summary archetype for this purpose.\r\n\r\nNot to be used to record an assessment about alcohol dependence. Use specific archetypes for this purpose, for example the AUDIT assessment - openEHR-EHR-OBSERVATION.alcohol_audit.\r\n\r\nNot to be used to record information about consumption of other substances other than alcohol.",
+          "copyright" : "© Australian Digital Health Agency, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.alcohol_intake.v0",
     "differential" : true,
@@ -12775,6 +12940,28 @@
                       "occurrences" : "0..0",
                       "nodeId" : "at0005.1",
                       "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "name",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.2" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      }, {
                         "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "items",
                         "children" : [ {
@@ -12940,28 +13127,6 @@
                           "attributes" : [ ],
                           "attributeTuples" : [ ]
                         } ]
-                      }, {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "name",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "ac0.2" ],
-                              "selectedTerminologies" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
                       } ],
                       "attributeTuples" : [ ]
                     }, {
@@ -12990,6 +13155,31 @@
               "occurrences" : "0..0",
               "nodeId" : "at0023.1",
               "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "width",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DURATION",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_DURATION",
+                      "rmTypeName" : "DURATION",
+                      "occurrences" : "1..1",
+                      "constraint" : [ {
+                        "lower" : "PT24H",
+                        "upper" : "PT24H",
+                        "lowerIncluded" : true,
+                        "upperIncluded" : true,
+                        "lowerUnbounded" : false,
+                        "upperUnbounded" : false
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "data",
                 "children" : [ {
@@ -13225,31 +13415,6 @@
                   } ],
                   "attributeTuples" : [ ]
                 } ]
-              }, {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "width",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DURATION",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_DURATION",
-                      "rmTypeName" : "DURATION",
-                      "occurrences" : "1..1",
-                      "constraint" : [ {
-                        "lower" : "PT24H",
-                        "upper" : "PT24H",
-                        "lowerIncluded" : true,
-                        "upperIncluded" : true,
-                        "lowerUnbounded" : false,
-                        "upperUnbounded" : false
-                      } ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
               } ],
               "attributeTuples" : [ ]
             }, {
@@ -13307,6 +13472,28 @@
                       "occurrences" : "0..0",
                       "nodeId" : "at0005.2",
                       "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "name",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.4" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      }, {
                         "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "items",
                         "children" : [ {
@@ -13470,28 +13657,6 @@
                           "occurrences" : "0..0",
                           "nodeId" : "at0018.3",
                           "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      }, {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "name",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "ac0.4" ],
-                              "selectedTerminologies" : [ ]
-                            } ]
-                          } ],
                           "attributeTuples" : [ ]
                         } ]
                       } ],
@@ -13707,6 +13872,289 @@
         "organisation" : "Core Consulting",
         "email" : "ana.andrade@coreconsulting.com.br"
       },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "1c1fa7a1-5396-4728-83b9-9d7d29bd81d7",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "AA14DED8BD27EC29A61AD73F44C380F1"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.condition_screening.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-condition_screening-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "HISTORY",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "events",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "POINT_EVENT",
+              "nodeId" : "at0002.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0034.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0028.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "CODE_PHRASE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "at0031", "at0032", "at0033" ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "nodeId" : "at0022",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0004.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "SCT"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "SCT" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "SCT",
+                                    "code" : "405751000",
+                                    "value" : "Diabetes (check code with Tracey)"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0005.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "ac0.1" ],
+                                  "selectedTerminologies" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0006.1",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0035.1",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0029.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DURATION",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "CODE_PHRASE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "at0036", "at0037", "at0038" ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0025.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Diabetes",
+            "description" : "An individual- or self-reported questionnaire screening for conditions, including problems, diagnoses and pregnancy."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "nb" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        }
+      }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "6d3625eb-b19e-4fbc-9c3f-83197a286818",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : { },
       "otherDetails" : { }
     } ]
   } ],
