@@ -1,9 +1,8 @@
-archetype (adl_version=1.4; uid=e8f2d2fb-1d9f-4352-8e84-6d1b421fb830)
+﻿archetype (adl_version=1.4; uid=e8f2d2fb-1d9f-4352-8e84-6d1b421fb830)
 	openEHR-EHR-EVALUATION.menstruation_summary.v1
 
 concept
-	[at0000]
-
+	[at0000]	-- Menstruation summary
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -32,21 +31,24 @@ language
 			>
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2011-03-09">
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Atomica Informatics, Australia">
 		["email"] = <"heather.leslie@atomicainformatics.com">
+		["date"] = <"2011-03-09">
 	>
-	lifecycle_state = <"published">
-	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)","Malin Berg, DIPS ASA, Norway","SB BHATTACHARYYA, Sudisa Consultancy Services, India","Anita Bjørnnes, Helse Bergen, Norway","Randi Brendberg, Helse Nord RHF, Norway","Bjørn Christensen, Helse Bergen HF, Norway","anne clarke, HSE, Ireland","Peter Fedorcsak, Oslo universitetssykehus, Norway","Heather Grain, Llewelyn Grain Informatics, Australia","Mikkel Johan Gaup Grønmo, Forvaltningssenter EPJ, Helse-Nord, Norway (openEHR Editor)","Sam Heard, Ocean Informatics, Australia","Ingrid Heitmann, Oslo universitetssykehus HF, Norway","Anca Heyd, DIPS ASA, Norway","Hilde Hollås, Norway","Roar Holm, Helse Vest IKT A/S, Norway","Evelyn Hovenga, EJSH Consulting, Australia","Pétur Júlíusson, Barneklinikken, HUS og K2, UIB, Norway","Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway","Harmony Kosola, Alberta Health Services, Canada","Liv Laugen, ​Oslo University Hospital, Norway, Norway","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Hallvard Lærum, Direktoratet for e-helse, Norway","Siv Marie Lien, DIPS ASA, Norway","Hildegard McNicoll, freshEHR Clinical Informatics Ltd., United Kingdom","Ian McNicoll, freshEHR Clinical Informatics, United Kingdom","Lars Morgan Karlsen, Nordlandssykehuset Bodø, Norway","Bjorn Naess, DIPS","Anne Pauline Anderssen, Helse Nord RHF, Norway","Danielle Santos Alves, Federal University of Pernambuco, Brazil","Gro-Hilde Severinsen, Norwegian center for ehealthresearch, Norway","Line Silsand, Universitetssykehuset i Nord-Norge, Norway","Iztok Stotl, UKCLJ, Slovenia","Norwegian Review Summary, Nasjonal IKT HF, Norway","Eli Taranger Ljønes, Bodø kommune, Norway","Nyree Taylor, Ocean Informatics, Australia","John Tore Valand, Helse Bergen, Norway (openEHR Editor)","Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)">
 	details = <
+		["fi"] = <
+			language = <[ISO_639-1::fi]>
+			purpose = <"*To record an overview of the significant events related to menstrual cycle events.(en)">
+			use = <"*Use to record significant events related to the menstrual history.(en)">
+			keywords = <"*menstruation(en)", "*menstrual(en)", "*cycle(en)", "*period(en)", "*menarche(en)", "*menopause(en)", "*LNMP(en)">
+			misuse = <"*Not to be used to record information about a specific menstrual cycle. Use OBSERVATION.menstruation for this purpose. (en)">
+		>
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
 			purpose = <"Att spela in sammanfattning eller ihållande information om en persons menstruationshistoriska händelser eller menstruationsmönster över tiden.">
-			keywords = <"menstruation","mensdebut","menopaus","klimakteriet","perimenopausal","postmenopausal">
 			use = <"Används för att registrera sammanfattning eller ihållande information om en persons menstruationshistoriska händelser eller menstruationsmönster över tiden.
 
 Flera instanser av CLUSTER 'Per episod' tillåter sammanställning av en utvecklande historia av både tidigare och nuvarande episoder, eller mönster, av menstruation.
@@ -54,19 +56,12 @@ Flera instanser av CLUSTER 'Per episod' tillåter sammanställning av en utveckl
 Dataelementet 'Senast uppdaterad' registrerar senaste gången som menstruationssammanfattningen som helhet, inklusive varje avsnitt, uppdaterades.
 
 Används för att införliva de berättande beskrivningarna av menstruation eller menstruationshistoria i befintliga eller äldre kliniska system i ett arketypiskt format med hjälp av dataelementet \"Övergripande beskrivning\".">
+			keywords = <"menstruation", "mensdebut", "menopaus", "klimakteriet", "perimenopausal", "postmenopausal">
 			misuse = <"Inte avsedd för att registrera information om en viss menstruationscykel. Använd OBSERVATION.menstruation för detta ändamål.">
-		>
-		["fi"] = <
-			language = <[ISO_639-1::fi]>
-			purpose = <"*To record an overview of the significant events related to menstrual cycle events.(en)">
-			keywords = <"*menstruation(en)","*menstrual(en)","*cycle(en)","*period(en)","*menarche(en)","*menopause(en)","*LNMP(en)">
-			use = <"*Use to record significant events related to the menstrual history.(en)">
-			misuse = <"*Not to be used to record information about a specific menstrual cycle. Use OBSERVATION.menstruation for this purpose. (en)">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"For å registrere sammendrag og varig (persistent) informasjon om individets historikk knyttet til menstruasjon eller menstruasjonsmønstre over tid.">
-			keywords = <"menstruasjon","menstruerende","syklus","menarke","menopause","overgangsalder","mensen","mens","menarché","blødningmønster">
 			use = <"Brukes for å registrere sammendrag eller varig (persistent) informasjon om et individs menstruasjonshistorikk eller menstruasjonsmønster over tid.
 
 Flere forekomster av det interne Clusteret 'Per episode' tillater sammenstilling av en utvikling av menstruasjonen i reproduktiv periode, for både tidligere og nåværende episoder.
@@ -74,14 +69,13 @@ Flere forekomster av det interne Clusteret 'Per episode' tillater sammenstilling
 Dataelementet \"Sist oppdatert\" vil bli brukt til å registrere siste gang menstruasjons-sammendraget som helhet ble oppdatert, inkludert hver episode.
 
 Dataelementet \"Overordnet beskrivelse\" brukes til å overføre fritekstbeskrivelser av menstruasjon eller menstruasjonshistorikken fra eksisterende eller tidligere kliniske systemer til arketypeformat.">
+			keywords = <"menstruasjon", "menstruerende", "syklus", "menarke", "menopause", "overgangsalder", "mensen", "mens", "menarché", "blødningmønster">
 			misuse = <"Brukes ikke for å registrere detaljer om en spesifikk menstruasjonssyklus. Bruk arketypen \"Menstruasjon\" (OBSERVATION.menstruation) for dette formålet.
 ">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record summary or persistent information about an individual's menstruation history events or patterns of menstruation over time.">
-			keywords = <"menstruation","menarche","menopause","menopausal","perimenopausal","postmenopausal">
-			copyright = <"© openEHR Foundation">
 			use = <"Use to record summary or persistent information about an individual's menstruation history events or patterns of menstruation over time.
 
 Multiple instances of the 'Per episode' CLUSTER will allow aggregation of an evolving history of both past and present episodes, or patterns, of menstruation.
@@ -89,9 +83,13 @@ Multiple instances of the 'Per episode' CLUSTER will allow aggregation of an evo
 The 'Last updated' data element will record the last time that the Menstruation summary as a whole, including each episode, was updated.
 
 Use to incorporate the narrative descriptions of Menstruation or menstrual history within existing or legacy clinical systems into an archetyped format, using the 'Overall description' data element.">
+			keywords = <"menstruation", "menarche", "menopause", "menopausal", "perimenopausal", "postmenopausal">
 			misuse = <"Not to be used to record information about a specific menstrual cycle. Use OBSERVATION.menstruation for this purpose.">
+			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"published">
+	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Malin Berg, DIPS ASA, Norway", "SB BHATTACHARYYA, Sudisa Consultancy Services, India", "Anita Bjørnnes, Helse Bergen, Norway", "Randi Brendberg, Helse Nord RHF, Norway", "Bjørn Christensen, Helse Bergen HF, Norway", "anne clarke, HSE, Ireland", "Peter Fedorcsak, Oslo universitetssykehus, Norway", "Heather Grain, Llewelyn Grain Informatics, Australia", "Mikkel Johan Gaup Grønmo, Forvaltningssenter EPJ, Helse-Nord, Norway (openEHR Editor)", "Sam Heard, Ocean Informatics, Australia", "Ingrid Heitmann, Oslo universitetssykehus HF, Norway", "Anca Heyd, DIPS ASA, Norway", "Hilde Hollås, Norway", "Roar Holm, Helse Vest IKT A/S, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Pétur Júlíusson, Barneklinikken, HUS og K2, UIB, Norway", "Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway", "Harmony Kosola, Alberta Health Services, Canada", "Liv Laugen, ​Oslo University Hospital, Norway, Norway", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Hallvard Lærum, Direktoratet for e-helse, Norway", "Siv Marie Lien, DIPS ASA, Norway", "Hildegard McNicoll, freshEHR Clinical Informatics Ltd., United Kingdom", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom", "Lars Morgan Karlsen, Nordlandssykehuset Bodø, Norway", "Bjorn Naess, DIPS", "Anne Pauline Anderssen, Helse Nord RHF, Norway", "Danielle Santos Alves, Federal University of Pernambuco, Brazil", "Gro-Hilde Severinsen, Norwegian center for ehealthresearch, Norway", "Line Silsand, Universitetssykehuset i Nord-Norge, Norway", "Iztok Stotl, UKCLJ, Slovenia", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "Eli Taranger Ljønes, Bodø kommune, Norway", "Nyree Taylor, Ocean Informatics, Australia", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -99,9 +97,9 @@ Use to incorporate the narrative descriptions of Menstruation or menstrual histo
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"D7DAE56ADC42D87C8928426D9BAA2C52">
-		["build_uid"] = <"e5530196-a73f-4014-b2b1-db8f740654ef">
-		["revision"] = <"1.0.1">
+		["MD5-CAM-1.0.1"] = <"A792B2B825C3F7988894FA17187F174B">
+		["build_uid"] = <"2dede592-c801-4139-8bfa-f8cec433c64b">
+		["revision"] = <"1.1.0">
 	>
 
 definition
@@ -127,11 +125,12 @@ definition
 							}
 						}
 					}
-					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Age at menarche
+					ELEMENT[at0002] occurrences matches {0..2} matches {    -- Menarche
 						value matches {
 							DV_DURATION matches {
 								value matches {PYM/|>=P0M|}
 							}
+							DV_DATE matches {*}
 						}
 					}
 					CLUSTER[at0010] occurrences matches {0..*} matches {    -- Per episode
@@ -216,11 +215,12 @@ definition
 							}
 						}
 					}
-					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Age at menopause
+					ELEMENT[at0004] occurrences matches {0..2} matches {    -- Menopause
 						value matches {
 							DV_DURATION matches {
 								value matches {PYM/|>=P0M|}
 							}
+							DV_DATE matches {*}
 						}
 					}
 					ELEMENT[at0023] occurrences matches {0..1} matches {    -- Comment
@@ -248,6 +248,7 @@ definition
 		}
 	}
 
+
 ontology
 	term_definitions = <
 		["en"] = <
@@ -261,8 +262,9 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Age at menarche">
-					description = <"Age at onset of first menstrual cycle.">
+					text = <"Menarche">
+					description = <"Onset of first menstrual cycle.">
+					comment = <"This data element allows 2 occurrences in a template, if required. Use the DV_DATE data type to represent the date, or a partial date, of menarche and the DV_DURATION data type to represent the age at menarche. ">
 				>
 				["at0003"] = <
 					text = <"Menstrual status">
@@ -270,8 +272,9 @@ ontology
 					comment = <"If this data element is updated, the 'Date last updated' in Protocol should also be amended.">
 				>
 				["at0004"] = <
-					text = <"Age at menopause">
-					description = <"Age at cessation of menstrual cycles.">
+					text = <"Menopause">
+					description = <"Cessation of all menstrual cycles.">
+					comment = <"This data element allows 2 occurrences in a template, if required. Use the DV_DATE data type to represent a partial date, such as year only, of menopause and the DV_DURATION data type to represent the age at menopause. ">
 				>
 				["at0005"] = <
 					text = <"Premenopausal">
@@ -375,8 +378,9 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Alder ved menarke">
-					description = <"Alder ved første menstruasjon.">
+					text = <"*Menarche (en)">
+					description = <"*Onset of first menstrual cycle. (en)">
+					comment = <"*This data element allows 2 occurrences in a template, if required. Use the DV_DATE data type to represent the date, or a partial date, of menarche and the DV_DURATION data type to represent the age at menarche.  (en)">
 				>
 				["at0003"] = <
 					text = <"Menstruasjonsstatus">
@@ -384,8 +388,9 @@ ontology
 					comment = <"Hvis dette dataelementet er oppdatert, bør \"Dato sist oppdatert\" i Protocol også endres.">
 				>
 				["at0004"] = <
-					text = <"Alder ved menopause">
-					description = <"Alderen menopausen startet.">
+					text = <"*Menopause (en)">
+					description = <"*Cessation of all menstrual cycles. (en)">
+					comment = <"*This data element allows 2 occurrences in a template, if required. Use the DV_DATE data type to represent a partial date, such as year only, of menopause and the DV_DURATION data type to represent the age at menopause.  (en)">
 				>
 				["at0005"] = <
 					text = <"Premenopausal">
@@ -489,8 +494,9 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*Age at menarche (en)">
-					description = <"Ensimmäisen kuukautiskierron alkamispäivä. Epätäydelliset päivämäärät, kuten pelkkä vuosi tai vuosi ja kuukausi, ovat sallittuja.">
+					text = <"*Menarche (en)">
+					description = <"*Onset of first menstrual cycle. (en)">
+					comment = <"*This data element allows 2 occurrences in a template, if required. Use the DV_DATE data type to represent the date, or a partial date, of menarche and the DV_DURATION data type to represent the age at menarche.  (en)">
 				>
 				["at0003"] = <
 					text = <"*Menstrual status (en)">
@@ -498,8 +504,9 @@ ontology
 					comment = <"*If this data element is updated, the 'Date last updated' in Protocol should also be amended. (en)">
 				>
 				["at0004"] = <
-					text = <"*Age at menopause (en)">
-					description = <"Menopaussin alku – kuukautisten loppuminen (vaihdevuosi-iässä). Epätäydelliset päivämäärät, kuten pelkkä vuosi tai vuosi ja kuukausi, ovat sallittuja.">
+					text = <"*Menopause (en)">
+					description = <"*Cessation of all menstrual cycles. (en)">
+					comment = <"*This data element allows 2 occurrences in a template, if required. Use the DV_DATE data type to represent a partial date, such as year only, of menopause and the DV_DURATION data type to represent the age at menopause.  (en)">
 				>
 				["at0005"] = <
 					text = <"*Premenopausal (en)">
@@ -603,8 +610,9 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Ålder vid mensdebut">
-					description = <"Ålder vid första menstruationscykel.">
+					text = <"*Menarche (en)">
+					description = <"*Onset of first menstrual cycle. (en)">
+					comment = <"*This data element allows 2 occurrences in a template, if required. Use the DV_DATE data type to represent the date, or a partial date, of menarche and the DV_DURATION data type to represent the age at menarche.  (en)">
 				>
 				["at0003"] = <
 					text = <"Menstruationsstatus">
@@ -612,8 +620,9 @@ ontology
 					comment = <"Om detta dataelement uppdateras bör \"Datum senast uppdaterad\" i protokollet också ändras.">
 				>
 				["at0004"] = <
-					text = <"Ålder vid klimakteriet">
-					description = <"Ålder vid upphörande av menstruationscykler.">
+					text = <"*Menopause (en)">
+					description = <"*Cessation of all menstrual cycles. (en)">
+					comment = <"*This data element allows 2 occurrences in a template, if required. Use the DV_DATE data type to represent a partial date, such as year only, of menopause and the DV_DURATION data type to represent the age at menopause.  (en)">
 				>
 				["at0005"] = <
 					text = <"Premenopausal">
