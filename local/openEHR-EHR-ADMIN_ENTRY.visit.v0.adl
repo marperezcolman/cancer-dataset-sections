@@ -1,0 +1,116 @@
+archetype (adl_version=1.4; uid=7e8e8326-0b9a-475b-92f1-fe140add144b)
+	openEHR-EHR-ADMIN_ENTRY.visit.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-08-01">
+		["name"] = <"Marlene Pérez Colman">
+		["organisation"] = <"Digital Health and Care Wales">
+		["email"] = <"marlene.perezcolman@wales.nhs.uk">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"a5cd1fb5762343d1105759b3bab8202b">
+		["build_uid"] = <"b17873a0-afee-38e5-8d23-8918c650c068">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- Visit
+		data matches {
+			ITEM_TREE matches {
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0001] occurrences matches {0..1} matches {    -- Professional/Team
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Role
+						value matches {
+							DV_CODED_TEXT matches {*}
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Specialty
+						value matches {
+							DV_CODED_TEXT matches {*}
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Date and time of visit
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0005] occurrences matches {0..*} matches {    -- Professional/Team structured data
+						include
+							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.practitioner_cc\.v0|openEHR-EHR-CLUSTER\.practitioner_role_cc\.v0|openEHR-EHR-CLUSTER\.fhir_name\.v0/}
+					}
+					allow_archetype CLUSTER[at0007] occurrences matches {0..*} matches {    -- Reason for encounter
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0006] occurrences matches {0..*} matches {    -- Outcome
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Visit">
+					description = <"Visit to a professional or a team">
+				>
+				["at0001"] = <
+					text = <"Professional/Team">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Role">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Specialty">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Date and time of visit">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Professional/Team structured data">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Outcome">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Reason for encounter">
+					description = <"">
+				>
+			>
+		>
+	>
