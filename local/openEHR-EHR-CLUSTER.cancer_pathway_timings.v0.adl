@@ -23,11 +23,11 @@ description
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
+		["current_contact"] = <"marlene.perezcolman@wales.nhs.uk">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["current_contact"] = <"marlene.perezcolman@wales.nhs.uk">
-		["MD5-CAM-1.0.1"] = <"c44325714edf4c7bbaa85e7eec8190b9">
+		["MD5-CAM-1.0.1"] = <"78ba1c1406415654cc499ea2b5057722">
 		["build_uid"] = <"40c95698-7fab-33c3-b6d8-8a66f6d1a641">
 	>
 
@@ -60,11 +60,6 @@ definition
 				}
 			}
 			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Date first seen (cancer specialist)
-				value matches {
-					DV_DATE_TIME matches {*}
-				}
-			}
-			ELEMENT[at0007] occurrences matches {0..1} matches {    -- Date of death
 				value matches {
 					DV_DATE_TIME matches {*}
 				}
@@ -102,10 +97,6 @@ ontology
 				>
 				["at0006"] = <
 					text = <"Date first seen (cancer specialist)">
-					description = <"">
-				>
-				["at0007"] = <
-					text = <"Date of death">
 					description = <"">
 				>
 			>
