@@ -23,12 +23,12 @@ description
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
+		["current_contact"] = <"marlene.perezcolman@wales.nhs.uk">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"d17b42f3d0a5aaaf906daeab007543cc">
 		["build_uid"] = <"1ecb2312-bc17-3d95-b0c1-702575159747">
-		["current_contact"] = <"marlene.perezcolman@wales.nhs.uk">
-		["MD5-CAM-1.0.1"] = <"684fe59407456d07066f2dedb2968c53">
 	>
 
 definition
@@ -41,8 +41,7 @@ definition
 							0|[local::at0004],
 							1|[local::at0005],
 							2|[local::at0006],
-							3|[local::at0007],
-							9|[local::at0008]
+							3|[local::at0007]
 						}
 					}
 					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Comment
@@ -71,7 +70,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"ACE 27 scale">
-					description = <"ACE 27 scale">
+					description = <"The Adult Comorbidity Evaluation 27 (ACE-27) is a validated comorbidity instrument that provides a score (0–3) based on the number and severity of medical comorbidities.">
 				>
 				["at0001"] = <
 					text = <"Extension">
@@ -87,23 +86,19 @@ ontology
 				>
 				["at0004"] = <
 					text = <"None">
-					description = <"">
+					description = <"No comorbidity">
 				>
 				["at0005"] = <
 					text = <"Mild">
-					description = <"">
+					description = <"Mild comorbidity">
 				>
 				["at0006"] = <
 					text = <"Moderate">
-					description = <"">
+					description = <"Moderate comorbidity">
 				>
 				["at0007"] = <
 					text = <"Severe">
-					description = <"">
-				>
-				["at0008"] = <
-					text = <"Not known">
-					description = <"">
+					description = <"Severe comorbidity">
 				>
 			>
 		>
