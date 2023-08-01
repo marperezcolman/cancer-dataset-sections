@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a5cd1fb5762343d1105759b3bab8202b">
+		["MD5-CAM-1.0.1"] = <"06b63953f8741ed7a58f259c3a21f370">
 		["build_uid"] = <"b17873a0-afee-38e5-8d23-8918c650c068">
 	>
 
@@ -60,6 +60,11 @@ definition
 					allow_archetype CLUSTER[at0005] occurrences matches {0..*} matches {    -- Professional/Team structured data
 						include
 							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.practitioner_cc\.v0|openEHR-EHR-CLUSTER\.practitioner_role_cc\.v0|openEHR-EHR-CLUSTER\.fhir_name\.v0/}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Visit duration
+						value matches {
+							DV_DURATION matches {*}
+						}
 					}
 					allow_archetype CLUSTER[at0007] occurrences matches {0..*} matches {    -- Reason for encounter
 						include
@@ -109,6 +114,10 @@ ontology
 				>
 				["at0007"] = <
 					text = <"Reason for encounter">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Visit duration">
 					description = <"">
 				>
 			>
