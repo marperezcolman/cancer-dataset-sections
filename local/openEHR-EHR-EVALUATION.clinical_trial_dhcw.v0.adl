@@ -1,0 +1,190 @@
+archetype (adl_version=1.4; uid=0a774ff0-3daf-4ee1-a7bc-748eb5ba5830)
+	openEHR-EHR-EVALUATION.clinical_trial_dhcw.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-08-07">
+		["name"] = <"Marlene Pérez Colman">
+		["organisation"] = <"Digital Health and Care Wales">
+		["email"] = <"marlene.perezcolman@wales.nhs.uk">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"bc9261661ad3dc930551dd0914e506be">
+		["build_uid"] = <"8728f1d7-db37-3170-81e3-e0a3844ed37a">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Clinical trial DHCW
+		data matches {
+			ITEM_TREE matches {
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Clinical trial decision date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Patient trial status
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Date trial started
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- Date onto follow up
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Completion of trial follow up
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Treatment type
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Trial acronym/name
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- IRAS number
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- Study ID number
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0017] occurrences matches {0..1} matches {    -- Outcome
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0018] occurrences matches {0..1} matches {    -- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE matches {
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0013] occurrences matches {0..*} matches {    -- Referring organisation/site
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {    -- Referring clinician
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0015] occurrences matches {0..*} matches {    -- Investigator
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0016] occurrences matches {0..*} matches {    -- Investigating organisation/site
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Clinical trial DHCW">
+					description = <"Clinical trial DHCW">
+				>
+				["at0002"] = <
+					text = <"Clinical trial decision date">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Patient trial status">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Date trial started">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Date onto follow up">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Completion of trial follow up">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Treatment type">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Trial acronym/name">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"IRAS number">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Study ID number">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Referring organisation/site">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Referring clinician">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Investigator">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Investigating organisation/site">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Outcome">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Comment">
+					description = <"">
+				>
+			>
+		>
+	>
