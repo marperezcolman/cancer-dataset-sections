@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"237402fb86d1d7467771782b5ec3fa38">
+		["MD5-CAM-1.0.1"] = <"fa9b0601d4bcadb7b52f8a421a731ad1">
 		["build_uid"] = <"ef5b2519-3289-3bb1-9869-124ae7944298">
 	>
 
@@ -46,6 +46,21 @@ definition
 			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Discharge destination
 				value matches {
 					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Adjunctive threapy
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Number of cycles planned
+				value matches {
+					DV_QUANTITY matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Number of cycles given
+				value matches {
+					DV_QUANTITY matches {*}
 				}
 			}
 		}
@@ -69,6 +84,18 @@ ontology
 				>
 				["at0003"] = <
 					text = <"Discharge destination">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Adjunctive threapy">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Number of cycles planned">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Number of cycles given">
 					description = <"">
 				>
 			>
