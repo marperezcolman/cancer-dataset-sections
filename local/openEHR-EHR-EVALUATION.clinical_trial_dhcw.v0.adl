@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"bc9261661ad3dc930551dd0914e506be">
+		["MD5-CAM-1.0.1"] = <"ae471906058e1c79b29a713165737245">
 		["build_uid"] = <"8728f1d7-db37-3170-81e3-e0a3844ed37a">
 	>
 
@@ -112,6 +112,11 @@ definition
 						include
 							archetype_id/value matches {/.*/}
 					}
+					ELEMENT[at0019] occurrences matches {0..1} matches {    -- Evaluation date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
 				}
 			}
 		}
@@ -183,6 +188,10 @@ ontology
 				>
 				["at0018"] = <
 					text = <"Comment">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Evaluation date">
 					description = <"">
 				>
 			>
