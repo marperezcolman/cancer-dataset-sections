@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"479ea906cea5cf07c2143ce878a0dd57">
+		["MD5-CAM-1.0.1"] = <"414cd69f51a744a5e1c65be3928d5570">
 		["build_uid"] = <"744ab0ce-4734-3ac0-aa4a-d2c2b1709130">
 	>
 
@@ -36,6 +36,11 @@ definition
 			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Pathological diagnosis (conclusion)
 				value matches {
 					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0021] occurrences matches {0..1} matches {    -- Report
+				value matches {
+					DV_TEXT matches {*}
 				}
 			}
 			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Morphology
@@ -95,6 +100,41 @@ definition
 					DV_CODED_TEXT matches {*}
 				}
 			}
+			ELEMENT[at0014] occurrences matches {0..1} matches {    -- Ki-67 tested
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0015] occurrences matches {0..1} matches {    -- Ki-67 result (%)
+				value matches {
+					DV_QUANTITY matches {*}
+				}
+			}
+			ELEMENT[at0016] occurrences matches {0..1} matches {    -- MLH1 Nuclear Expression
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0017] occurrences matches {0..1} matches {    -- PMS2 Nuclear Expression
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0018] occurrences matches {0..1} matches {    -- MSH2 Nuclear Expression
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0019] occurrences matches {0..1} matches {    -- MSH6 Nuclear Expression
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0020] occurrences matches {0..1} matches {    -- Microsatellite Instability (MSI)
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
 		}
 	}
 
@@ -148,6 +188,38 @@ ontology
 				>
 				["at0013"] = <
 					text = <"Margins">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Ki-67 tested">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Ki-67 result (%)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"MLH1 Nuclear Expression">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"PMS2 Nuclear Expression">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"MSH2 Nuclear Expression">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"MSH6 Nuclear Expression">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Microsatellite Instability (MSI)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Report">
 					description = <"">
 				>
 			>
