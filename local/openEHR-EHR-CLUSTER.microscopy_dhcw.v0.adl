@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"414cd69f51a744a5e1c65be3928d5570">
+		["MD5-CAM-1.0.1"] = <"3ab7dfbeba1347f5265dab8c5866d020">
 		["build_uid"] = <"744ab0ce-4734-3ac0-aa4a-d2c2b1709130">
 	>
 
@@ -98,6 +98,26 @@ definition
 			ELEMENT[at0013] occurrences matches {0..1} matches {    -- Margins
 				value matches {
 					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0022] occurrences matches {0..1} matches {    -- Number of nodes examined
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0023] occurrences matches {0..1} matches {    -- Number of nodes positive
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0024] occurrences matches {0..1} matches {    -- Number of nodes examined
+				value matches {
+					DV_QUANTITY matches {*}
+				}
+			}
+			ELEMENT[at0025] occurrences matches {0..1} matches {    -- Number of nodes positive
+				value matches {
+					DV_QUANTITY matches {*}
 				}
 			}
 			ELEMENT[at0014] occurrences matches {0..1} matches {    -- Ki-67 tested
@@ -220,6 +240,22 @@ ontology
 				>
 				["at0021"] = <
 					text = <"Report">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Number of nodes examined">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Number of nodes positive">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Number of nodes examined">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Number of nodes positive">
 					description = <"">
 				>
 			>
