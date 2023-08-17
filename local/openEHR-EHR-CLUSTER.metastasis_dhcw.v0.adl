@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"790f0f518769fd6fcb829133d4494a83">
+		["MD5-CAM-1.0.1"] = <"bcf9f21f8dce7c1184b7d17ec4635ceb">
 		["build_uid"] = <"f4e10d68-e8eb-3c1a-a08a-65e254a74a21">
 	>
 
@@ -49,11 +49,37 @@ definition
 					DV_COUNT matches {*}
 				}
 			}
+			ELEMENT[at0008] occurrences matches {0..1} matches {    -- Date detected
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0010] occurrences matches {0..1} matches {    -- Concurrent
+				value matches {
+					DV_CODED_TEXT matches {*}
+					DV_BOOLEAN matches {*}
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0012] occurrences matches {0..1} matches {    -- Diagnosis method
+				value matches {
+					DV_CODED_TEXT matches {*}
+					DV_TEXT matches {*}
+				}
+			}
+			allow_archetype CLUSTER[at0009] occurrences matches {0..*} matches {    -- Diagnosis specific details
+				include
+					archetype_id/value matches {/.*/}
+			}
 			allow_archetype CLUSTER[at0005] occurrences matches {0..*} matches {    -- Staging
 				include
 					archetype_id/value matches {/.*/}
 			}
 			allow_archetype CLUSTER[at0006] occurrences matches {0..*} matches {    -- Treatments
+				include
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype CLUSTER[at0007] occurrences matches {0..*} matches {    -- Measurements
 				include
 					archetype_id/value matches {/.*/}
 			}
@@ -65,26 +91,6 @@ definition
 				value matches {
 					DV_TEXT matches {*}
 				}
-			}
-			ELEMENT[at0008] occurrences matches {0..1} matches {    -- Date detected
-				value matches {
-					DV_DATE_TIME matches {*}
-				}
-			}
-			allow_archetype CLUSTER[at0007] occurrences matches {0..*} matches {    -- Measurements
-				include
-					archetype_id/value matches {/.*/}
-			}
-			ELEMENT[at0010] occurrences matches {0..1} matches {    -- Concurrent
-				value matches {
-					DV_CODED_TEXT matches {*}
-					DV_BOOLEAN matches {*}
-					DV_TEXT matches {*}
-				}
-			}
-			allow_archetype CLUSTER[at0009] occurrences matches {0..*} matches {    -- Diagnosis
-				include
-					archetype_id/value matches {/.*/}
 			}
 		}
 	}
@@ -110,7 +116,7 @@ Bulky disease (lymphomas)">
 				>
 				["at0003"] = <
 					text = <"Number">
-					description = <"">
+					description = <"Number of metastasis.">
 				>
 				["at0004"] = <
 					text = <"Comment">
@@ -130,10 +136,10 @@ Bulky disease (lymphomas)">
 				>
 				["at0008"] = <
 					text = <"Date detected">
-					description = <"">
+					description = <"Date the metastasis or recurrence was diagnosed">
 				>
 				["at0009"] = <
-					text = <"Diagnosis">
+					text = <"Diagnosis specific details">
 					description = <"To be used to include specific details and description of how the diagnosis was made (ie: radiology, pathology, clinical examination)">
 				>
 				["at0010"] = <
@@ -143,6 +149,10 @@ Bulky disease (lymphomas)">
 				["at0011"] = <
 					text = <"Other details">
 					description = <"">
+				>
+				["at0012"] = <
+					text = <"Diagnosis method">
+					description = <"Description of how the diagnosis was made.">
 				>
 			>
 		>
