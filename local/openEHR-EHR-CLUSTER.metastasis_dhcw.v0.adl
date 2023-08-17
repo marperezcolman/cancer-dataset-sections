@@ -1,0 +1,70 @@
+archetype (adl_version=1.4; uid=a5ca249e-5daf-41fa-a114-fbf5e397f2de)
+	openEHR-EHR-CLUSTER.metastasis_dhcw.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-08-17">
+		["name"] = <"Marlene Pérez Colman">
+		["organisation"] = <"Digital Health and Care Wales">
+		["email"] = <"marlene.perezcolman@wales.nhs.uk">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"c61ca7f0b8f2cea42d65eda4699b1387">
+		["build_uid"] = <"f4e10d68-e8eb-3c1a-a08a-65e254a74a21">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Metastasis DHCW
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Type
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Site
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Metastasis DHCW">
+					description = <"To be used to establish and describe tumour sites other than primary site of malignancy.
+It can be used for metastasis at diagnosis, progressions of disease, recurrence of disease or transformation.">
+				>
+				["at0001"] = <
+					text = <"Type">
+					description = <"To determine distance to which the tumour has spread.">
+					comment = <"ie: Lymphatic nodes, Local/Regional, Distant
+Bulky disease (lymphomas)">
+				>
+				["at0002"] = <
+					text = <"Site">
+					description = <"Determine body sites where there are metastasis/recurrences.">
+				>
+			>
+		>
+	>
