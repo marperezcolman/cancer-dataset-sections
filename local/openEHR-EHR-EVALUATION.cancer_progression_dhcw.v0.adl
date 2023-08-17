@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e11fa1a87bdfcbf9a99ce6cad6731327">
+		["MD5-CAM-1.0.1"] = <"6f95f9920bd5522035e051a821040387">
 		["build_uid"] = <"cafc7c55-f873-3c33-aa09-86aae0ba4708">
 	>
 
@@ -92,6 +92,11 @@ definition
 					ELEMENT[at0016] occurrences matches {0..1} matches {    -- Date primary cancer detected
 						value matches {
 							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0017] occurrences matches {0..1} matches {    -- Comment
+						value matches {
+							DV_TEXT matches {*}
 						}
 					}
 				}
@@ -193,6 +198,10 @@ ontology
 				>
 				["at0016"] = <
 					text = <"Date primary cancer detected">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Comment">
 					description = <"">
 				>
 			>
