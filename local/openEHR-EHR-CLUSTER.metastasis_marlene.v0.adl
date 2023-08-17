@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4bc2949fd305264dc7aec0ccc6035089">
+		["MD5-CAM-1.0.1"] = <"d631f3f7844ded434dd89bb88db85bb4">
 		["build_uid"] = <"66ed3c8a-fd79-3cb7-ae07-bf4c3acc466f">
 	>
 
@@ -56,6 +56,11 @@ definition
 			allow_archetype CLUSTER[at0008] occurrences matches {0..*} matches {    -- Measurements
 				include
 					archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.specimen_measurements\.v1/}
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {    -- Comments
+				value matches {
+					DV_TEXT matches {*}
+				}
 			}
 		}
 	}
@@ -96,6 +101,10 @@ Bulky disease (lymphomas)">
 				["at0008"] = <
 					text = <"Measurements">
 					description = <"To include relevant measurements ">
+				>
+				["at0009"] = <
+					text = <"Comments">
+					description = <"">
 				>
 			>
 		>
