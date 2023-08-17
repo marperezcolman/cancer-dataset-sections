@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3ab7dfbeba1347f5265dab8c5866d020">
+		["MD5-CAM-1.0.1"] = <"51e4cf6a981654e0f369fa20b31d8699">
 		["build_uid"] = <"744ab0ce-4734-3ac0-aa4a-d2c2b1709130">
 	>
 
@@ -155,6 +155,11 @@ definition
 					DV_CODED_TEXT matches {*}
 				}
 			}
+			ELEMENT[at0026] occurrences matches {0..1} matches {    -- Laterality
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
 		}
 	}
 
@@ -256,6 +261,10 @@ ontology
 				>
 				["at0025"] = <
 					text = <"Number of nodes positive">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Laterality">
 					description = <"">
 				>
 			>
