@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a18f3aa07068acc329bc130cc7768a51">
+		["MD5-CAM-1.0.1"] = <"790f0f518769fd6fcb829133d4494a83">
 		["build_uid"] = <"f4e10d68-e8eb-3c1a-a08a-65e254a74a21">
 	>
 
@@ -38,9 +38,10 @@ definition
 					DV_CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Site
+			ELEMENT[at0002] occurrences matches {0..*} matches {    -- Site
 				value matches {
 					DV_CODED_TEXT matches {*}
+					DV_TEXT matches {*}
 				}
 			}
 			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Number
