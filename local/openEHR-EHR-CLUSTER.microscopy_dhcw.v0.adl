@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f8daf416e96f5064fcef2712cb8946a4">
+		["MD5-CAM-1.0.1"] = <"966725627620584860e9645184111235">
 		["build_uid"] = <"744ab0ce-4734-3ac0-aa4a-d2c2b1709130">
 	>
 
@@ -68,7 +68,7 @@ definition
 					DV_CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0009] occurrences matches {0..1} matches {    -- Lesion size
+			ELEMENT[at0009] occurrences matches {0..*} matches {    -- Lesion size
 				value matches {
 					C_DV_QUANTITY <
 						property = <[openehr::122]>
@@ -95,7 +95,7 @@ definition
 					DV_CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0013] occurrences matches {0..1} matches {    -- Margins
+			ELEMENT[at0013] occurrences matches {0..*} matches {    -- Margins
 				value matches {
 					DV_CODED_TEXT matches {*}
 				}
