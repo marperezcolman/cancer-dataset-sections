@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f76cfe2b947a2b1df1f735e18164dab4">
+		["MD5-CAM-1.0.1"] = <"210c4d7a06f3aa0da242165eca3a1e0a">
 		["build_uid"] = <"cafc7c55-f873-3c33-aa09-86aae0ba4708">
 	>
 
@@ -40,9 +40,59 @@ definition
 							DV_CODED_TEXT matches {*}
 						}
 					}
-					allow_archetype CLUSTER[at0003] occurrences matches {0..*} matches {    -- Metastasis
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Subtype
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0015] occurrences matches {0..1} matches {    -- Status
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Date detected
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {    -- Date patient evaluated
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Date reported
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0003] occurrences matches {0..*} matches {    -- Metastasis/Recurrence details
 						include
 							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0006] occurrences matches {0..*} matches {    -- Site
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Morphology of transformation/progression
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- Primary cancer site
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0016] occurrences matches {0..1} matches {    -- Date primary cancer detected
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
 					}
 				}
 			}
@@ -50,7 +100,20 @@ definition
 		protocol matches {
 			ITEM_TREE matches {
 				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Referral
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
 					allow_archetype CLUSTER[at0001] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0013] occurrences matches {0..*} matches {    -- Treating organisation
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {    -- Referring organisation
 						include
 							archetype_id/value matches {/.*/}
 					}
@@ -73,10 +136,63 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Type of progression">
-					description = <"">
+					description = <"Determine if the progression is from a primary cancer or a recurrence">
 				>
 				["at0003"] = <
-					text = <"Metastasis">
+					text = <"Metastasis/Recurrence details">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Date detected">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Date reported">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Site">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Subtype">
+					description = <"Further clarification of type of progression">
+					comment = <"Progression, transformation or recurrence.">
+				>
+				["at0008"] = <
+					text = <"Morphology of transformation/progression">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Description">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Date patient evaluated">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Referral">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Primary cancer site">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Treating organisation">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Referring organisation">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Status">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Date primary cancer detected">
 					description = <"">
 				>
 			>
