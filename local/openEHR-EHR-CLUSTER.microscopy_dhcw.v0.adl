@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"51e4cf6a981654e0f369fa20b31d8699">
+		["MD5-CAM-1.0.1"] = <"f8daf416e96f5064fcef2712cb8946a4">
 		["build_uid"] = <"744ab0ce-4734-3ac0-aa4a-d2c2b1709130">
 	>
 
@@ -160,6 +160,21 @@ definition
 					DV_CODED_TEXT matches {*}
 				}
 			}
+			ELEMENT[at0027] occurrences matches {0..1} matches {    -- Synchronous tumour indicator
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0028] occurrences matches {0..1} matches {    -- Site of synchronous tumour
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0029] occurrences matches {0..1} matches {    -- Neo-adjuvant therapy indicator
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
 		}
 	}
 
@@ -265,6 +280,18 @@ ontology
 				>
 				["at0026"] = <
 					text = <"Laterality">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Synchronous tumour indicator">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Site of synchronous tumour">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Neo-adjuvant therapy indicator">
 					description = <"">
 				>
 			>
