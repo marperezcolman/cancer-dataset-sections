@@ -26,12 +26,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"342c5aa254ae13e0c80bd0526796fd49">
+		["MD5-CAM-1.0.1"] = <"342ba53a3a7ee5350260976d885df5cf">
 		["build_uid"] = <"49dfc1ff-28fe-31c6-8f39-165237d53c02">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- Cancer specific DHCW
+	CLUSTER[at0000] occurrences matches {0..1} matches {    -- Cancer specific DHCW
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Laterality
 				value matches {
