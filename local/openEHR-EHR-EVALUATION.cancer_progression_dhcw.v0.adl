@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6f95f9920bd5522035e051a821040387">
+		["MD5-CAM-1.0.1"] = <"ab499152454d246d662678f6f777bf96">
 		["build_uid"] = <"cafc7c55-f873-3c33-aa09-86aae0ba4708">
 	>
 
@@ -108,7 +108,17 @@ definition
 					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Referral
 						value matches {
 							DV_CODED_TEXT matches {*}
+							DV_TEXT matches {*}
+							DV_IDENTIFIER matches {*}
 						}
+					}
+					allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {    -- Referring organisation
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0018] occurrences matches {0..*} matches {    -- Referring clinician
+						include
+							archetype_id/value matches {/.*/}
 					}
 					allow_archetype CLUSTER[at0001] occurrences matches {0..*} matches {    -- Extension
 						include
@@ -118,7 +128,7 @@ definition
 						include
 							archetype_id/value matches {/.*/}
 					}
-					allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {    -- Referring organisation
+					allow_archetype CLUSTER[at0019] occurrences matches {0..*} matches {    -- Treating clinician
 						include
 							archetype_id/value matches {/.*/}
 					}
@@ -202,6 +212,14 @@ ontology
 				>
 				["at0017"] = <
 					text = <"Comment">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Referring clinician">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Treating clinician">
 					description = <"">
 				>
 			>
