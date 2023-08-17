@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"210c4d7a06f3aa0da242165eca3a1e0a">
+		["MD5-CAM-1.0.1"] = <"eb555c6a9e2a63783d6b8fa4f27446c2">
 		["build_uid"] = <"cafc7c55-f873-3c33-aa09-86aae0ba4708">
 	>
 
@@ -36,11 +36,6 @@ definition
 			ITEM_TREE matches {
 				items cardinality matches {0..*; unordered} matches {
 					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Type of progression
-						value matches {
-							DV_CODED_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Subtype
 						value matches {
 							DV_CODED_TEXT matches {*}
 						}
@@ -136,7 +131,7 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Type of progression">
-					description = <"Determine if the progression is from a primary cancer or a recurrence">
+					description = <"Determine if the progression is from a primary cancer, a recurrence or a transformation">
 				>
 				["at0003"] = <
 					text = <"Metastasis/Recurrence details">
@@ -153,11 +148,6 @@ ontology
 				["at0006"] = <
 					text = <"Site">
 					description = <"">
-				>
-				["at0007"] = <
-					text = <"Subtype">
-					description = <"Further clarification of type of progression">
-					comment = <"Progression, transformation or recurrence.">
 				>
 				["at0008"] = <
 					text = <"Morphology of transformation/progression">
