@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c61ca7f0b8f2cea42d65eda4699b1387">
+		["MD5-CAM-1.0.1"] = <"a18f3aa07068acc329bc130cc7768a51">
 		["build_uid"] = <"f4e10d68-e8eb-3c1a-a08a-65e254a74a21">
 	>
 
@@ -42,6 +42,48 @@ definition
 				value matches {
 					DV_CODED_TEXT matches {*}
 				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Number
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			allow_archetype CLUSTER[at0005] occurrences matches {0..*} matches {    -- Staging
+				include
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype CLUSTER[at0006] occurrences matches {0..*} matches {    -- Treatments
+				include
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype CLUSTER[at0011] occurrences matches {0..*} matches {    -- Other details
+				include
+					archetype_id/value matches {/.*/}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Comment
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0008] occurrences matches {0..1} matches {    -- Date detected
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			allow_archetype CLUSTER[at0007] occurrences matches {0..*} matches {    -- Measurements
+				include
+					archetype_id/value matches {/.*/}
+			}
+			ELEMENT[at0010] occurrences matches {0..1} matches {    -- Concurrent
+				value matches {
+					DV_CODED_TEXT matches {*}
+					DV_BOOLEAN matches {*}
+					DV_TEXT matches {*}
+				}
+			}
+			allow_archetype CLUSTER[at0009] occurrences matches {0..*} matches {    -- Diagnosis
+				include
+					archetype_id/value matches {/.*/}
 			}
 		}
 	}
@@ -64,6 +106,42 @@ Bulky disease (lymphomas)">
 				["at0002"] = <
 					text = <"Site">
 					description = <"Determine body sites where there are metastasis/recurrences.">
+				>
+				["at0003"] = <
+					text = <"Number">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Comment">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Staging">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Treatments">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Measurements">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Date detected">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Diagnosis">
+					description = <"To be used to include specific details and description of how the diagnosis was made (ie: radiology, pathology, clinical examination)">
+				>
+				["at0010"] = <
+					text = <"Concurrent">
+					description = <"Describe if the metastasis was identified concurrently with the primary cancer or as part of the evolution of the disease.">
+				>
+				["at0011"] = <
+					text = <"Other details">
+					description = <"">
 				>
 			>
 		>
