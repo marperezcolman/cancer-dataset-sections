@@ -1,0 +1,277 @@
+archetype (adl_version=1.4; uid=16239ba7-7660-4af3-a6e5-9e08fa315c08)
+	openEHR-EHR-CLUSTER.cancer_diagnosis_gel.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2017-03-23">
+		["name"] = <"Hildegard Franke">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["email"] = <"hildi@freshehr.com">
+	>
+	lifecycle_state = <"in_development">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"For the capture and reporting of cancer diagnosis specific details not available elsewhere in the context of Genomics England Cancer datasets.">
+			copyright = <"© Clinical Models UK">
+			use = <"Use to record metastatic site, tumour laterality, morphology, topography and recurrence indicator as part of a cancer diagnosis record in the Genomics England Cancer dataset. This cluster is intended to be used inside a Problem/Diagnosis archetype.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"UK Clinical Models">
+		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"UK Clinical Models">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"c3cbc035101c66efde289401a04ae0c0">
+		["build_uid"] = <"7b219b70-e6b8-4c9b-b227-9de5193e888b">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Cancer diagnosis reporting
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0013] occurrences matches {0..1} matches {    -- Recurrence indicator
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0014,    -- YL: Yes, including local recurrence
+							at0015,    -- YD: Yes, not including local recurrence
+							at0016]    -- NN: No, not recurrence
+						}
+					}
+				}
+			}
+			ELEMENT[at0001] occurrences matches {0..*} matches {    -- Morphology
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Topography
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0017] occurrences matches {0..*} matches {    -- Metastatic site
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0018,    -- 02: Brain
+							at0019,    -- 03: Liver
+							at0020,    -- 04: Lung
+							at0021,    -- 06: Multiple metastatic sites
+							at0022,    -- 07: Unknown metastatic site
+							at0023,    -- 08: Skin
+							at0024,    -- 09: Distant lymph nodes
+							at0025,    -- 10: Bone (excluding Bone Marrow)
+							at0026,    -- 11: Bone marrow
+							at0027]    -- 99: Other metastatic site
+						}
+					}
+				}
+			}
+			ELEMENT[at0028] occurrences matches {0..1} matches {    -- Tumour laterality
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0029,    -- Bilateral
+							at0030,    -- Right
+							at0031,    -- Left
+							at0032,    -- Midline
+							at0033,    -- Not known
+							at0034]    -- Not applicable
+						}
+					}
+				}
+			}
+			ELEMENT[at0035] occurrences matches {0..1} matches {    -- Basis of diagnosis
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0039,    -- 0: Death Certificate
+							at0040,    -- 1: Clinical
+							at0041,    -- 2: Clinical Investigation
+							at0042,    -- 4: Specific tumour markers
+							at0043,    -- 5: Cytology
+							at0044,    -- 6: Histology of a metastasis
+							at0045,    -- 7: Histology of a primary tumour
+							at0046]    -- 9: Unknown
+						}
+					}
+				}
+			}
+			ELEMENT[at0038] occurrences matches {0..1} matches {    -- Clonal Plasma Cell %
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::380]>
+						list = <
+							["1"] = <
+								units = <"%">
+							>
+						>
+					>
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Cancer diagnosis reporting">
+					description = <"Local cluster to capture specific details (not available elsewhere) for cancer diagnosis in Genomics England Cancer datasets.">
+				>
+				["at0001"] = <
+					text = <"Morphology">
+					description = <"The morphology code for the diagnosed cancer as defined by ICDO3 or SNOMED CT or SNOMED RT. Terminology mappings should be used.">
+					comment = <"The SNOMED version should be captured as part of the code string.">
+				>
+				["at0002"] = <
+					text = <"Topography">
+					description = <"The topography code for the diagnosed cancer as defined by ICDO3 or SNOMED CT or SNOMED RT. Terminology mappings should be used.">
+					comment = <"The SNOMED version should be captured as part of the code string.">
+				>
+				["at0013"] = <
+					text = <"Recurrence indicator">
+					description = <"An indication of whether a diagnosis of recurrence has been recorded for which a new Cancer Care Plan is required.">
+				>
+				["at0014"] = <
+					text = <"YL: Yes, including local recurrence">
+					description = <"Yes, including local recurrence.">
+				>
+				["at0015"] = <
+					text = <"YD: Yes, not including local recurrence">
+					description = <"Yes, not including local recurrence.">
+				>
+				["at0016"] = <
+					text = <"NN: No, not recurrence">
+					description = <"No, not recurrence.">
+				>
+				["at0017"] = <
+					text = <"Metastatic site">
+					description = <"The site of the metastatic disease, if any, at diagnosis.">
+				>
+				["at0018"] = <
+					text = <"02: Brain">
+					description = <"Metastatic disease is located in the brain.">
+				>
+				["at0019"] = <
+					text = <"03: Liver">
+					description = <"Metastatic disease is located in the liver.">
+				>
+				["at0020"] = <
+					text = <"04: Lung">
+					description = <"Metastatic disease is located in the lung.">
+				>
+				["at0021"] = <
+					text = <"06: Multiple metastatic sites">
+					description = <"Metastatic disease is located in multiple sites.">
+				>
+				["at0022"] = <
+					text = <"07: Unknown metastatic site">
+					description = <"The site of metastatic disease is unknown.">
+				>
+				["at0023"] = <
+					text = <"08: Skin">
+					description = <"Metastatic disease is located in the skin.">
+				>
+				["at0024"] = <
+					text = <"09: Distant lymph nodes">
+					description = <"Metastatic disease is located in distant lymph nodes.">
+				>
+				["at0025"] = <
+					text = <"10: Bone (excluding Bone Marrow)">
+					description = <"Metastatic disease is located in the bone excluding bone marrow.">
+				>
+				["at0026"] = <
+					text = <"11: Bone marrow">
+					description = <"Metastatic disease is located in the bone marrow.">
+				>
+				["at0027"] = <
+					text = <"99: Other metastatic site">
+					description = <"Metastatic disease is located in another site.">
+				>
+				["at0028"] = <
+					text = <"Tumour laterality">
+					description = <"Tumour laterality identifies the side of the body for a tumour relating to paired organs within a PATIENT based on the evidence from a pathological examination.">
+				>
+				["at0029"] = <
+					text = <"Bilateral">
+					description = <"The tumour is situated on both sides of the body.">
+				>
+				["at0030"] = <
+					text = <"Right">
+					description = <"The tumour is situated on the right side of the body.">
+				>
+				["at0031"] = <
+					text = <"Left">
+					description = <"The tumour is situated on the left side of the body.">
+				>
+				["at0032"] = <
+					text = <"Midline">
+					description = <"The tumour is situated midline.">
+				>
+				["at0033"] = <
+					text = <"Not known">
+					description = <"Tumour laterality is unknown.">
+				>
+				["at0034"] = <
+					text = <"Not applicable">
+					description = <"Tumour laterality is not applicable.">
+				>
+				["at0035"] = <
+					text = <"Basis of diagnosis">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Clonal Plasma Cell %">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"0: Death Certificate">
+					description = <"Death Certificate: The only information available is from a death certificate">
+				>
+				["at0040"] = <
+					text = <"1: Clinical">
+					description = <"Diagnosis made before death but without the benefit of any of the following (2-7)">
+				>
+				["at0041"] = <
+					text = <"2: Clinical Investigation">
+					description = <"Clinical Investigation: Includes all diagnostic techniques (e.g. X-rays, endoscopy, imaging, ultrasound, exploratory surgery and autopsy) without a tissue diagnosis">
+				>
+				["at0042"] = <
+					text = <"4: Specific tumour markers">
+					description = <"Specific tumour markers: Includes biochemical and/or immunological markers which are specific for a tumour site">
+				>
+				["at0043"] = <
+					text = <"5: Cytology">
+					description = <"Cytology: Examination of cells whether from a primary or secondary site, including fluids aspirated using endoscopes or needles. Also including microscopic examination of peripheral blood films and trephine bone marrow aspirates">
+				>
+				["at0044"] = <
+					text = <"6: Histology of a metastasis">
+					description = <"Histology of a metastasis: Histological examination of tissues from a metastasis, including autopsy specimens">
+				>
+				["at0045"] = <
+					text = <"7: Histology of a primary tumour">
+					description = <"Histology of a primary tumour: Histological examination of tissue from the primary tumour, however obtained, including all cutting and bone marrow biopsies. Also includes autopsy specimens of a primary tumour">
+				>
+				["at0046"] = <
+					text = <"9: Unknown">
+					description = <"Unknown: No information on how the diagnosis has been made (e.g. PAS or HISS record only)">
+				>
+			>
+		>
+	>
