@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"966725627620584860e9645184111235">
+		["MD5-CAM-1.0.1"] = <"1403556c4d7cc5cad45649426a8b1944">
 		["build_uid"] = <"744ab0ce-4734-3ac0-aa4a-d2c2b1709130">
 	>
 
@@ -133,6 +133,21 @@ definition
 			ELEMENT[at0016] occurrences matches {0..1} matches {    -- MLH1 Nuclear Expression
 				value matches {
 					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0030] occurrences matches {0..*} matches {    -- Nuclear expression
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+				name matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0031,    -- MLH1 nuclear expression
+							at0032,    -- PMS2 nuclear expression
+							at0033]    -- MSH2 nuclear expression
+						}
+					}
 				}
 			}
 			ELEMENT[at0017] occurrences matches {0..1} matches {    -- PMS2 Nuclear Expression
@@ -292,6 +307,22 @@ ontology
 				>
 				["at0029"] = <
 					text = <"Neo-adjuvant therapy indicator">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Nuclear expression">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"MLH1 nuclear expression">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"PMS2 nuclear expression">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"MSH2 nuclear expression">
 					description = <"">
 				>
 			>
