@@ -25,7 +25,7 @@
       "sem_ver" : "0.1.7",
       "build_uid" : "",
       "PARENT:MD5-CAM-1.0.1" : "A0DA8D01B967B2B05FC941F6E389A94B",
-      "MD5-CAM-1.0.1" : "274ca324d158dc9b9e9ed6b8f8be7e09"
+      "MD5-CAM-1.0.1" : "48fccc43e5cdf77a2f521dc67dd44aae"
     },
     "details" : {
       "sv" : {
@@ -149,7 +149,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "CDS -7- Progression and recurrence",
+          "text" : "CDS -6- Progression and recurrence",
           "description" : "Generic document containing a summary of health information about an individual."
         }
       },
