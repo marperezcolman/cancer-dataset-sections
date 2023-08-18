@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d3dfb008b0ed2d20bac1d8b0b02cf38c">
+		["MD5-CAM-1.0.1"] = <"4a33707de6bc145a47574be35079a937">
 		["build_uid"] = <"b825733e-6e55-30ce-8141-fb140616aad2">
 	>
 
@@ -38,12 +38,12 @@ definition
 					DV_CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Site
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Form subtype/Specialty
 				value matches {
 					DV_CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Form subtype/Specialty
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Site
 				value matches {
 					DV_CODED_TEXT matches {*}
 				}
@@ -64,9 +64,18 @@ definition
 					}
 				}
 			}
+			allow_archetype CLUSTER[at0008] occurrences matches {0..*} matches {    -- SRC
+				include
+					archetype_id/value matches {/.*/}
+			}
 			allow_archetype CLUSTER[at0007] occurrences matches {0..*} matches {    -- Author
 				include
 					archetype_id/value matches {/.*/}
+			}
+			ELEMENT[at0010] occurrences matches {0..1} matches {    -- Highly sensitive
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
 			}
 		}
 	}
@@ -105,6 +114,14 @@ ontology
 				>
 				["at0007"] = <
 					text = <"Author">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"SRC">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Highly sensitive">
 					description = <"">
 				>
 			>
