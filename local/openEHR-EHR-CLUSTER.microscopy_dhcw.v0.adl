@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"14fe4971310320383275033ec8fbde8a">
+		["MD5-CAM-1.0.1"] = <"9c54be7c04483d5077e3c72633cbd23b">
 		["build_uid"] = <"744ab0ce-4734-3ac0-aa4a-d2c2b1709130">
 	>
 
@@ -116,14 +116,14 @@ definition
 					DV_CODED_TEXT matches {*}
 				}
 			}
-			allow_archetype CLUSTER[at0037] occurrences matches {0..*} matches {    -- Site specific details
-				include
-					archetype_id/value matches {/.*/}
-			}
 			ELEMENT[at0029] occurrences matches {0..1} matches {    -- Neo-adjuvant therapy indicator
 				value matches {
 					DV_CODED_TEXT matches {*}
 				}
+			}
+			allow_archetype CLUSTER[at0037] occurrences matches {0..*} matches {    -- Site specific details
+				include
+					archetype_id/value matches {/.*/}
 			}
 			allow_archetype CLUSTER[at0039] occurrences matches {0..*} matches {    -- Laterality
 				include
