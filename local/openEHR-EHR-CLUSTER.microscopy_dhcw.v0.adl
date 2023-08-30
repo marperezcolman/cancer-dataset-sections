@@ -26,12 +26,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9c54be7c04483d5077e3c72633cbd23b">
+		["MD5-CAM-1.0.1"] = <"e9fe273d3c0b81082578248c2a88a113">
 		["build_uid"] = <"744ab0ce-4734-3ac0-aa4a-d2c2b1709130">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- microscopy dhcw
+	CLUSTER[at0000] occurrences matches {0..1} matches {    -- Microscopy
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0007] occurrences matches {0..1} matches {    -- Type of sample (Pathology investigation type)
 				value matches {
@@ -137,7 +137,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"microscopy dhcw">
+					text = <"Microscopy">
 					description = <"microscopy dhcw">
 				>
 				["at0007"] = <
