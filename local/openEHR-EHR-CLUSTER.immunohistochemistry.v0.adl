@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"bb9c75c8a312e58102747aaa470e9a8a">
+		["MD5-CAM-1.0.1"] = <"470ddd46a1304eca69e363319537916d">
 		["build_uid"] = <"854b7c80-5a21-3845-834d-b2419a63c02a">
 	>
 
@@ -57,6 +57,14 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- DNA/gene marker
+				value matches {
+					DV_CODED_TEXT matches {*}
+					DV_PROPORTION matches {*}
+					DV_QUANTITY matches {*}
+					DV_TEXT matches {*}
+				}
+			}
 		}
 	}
 
@@ -79,6 +87,11 @@ ontology
 				["at0005"] = <
 					text = <"Nuclear marker">
 					description = <"">
+				>
+				["at0006"] = <
+					text = <"DNA/gene marker">
+					description = <"">
+					comment = <"ie: Microsatellite instability (MSI) tested via IHC - not to be used for MSI tested via PCR (polymerase chain reaction).">
 				>
 			>
 		>
