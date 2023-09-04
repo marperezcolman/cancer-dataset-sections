@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"342ba53a3a7ee5350260976d885df5cf">
+		["MD5-CAM-1.0.1"] = <"1f7cb68c62fb9383bed0ce535a2064a3">
 		["build_uid"] = <"49dfc1ff-28fe-31c6-8f39-165237d53c02">
 	>
 
@@ -34,6 +34,11 @@ definition
 	CLUSTER[at0000] occurrences matches {0..1} matches {    -- Cancer specific DHCW
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Laterality
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Basis of diagnosis
 				value matches {
 					DV_CODED_TEXT matches {*}
 				}
@@ -51,6 +56,10 @@ ontology
 				>
 				["at0001"] = <
 					text = <"Laterality">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Basis of diagnosis">
 					description = <"">
 				>
 			>
