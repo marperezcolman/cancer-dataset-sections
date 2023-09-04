@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"bdc4882368e1d7cdf458d202ce2784b1">
+		["MD5-CAM-1.0.1"] = <"ab2d6045cbfb0119bff4554fa13243e7">
 		["build_uid"] = <"788e5c7a-9125-3a29-93a8-3b4179901166">
 	>
 
@@ -43,6 +43,11 @@ definition
 					DV_CODED_TEXT matches {*}
 				}
 			}
+			ELEMENT[at0027] occurrences matches {0..*} matches {    -- Lesion size
+				value matches {
+					DV_QUANTITY matches {*}
+				}
+			}
 			allow_archetype CLUSTER[at0013] occurrences matches {0..*} matches {    -- Laterality
 				include
 					archetype_id/value matches {/.*/}
@@ -57,16 +62,21 @@ definition
 					DV_CODED_TEXT matches {*}
 				}
 			}
-			CLUSTER[at0024] occurrences matches {0..1} matches {    -- Invasion (organ)
+			CLUSTER[at0024] occurrences matches {0..1} matches {    -- Extent (organ)
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0025] occurrences matches {0..1} matches {    -- Capsule invasion
+					ELEMENT[at0028] occurrences matches {0..*} matches {    -- Dysplasia/In situ neoplasia classification
 						value matches {
 							DV_CODED_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0026] occurrences matches {0..1} matches {    -- Depth of invasion
+					ELEMENT[at0026] occurrences matches {0..*} matches {    -- Depth of invasion
 						value matches {
 							DV_QUANTITY matches {*}
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0025] occurrences matches {0..1} matches {    -- Capsule status
+						value matches {
 							DV_CODED_TEXT matches {*}
 						}
 					}
@@ -124,7 +134,7 @@ definition
 					DV_CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0021] occurrences matches {0..1} matches {    -- Neoadjuvant therapy indicator
+			ELEMENT[at0021] occurrences matches {0..*} matches {    -- Neoadjuvant therapy indicator
 				value matches {
 					DV_CODED_TEXT matches {*}
 				}
@@ -224,7 +234,7 @@ ontology
 				>
 				["at0021"] = <
 					text = <"Neoadjuvant therapy indicator">
-					description = <"">
+					description = <"Describe evidence of neoadjuvant therapy like necrosis, scarring or regression.">
 				>
 				["at0022"] = <
 					text = <"Nodes (per site)">
@@ -235,16 +245,25 @@ ontology
 					description = <"">
 				>
 				["at0024"] = <
-					text = <"Invasion (organ)">
+					text = <"Extent (organ)">
 					description = <"">
 				>
 				["at0025"] = <
-					text = <"Capsule invasion">
+					text = <"Capsule status">
 					description = <"">
 				>
 				["at0026"] = <
 					text = <"Depth of invasion">
 					description = <"Describe thickness in mm (ie melanoma) or depth in relation to basal membrane or other relevant structure within the organ being analysed.">
+				>
+				["at0027"] = <
+					text = <"Lesion size">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Dysplasia/In situ neoplasia classification">
+					description = <"">
+					comment = <"ie CIN, CGIN, VAIN, etc.">
 				>
 			>
 		>
