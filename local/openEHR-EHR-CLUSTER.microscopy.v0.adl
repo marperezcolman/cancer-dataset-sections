@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ab2d6045cbfb0119bff4554fa13243e7">
+		["MD5-CAM-1.0.1"] = <"cbcdbce183c0471a8ccbd9f22af27251">
 		["build_uid"] = <"788e5c7a-9125-3a29-93a8-3b4179901166">
 	>
 
@@ -57,8 +57,25 @@ definition
 					DV_CODED_TEXT matches {*}
 				}
 			}
+			ELEMENT[at0032] occurrences matches {0..1} matches {    -- Mitotic count
+				value matches {
+					DV_QUANTITY matches {*}
+				}
+			}
+			ELEMENT[at0033] occurrences matches {0..1} matches {    -- Necrosis
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
 			ELEMENT[at0015] occurrences matches {0..*} matches {    -- Margins
 				value matches {
+					DV_CODED_TEXT matches {*}
+					DV_QUANTITY matches {*}
+				}
+			}
+			ELEMENT[at0029] occurrences matches {0..1} matches {    -- Healthy tissue rim
+				value matches {
+					DV_QUANTITY matches {*}
 					DV_CODED_TEXT matches {*}
 				}
 			}
@@ -214,7 +231,12 @@ ontology
 				>
 				["at0015"] = <
 					text = <"Margins">
-					description = <"">
+					description = <"Description of the margin in length or classification.
+Multiple for different types of margins.">
+					comment = <"ie: Affected/not affected/contacts. or Length in mm.
+Proximal margin vs lateral margin, etc.
+
+">
 				>
 				["at0017"] = <
 					text = <"Microscopy report">
@@ -264,6 +286,19 @@ ontology
 					text = <"Dysplasia/In situ neoplasia classification">
 					description = <"">
 					comment = <"ie CIN, CGIN, VAIN, etc.">
+				>
+				["at0029"] = <
+					text = <"Healthy tissue rim">
+					description = <"Description of healthy tissue.">
+					comment = <"For example thickness of uninvolved cervical stroma in cervical neoplasias.">
+				>
+				["at0032"] = <
+					text = <"Mitotic count">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Necrosis">
+					description = <"">
 				>
 			>
 		>
