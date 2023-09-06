@@ -26,12 +26,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f28370507041dd56dbee55b08820873d">
+		["MD5-CAM-1.0.1"] = <"55d557f416df24e45a7ae416b9e06076">
 		["build_uid"] = <"511079ca-738a-3f7a-8e1d-2d3448701665">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- NET specific
+	CLUSTER[at0000] matches {    -- NET specific pathology
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Histological Type and Grade
 				value matches {
@@ -51,7 +51,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"NET specific">
+					text = <"NET specific pathology">
 					description = <"NET specific">
 				>
 				["at0001"] = <
