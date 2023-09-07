@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1f7cb68c62fb9383bed0ce535a2064a3">
+		["MD5-CAM-1.0.1"] = <"a19713a9e2050ffed39300219efbedf3">
 		["build_uid"] = <"49dfc1ff-28fe-31c6-8f39-165237d53c02">
 	>
 
@@ -41,6 +41,11 @@ definition
 			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Basis of diagnosis
 				value matches {
 					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Bone marrow blasts
+				value matches {
+					DV_QUANTITY matches {*}
 				}
 			}
 		}
@@ -60,6 +65,10 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Basis of diagnosis">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Bone marrow blasts">
 					description = <"">
 				>
 			>
