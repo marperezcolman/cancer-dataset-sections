@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.2.0",
+      "sem_ver" : "0.2.1",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "2b896708ebe30a9f71c9210f19a24356",
+      "MD5-CAM-1.0.1" : "88f09547ecd0d16fa3bd69656a513e66",
       "PARENT:MD5-CAM-1.0.1" : "A0DA8D01B967B2B05FC941F6E389A94B"
     },
     "details" : {
@@ -336,6 +336,12 @@
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "items",
                     "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0004.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
                       "nodeId" : "at0091.1",
@@ -880,6 +886,13 @@
             "text" : "Imaging outcome",
             "description" : "Narrative concise, clinically relevant interpretation of all imaging findings, and include a comparison with previous studies where appropriate.",
             "comment" : "Also referred to as 'Opinion' or 'Conclusion'. Equivalent to DiagnosticReport.conclusion in FHIR."
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004.1",
+            "text" : "Cancer imaging ? Can it be split",
+            "description" : "The name of the imaging examination performed.",
+            "comment" : "For example: 'CT abdomen'; 'Doppler ultrasound of renal artery' or 'Plain chest xray'. Coding with a terminology is strongly recommended, preferably a term specifying both modality and anatomical location, where possible. Examples of candidate terminologies are the LOINC Imaging Document Codes, RadLex Playbook or SNOMED-CT. Equivalent to DiagnosticReport.code in FHIR."
           }
         },
         "nb" : {
