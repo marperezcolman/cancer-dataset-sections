@@ -26,16 +26,116 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"70404a2faa59ed4ba234cbc4876e462b">
+		["MD5-CAM-1.0.1"] = <"b723297d7a84c812796107ced86c6eab">
 		["build_uid"] = <"019fb36b-5d0e-358b-bbe4-5bd0ddb31648">
 	>
 
 definition
 	CLUSTER[at0000] matches {    -- Haematology specific diagnosis
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Transfusion dependant
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- ?? Bone marrow blasts
+				value matches {
+					DV_QUANTITY matches {*}
+				}
+			}
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Transfusion dependent
 				value matches {
 					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Number of abnormal nodal areas
+				value matches {
+					DV_QUANTITY matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Number of extranodal sites code
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Primary extranodal site
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Kidney/Adrenal involvement
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- ALK fusion status for ALCL
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0008] occurrences matches {0..*} matches {    -- Gene present
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0009] occurrences matches {0..*} matches {    -- Gene mutated
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0010] occurrences matches {0..1} matches {    -- FAB classification
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0011] occurrences matches {0..1} matches {    -- AML risk factors
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0012] occurrences matches {0..1} matches {    -- Cytogenetic marker
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0014] occurrences matches {0..*} matches {    -- Molecular genetic result
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0015] occurrences matches {0..1} matches {    -- Extramedullary disease
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0016] occurrences matches {0..1} matches {    -- BCR level ABL ratio at 12 months
+				value matches {
+					DV_QUANTITY matches {*}
+				}
+			}
+			ELEMENT[at0017] occurrences matches {0..1} matches {    -- Molecular response at 12 months
+				value matches {
+					DV_QUANTITY matches {*}
+				}
+			}
+			ELEMENT[at0018] occurrences matches {0..1} matches {    -- Splenomegaly indicator
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0019] occurrences matches {0..1} matches {    -- FISH
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0020] occurrences matches {0..1} matches {    -- Mixed phenotype symptoms
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0021] occurrences matches {0..1} matches {    -- EGIL score
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0013] occurrences matches {0..*} matches {    -- Other
+				value matches {
+					DV_TEXT matches {*}
 				}
 			}
 		}
@@ -50,7 +150,87 @@ ontology
 					description = <"Haematology specific diagnosis">
 				>
 				["at0001"] = <
-					text = <"Transfusion dependant">
+					text = <"Transfusion dependent">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Number of abnormal nodal areas">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"?? Bone marrow blasts">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Number of extranodal sites code">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Primary extranodal site">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Kidney/Adrenal involvement">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"ALK fusion status for ALCL">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Gene present">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Gene mutated">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"FAB classification">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"AML risk factors">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Cytogenetic marker">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Other">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Molecular genetic result">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Extramedullary disease">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"BCR level ABL ratio at 12 months">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Molecular response at 12 months">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Splenomegaly indicator">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"FISH">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Mixed phenotype symptoms">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"EGIL score">
 					description = <"">
 				>
 			>
