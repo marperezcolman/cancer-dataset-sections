@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"fa616e5d8b94e4daa45a27259a81d0ac">
+		["MD5-CAM-1.0.1"] = <"c25486db6b8a0595ebe762d24f1f2723">
 		["build_uid"] = <"7a91e571-82f6-30c4-8092-dc9901e779c2">
 	>
 
@@ -68,6 +68,11 @@ definition
 					DV_CODED_TEXT matches {*}
 				}
 			}
+			ELEMENT[at0008] occurrences matches {0..*} matches {    -- ? biomarker test
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
 		}
 	}
 
@@ -105,6 +110,10 @@ ontology
 				>
 				["at0007"] = <
 					text = <"Serotonin test">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"? biomarker test">
 					description = <"">
 				>
 			>
