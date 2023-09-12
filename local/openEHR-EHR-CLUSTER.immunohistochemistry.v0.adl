@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"470ddd46a1304eca69e363319537916d">
+		["MD5-CAM-1.0.1"] = <"1db63e4fefa51698155ca2d78ed7f90d">
 		["build_uid"] = <"854b7c80-5a21-3845-834d-b2419a63c02a">
 	>
 
@@ -41,7 +41,7 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Cytoplasmic marker
+			ELEMENT[at0004] occurrences matches {0..*} matches {    -- Cytoplasmic marker
 				value matches {
 					DV_CODED_TEXT matches {*}
 					DV_PROPORTION matches {*}
@@ -49,7 +49,7 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Nuclear marker
+			ELEMENT[at0005] occurrences matches {0..*} matches {    -- Nuclear marker
 				value matches {
 					DV_CODED_TEXT matches {*}
 					DV_PROPORTION matches {*}
@@ -57,7 +57,7 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0006] occurrences matches {0..1} matches {    -- DNA/gene marker
+			ELEMENT[at0006] occurrences matches {0..*} matches {    -- DNA/gene marker
 				value matches {
 					DV_CODED_TEXT matches {*}
 					DV_PROPORTION matches {*}
