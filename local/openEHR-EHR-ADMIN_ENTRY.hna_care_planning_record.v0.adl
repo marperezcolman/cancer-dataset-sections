@@ -26,26 +26,26 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"30a84d4fe93c73f44509819d67d0cdb8">
+		["MD5-CAM-1.0.1"] = <"7a0317d4705cdd09c569e6f0e7838959">
 		["build_uid"] = <"d77074f6-a390-3819-af76-5a16c377aa7a">
 	>
 
 definition
-	ADMIN_ENTRY[at0000] matches {    -- hna_care_planning_record
+	ADMIN_ENTRY[at0000] matches {    -- HNA care planning
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0002] occurrences matches {0..1} matches {    -- HNA completed date
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- HNA care planning completed date
 						value matches {
 							DV_DATE_TIME matches {*}
 						}
 					}
-					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Point of pathway
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- Care planning offered
 						value matches {
 							DV_CODED_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Status
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Point of pathway
 						value matches {
 							DV_CODED_TEXT matches {*}
 						}
@@ -65,7 +65,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"hna_care_planning_record">
+					text = <"HNA care planning">
 					description = <"HNA record">
 				>
 				["at0001"] = <
@@ -73,19 +73,19 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"HNA completed date">
+					text = <"HNA care planning completed date">
 					description = <"">
 				>
 				["at0003"] = <
 					text = <"Point of pathway">
 					description = <"">
 				>
-				["at0004"] = <
-					text = <"Status">
-					description = <"">
-				>
 				["at0005"] = <
 					text = <"Role of staff member">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Care planning offered">
 					description = <"">
 				>
 			>
