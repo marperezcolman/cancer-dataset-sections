@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"89bcd54d2ccff3c659b16fdd8524ad38">
+		["MD5-CAM-1.0.1"] = <"8d42d7bb13805da2d4caf7995a1b7f50">
 		["build_uid"] = <"744ab0ce-4734-3ac0-aa4a-d2c2b1709130">
 	>
 
@@ -125,10 +125,6 @@ definition
 				include
 					archetype_id/value matches {/.*/}
 			}
-			allow_archetype CLUSTER[at0039] occurrences matches {0..*} matches {    -- Laterality
-				include
-					archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.reporting_laterality_dhcw\.v0/}
-			}
 		}
 	}
 
@@ -214,10 +210,6 @@ ontology
 				>
 				["at0038"] = <
 					text = <"Invasion (Cancer vascular/lymphatic invasion)">
-					description = <"">
-				>
-				["at0039"] = <
-					text = <"Laterality">
 					description = <"">
 				>
 			>
