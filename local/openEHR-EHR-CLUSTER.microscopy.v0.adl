@@ -26,19 +26,14 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"cbcdbce183c0471a8ccbd9f22af27251">
+		["MD5-CAM-1.0.1"] = <"14a53ff0f6ed43790f486652a9f888fd">
 		["build_uid"] = <"788e5c7a-9125-3a29-93a8-3b4179901166">
 	>
 
 definition
 	CLUSTER[at0000] matches {    -- Microscopy
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Date of sample
-				value matches {
-					DV_DATE_TIME matches {*}
-				}
-			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Type of sample
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- specimen nature
 				value matches {
 					DV_CODED_TEXT matches {*}
 				}
@@ -48,18 +43,9 @@ definition
 					DV_QUANTITY matches {*}
 				}
 			}
-			allow_archetype CLUSTER[at0013] occurrences matches {0..*} matches {    -- Laterality
-				include
-					archetype_id/value matches {/.*/}
-			}
 			ELEMENT[at0003] occurrences matches {0..*} matches {    -- Grade of differentiation
 				value matches {
 					DV_CODED_TEXT matches {*}
-				}
-			}
-			ELEMENT[at0032] occurrences matches {0..1} matches {    -- Mitotic count
-				value matches {
-					DV_QUANTITY matches {*}
 				}
 			}
 			ELEMENT[at0033] occurrences matches {0..1} matches {    -- Necrosis
@@ -181,12 +167,8 @@ ontology
 					text = <"Microscopy">
 					description = <"microscopy">
 				>
-				["at0001"] = <
-					text = <"Date of sample">
-					description = <"">
-				>
 				["at0002"] = <
-					text = <"Type of sample">
+					text = <"specimen nature">
 					description = <"">
 				>
 				["at0003"] = <
@@ -219,10 +201,6 @@ ontology
 				>
 				["at0012"] = <
 					text = <"Immunohistochemistry">
-					description = <"">
-				>
-				["at0013"] = <
-					text = <"Laterality">
 					description = <"">
 				>
 				["at0014"] = <
@@ -291,10 +269,6 @@ Proximal margin vs lateral margin, etc.
 					text = <"Healthy tissue rim">
 					description = <"Description of healthy tissue.">
 					comment = <"For example thickness of uninvolved cervical stroma in cervical neoplasias.">
-				>
-				["at0032"] = <
-					text = <"Mitotic count">
-					description = <"">
 				>
 				["at0033"] = <
 					text = <"Necrosis">
