@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a19713a9e2050ffed39300219efbedf3">
+		["MD5-CAM-1.0.1"] = <"857758c5aa3d05eef17c8b38a70a5d28">
 		["build_uid"] = <"49dfc1ff-28fe-31c6-8f39-165237d53c02">
 	>
 
@@ -46,6 +46,11 @@ definition
 			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Bone marrow blasts
 				value matches {
 					DV_QUANTITY matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Banked tissue at diagnosis
+				value matches {
+					DV_CODED_TEXT matches {*}
 				}
 			}
 		}
@@ -69,6 +74,10 @@ ontology
 				>
 				["at0003"] = <
 					text = <"Bone marrow blasts">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Banked tissue at diagnosis">
 					description = <"">
 				>
 			>
