@@ -1,0 +1,2995 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "d3442b69-917c-41fb-9c49-35d7ef3a6d84",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "date" : "2023-07-15"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "unmanaged"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "",
+      "custodian_organisation" : "",
+      "original_namespace" : "",
+      "original_publisher" : "",
+      "custodian_namespace" : "",
+      "sem_ver" : "0.1.24",
+      "build_uid" : "",
+      "MD5-CAM-1.0.1" : "b0bbf86b99d38a4f627e6decbeabe033",
+      "original_language" : "ISO_639-1::en"
+    },
+    "details" : {
+      "en" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "en"
+        },
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "nb" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nb"
+        },
+        "originalResourceUri" : { },
+        "otherDetails" : {
+          "notes" : "Generated automatically by Adl Designer"
+        }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-COMPOSITION.review.v0",
+  "differential" : false,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-COMPOSITION.t_review.v0"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "COMPOSITION",
+    "occurrences" : "1..1",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "category",
+      "existence" : "1..1",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "DV_CODED_TEXT",
+        "occurrences" : "1..1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "defining_code",
+          "existence" : "1..1",
+          "children" : [ {
+            "@type" : "C_TERMINOLOGY_CODE",
+            "rmTypeName" : "CODE_PHRASE",
+            "occurrences" : "1..1",
+            "terminologyId" : {
+              "value" : "openehr"
+            },
+            "constraint" : [ "433" ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    }, {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "context",
+      "existence" : "0..1",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "EVENT_CONTEXT",
+        "occurrences" : "1..1",
+        "nodeId" : "at0001",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      } ]
+    }, {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "content",
+      "existence" : "0..1",
+      "children" : [ {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "EVALUATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-tumour_staging-000.v0",
+        "referenceType" : "archetypeOverlay"
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "en" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "CDS - Tumour staging section",
+          "description" : "Composition for the recording of the details of a formal review of a subject's clinical situation or any specific aspect of their clinical care."
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Review",
+          "description" : "Composition for the recording of the details of a formal review of a subject's clinical situation or any specific aspect of their clinical care."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Event Context",
+          "description" : "*"
+        }
+      },
+      "nb" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "CDS - Tumour staging section",
+          "description" : "Komposisjon for å registrere detaljer om en formell vurdering av den kliniske situasjonen eller andre aspekter ved den klinisk omsorgen hos et individ."
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Vurdering",
+          "description" : "Komposisjon for å registrere detaljer om en formell vurdering av den kliniske situasjonen eller andre aspekter ved den klinisk omsorgen hos et individ."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Hendelseskontekst",
+          "description" : "*"
+        }
+      }
+    },
+    "termBindings" : { },
+    "terminologyExtracts" : { },
+    "valueSets" : { }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "24ece985-4ae6-327c-8459-e7ea48288622",
+  "rmName" : "openehr",
+  "rmRelease" : "1.1.0",
+  "generated" : true,
+  "templateId" : "CDS - Tumour staging section",
+  "otherMetaData" : { },
+  "templateOverlays" : [ {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "27c31256-015b-4b60-b58e-8586c2d0dea8",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : { },
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.tumour_staging.v0",
+    "differential" : false,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-tumour_staging-000.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "occurrences" : "1..1",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "existence" : "1..1",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "occurrences" : "1..1",
+          "nodeId" : "at0004",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "existence" : "0..1",
+            "cardinality" : {
+              "@type" : "CARDINALITY",
+              "interval" : "0..*",
+              "ordered" : false,
+              "unique" : false
+            },
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "1..1",
+              "nodeId" : "at0001",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "existence" : "0..1",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "1..1",
+              "nodeId" : "at0003.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "existence" : "0..1",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..1",
+              "nodeId" : "at0027",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "existence" : "0..1",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "1..1",
+              "nodeId" : "at0023.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "existence" : "0..1",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..1",
+              "nodeId" : "at0024",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "existence" : "0..1",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..1",
+              "nodeId" : "at0025",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "existence" : "0..1",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "ARCHETYPE_SLOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..*",
+              "nodeId" : "at0020",
+              "includes" : [ {
+                "@type" : "ASSERTION",
+                "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.tnm-dhcw\\.v1|openEHR-EHR-CLUSTER\\.simple_tumour_stage\\.v0|openEHR-EHR-CLUSTER\\.ann_arbor_stage\\.v0/}",
+                "expression" : {
+                  "@type" : "BINARY_OPERATOR",
+                  "type" : "BOOLEAN",
+                  "operator" : "matches",
+                  "leftOperand" : {
+                    "@type" : "MODEL_REFERENCE",
+                    "type" : "STRING",
+                    "precedenceOverriden" : false,
+                    "referenceType" : "Attribute",
+                    "path" : "archetype_id/value"
+                  },
+                  "rightOperand" : {
+                    "@type" : "CONSTRAINT",
+                    "type" : "STRING",
+                    "precedenceOverriden" : false,
+                    "referenceType" : "Constraint",
+                    "item" : {
+                      "@type" : "C_STRING",
+                      "constraint" : [ "/openEHR-EHR-CLUSTER\\.tnm-dhcw\\.v1|openEHR-EHR-CLUSTER\\.simple_tumour_stage\\.v0|openEHR-EHR-CLUSTER\\.ann_arbor_stage\\.v0/" ]
+                    }
+                  },
+                  "precedenceOverriden" : false
+                },
+                "variables" : [ ]
+              } ],
+              "excludes" : [ ],
+              "closed" : false
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0020.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-tnm-dhcw-001.v1",
+              "referenceType" : "archetypeOverlay"
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0020.2",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-ann_arbor_stage-002.v0",
+              "referenceType" : "archetypeOverlay"
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0020.3",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-simple_tumour_stage-003.v0",
+              "referenceType" : "archetypeOverlay"
+            }, {
+              "@type" : "ARCHETYPE_SLOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..*",
+              "nodeId" : "at0021",
+              "includes" : [ {
+                "@type" : "ASSERTION",
+                "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.tumour_metastasis\\.v0/}",
+                "expression" : {
+                  "@type" : "BINARY_OPERATOR",
+                  "type" : "BOOLEAN",
+                  "operator" : "matches",
+                  "leftOperand" : {
+                    "@type" : "MODEL_REFERENCE",
+                    "type" : "STRING",
+                    "precedenceOverriden" : false,
+                    "referenceType" : "Attribute",
+                    "path" : "archetype_id/value"
+                  },
+                  "rightOperand" : {
+                    "@type" : "CONSTRAINT",
+                    "type" : "STRING",
+                    "precedenceOverriden" : false,
+                    "referenceType" : "Constraint",
+                    "item" : {
+                      "@type" : "C_STRING",
+                      "constraint" : [ "/openEHR-EHR-CLUSTER\\.tumour_metastasis\\.v0/" ]
+                    }
+                  },
+                  "precedenceOverriden" : false
+                },
+                "variables" : [ ]
+              } ],
+              "excludes" : [ ],
+              "closed" : false
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0021.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-tumour_metastasis-004.v0",
+              "referenceType" : "archetypeOverlay"
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "existence" : "0..1",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "occurrences" : "1..1",
+          "nodeId" : "at0005",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "existence" : "0..1",
+            "cardinality" : {
+              "@type" : "CARDINALITY",
+              "interval" : "0..*",
+              "ordered" : false,
+              "unique" : false
+            },
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0026",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "existence" : "1..1",
+                "cardinality" : {
+                  "@type" : "CARDINALITY",
+                  "interval" : "1..*",
+                  "ordered" : false,
+                  "unique" : false
+                },
+                "children" : [ {
+                  "@type" : "ARCHETYPE_SLOT",
+                  "rmTypeName" : "CLUSTER",
+                  "occurrences" : "0..1",
+                  "nodeId" : "at0002",
+                  "includes" : [ {
+                    "@type" : "ASSERTION",
+                    "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.organisation_cc\\.v0/}",
+                    "expression" : {
+                      "@type" : "BINARY_OPERATOR",
+                      "type" : "BOOLEAN",
+                      "operator" : "matches",
+                      "leftOperand" : {
+                        "@type" : "MODEL_REFERENCE",
+                        "type" : "STRING",
+                        "precedenceOverriden" : false,
+                        "referenceType" : "Attribute",
+                        "path" : "archetype_id/value"
+                      },
+                      "rightOperand" : {
+                        "@type" : "CONSTRAINT",
+                        "type" : "STRING",
+                        "precedenceOverriden" : false,
+                        "referenceType" : "Constraint",
+                        "item" : {
+                          "@type" : "C_STRING",
+                          "constraint" : [ "/openEHR-EHR-CLUSTER\\.organisation_cc\\.v0/" ]
+                        }
+                      },
+                      "precedenceOverriden" : false
+                    },
+                    "variables" : [ ]
+                  } ],
+                  "excludes" : [ ],
+                  "closed" : false
+                }, {
+                  "@type" : "C_ARCHETYPE_ROOT",
+                  "rmTypeName" : "CLUSTER",
+                  "occurrences" : "0..1",
+                  "nodeId" : "at0002.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ],
+                  "archetypeRef" : "Organisation DHCW",
+                  "referenceType" : "templateId"
+                }, {
+                  "@type" : "ARCHETYPE_SLOT",
+                  "rmTypeName" : "CLUSTER",
+                  "occurrences" : "0..*",
+                  "nodeId" : "at0022",
+                  "includes" : [ {
+                    "@type" : "ASSERTION",
+                    "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.practitioner_cc\\.v0/}",
+                    "expression" : {
+                      "@type" : "BINARY_OPERATOR",
+                      "type" : "BOOLEAN",
+                      "operator" : "matches",
+                      "leftOperand" : {
+                        "@type" : "MODEL_REFERENCE",
+                        "type" : "STRING",
+                        "precedenceOverriden" : false,
+                        "referenceType" : "Attribute",
+                        "path" : "archetype_id/value"
+                      },
+                      "rightOperand" : {
+                        "@type" : "CONSTRAINT",
+                        "type" : "STRING",
+                        "precedenceOverriden" : false,
+                        "referenceType" : "Constraint",
+                        "item" : {
+                          "@type" : "C_STRING",
+                          "constraint" : [ "/openEHR-EHR-CLUSTER\\.practitioner_cc\\.v0/" ]
+                        }
+                      },
+                      "precedenceOverriden" : false
+                    },
+                    "variables" : [ ]
+                  } ],
+                  "excludes" : [ ],
+                  "closed" : false
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0023.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0023.1",
+            "text" : "Staging system",
+            "description" : ""
+          },
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Tumour staging",
+            "description" : "Staging1_Heather"
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Stage date",
+            "description" : ""
+          },
+          "at0002" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Site (recording staging)",
+            "description" : ""
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Staging point",
+            "description" : ""
+          },
+          "at0020" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0020",
+            "text" : "Stage detail",
+            "description" : ""
+          },
+          "at0021" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021",
+            "text" : "Metastasis",
+            "description" : ""
+          },
+          "at0022" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "Professional (recording staging)",
+            "description" : ""
+          },
+          "at0023" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0023",
+            "text" : "Staging system variant",
+            "description" : ""
+          },
+          "at0024" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "Staging system version",
+            "description" : ""
+          },
+          "at0025" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Stage",
+            "description" : "The field represents the simple stage statement that is commonly understood across tumour sites and across staging systems e.g. Stage 1, Stage 1A etc.  In the case of TNM staging, this is referred to as a stage group.",
+            "comment" : "This field represents the code of the applicable / comparable system stage field in the stage detail as applicable to the system selected."
+          },
+          "at0026" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Recording staging",
+            "description" : ""
+          },
+          "at0027" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Staging system classification",
+            "description" : ""
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "ITEM_TREE",
+            "description" : ""
+          },
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "ITEM_TREE",
+            "description" : ""
+          },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Site (recording staging)",
+            "description" : ""
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Staging point",
+            "description" : ""
+          },
+          "at0020.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0020",
+            "text" : "Stage detail",
+            "description" : ""
+          },
+          "at0021.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021",
+            "text" : "Metastasis",
+            "description" : ""
+          },
+          "at0020.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0020",
+            "text" : "Stage detail",
+            "description" : ""
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Tumour staging",
+            "description" : "Staging1_Heather"
+          },
+          "at0020.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0020",
+            "text" : "Stage detail",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "e8273436-dad7-348b-b661-70fa867e9439",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "1e4175e5-045f-40ef-8b23-747c56888331",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : { },
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung der klinischen Klassifikation und die Einteilung der Malignität in Stadien anhand des TNM-Systems.",
+          "keywords" : [ "TNM, Krebs, Tumor, cTNM, Grading, Einstufung, Malignität, Klassifikation, Einteilung, Stadium, Neoplasie" ],
+          "use" : "Zur Darstellung der klinischen Klassifikation, als TNM oder cTNM bezeichnet, und der Stadieneinteilung der Malignität.\r\n\r\nDieser Archetyp wurde entworfen, um in einem ENTRY-Archetyp, der einen klinischen Kontext und den Tumortyp für den TNM-Datensatz bereitstellt, verschachtelt zu werden - zum Beispiel: der SLOT \"Spezifische Angaben\" im Archetyp EVALUATION.problem_diagnosis.\r\n\r\nJeder Krebs hat einen Satz eindeutigen TNM-Klassifikationswerte. Dieser Archetyp kann unter Verwendung einer Spezialisierung oder eines Templates für jede Tumorentität und jede Auflage der TNM-Klassifikation weiter eingeschränkt werden, um individuelle Anforderungen zu berücksichtigen.\r\n\r\nBei bestimmten Tumorarten, wie Hodgkin-Lymphomen und anderen Non-Hodgkin-Lymphomen, wird zur Bestimmung des Ausmaßes und der Prognose von Krankheiten ein anderes System verwendet. In diesem Fall wird nur die Stadieneinteilung definiert.",
+          "misuse" : "Nicht zur Darstellung der pathologischen TNM-Klassifikation verwenden - verwenden Sie für diesen Zweck den Archetyp CLUSTER.tnm-pathological.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere klinisk klassifikasjon og stadium av maligne tumorer ved å bruke TNM-systemet.",
+          "keywords" : [ "TNM, kreft, svulst, tumor, cTNM, gradering, staging, malignitet, klassifikasjon, gruppering, stage, neoplasi, neoplastisk vekst, metastase, spredning, canser, cancer, malign tumor, stadie, stadium, carcinoma, karsinom" ],
+          "use" : "Brukes for å klassifisere og angi stadium av maligne tumorer, betegnet som TNM eller cTNM.\r\n\r\nArketypen er laget for å benyttes i en ENTRY arketype som vil gi den kliniske konteksten for TNM registreringen og typen tumor. For eksempel: I SLOTet \"Spesifikke detaljer\" i arketypen EVALUATION.problem_diagnose (Problem/diagnose).\r\n\r\nHver kreftform har et sett av unike TNM klassifikasjonsverdier. Det er antatt at denne arketypen blir tilpasset for å ivareta de unike kravene for hver type tumor og aktuell utgave av TNM-klassifikasjonen, enten ved å bruke en spesialisering av arketypen eller ved å justere i et templat.\r\n\r\nFor noen bestemte kreftformer, som Hodgkins eller non-Hodgkins lymfom vil andre klassifikasjonssystemer benyttes for å angi omfang av sykdom eller prognose. I disse tilfellene vil kun stadium defineres.",
+          "misuse" : "Skal ikke brukes for å registrere patologisk TNM-klassifikasjon. Bruk arketypen CLUSTER.tnm-pathological (TNM-klassifikasjon patologi) for dette formålet.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the clinical classification and stage grouping of malignancies using the TNM system.",
+          "keywords" : [ "TNM, cancer, tumour, cTNM, grading, staging, malignancy, classification, grouping, stage, neoplasia" ],
+          "use" : "Use to record the clinical classification, designated as TNM or cTNM, and stage grouping of malignancies.\r\n\r\nThis archetype has been designed to be nested inside an ENTRY archetype which will provide a clinical context and the tumour type for the TNM record - for example: the 'Specific details' SLOT within the EVALUATION.problem_diagnosis archetype.\r\n\r\nEach cancer has a set of unique TNM classification values. It is expected that this archetype will be further constrained to reflect the unique requirements for each tumour and edition of the TNM classification, using either an archetype specialisation or a template.\r\n\r\nWith certain types of tumours, such as Hodgkin and other non-Hodgkin lymphomas, a different system for designating the extent of disease and prognosis is used. In these circumstances only the stage group is defined.",
+          "misuse" : "Not to be used to record the TNM pathological classification - use the CLUSTER.tnm-pathological archetype for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.tnm-dhcw.v1",
+    "differential" : false,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-tnm-dhcw-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "occurrences" : "1..1",
+      "nodeId" : "at0000.1.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "existence" : "1..1",
+        "cardinality" : {
+          "@type" : "CARDINALITY",
+          "interval" : "1..*",
+          "ordered" : false,
+          "unique" : false
+        },
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0001.0.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0002.0.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0003.0.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0004.0.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0005.0.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0006.0.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0007.0.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "existence" : "1..1",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "at0008", "at0009", "at0010", "at0011" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0012.0.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "existence" : "1..1",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "at0013", "at0014", "at0015" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0016.0.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "existence" : "1..1",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "at0017", "at0018", "at0019", "at0020" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0021.0.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "existence" : "1..1",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "at0022", "at0023", "at0024" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0025.0.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_COUNT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_BOOLEAN",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0026.0.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_BOOLEAN",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "existence" : "1..1",
+                "children" : [ {
+                  "@type" : "C_BOOLEAN",
+                  "rmTypeName" : "Boolean",
+                  "occurrences" : "1..1",
+                  "constraint" : [ true ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0027.0.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_BOOLEAN",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "existence" : "1..1",
+                "children" : [ {
+                  "@type" : "C_BOOLEAN",
+                  "rmTypeName" : "Boolean",
+                  "occurrences" : "1..1",
+                  "constraint" : [ true ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0028.0.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_BOOLEAN",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "existence" : "1..1",
+                "children" : [ {
+                  "@type" : "C_BOOLEAN",
+                  "rmTypeName" : "Boolean",
+                  "occurrences" : "1..1",
+                  "constraint" : [ true ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0029.0.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_BOOLEAN",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "existence" : "1..1",
+                "children" : [ {
+                  "@type" : "C_BOOLEAN",
+                  "rmTypeName" : "Boolean",
+                  "occurrences" : "1..1",
+                  "constraint" : [ true ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0030",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0031.0.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0032.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0.4",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0.1.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0.2",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_BOOLEAN",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000.1",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1.1",
+            "text" : "TNM stage detail",
+            "description" : "A framework for the clinical classification and stage grouping of malignancies using the TNM system.",
+            "comment" : "Designated as TNM or cTNM."
+          },
+          "at0003.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.0.1",
+            "text" : "T stage",
+            "description" : "Assessment of the the extent of the primary tumour.",
+            "comment" : "Coding with a T code appropriate for the tumour type and anatomical site is expected. For example: 'T1'; or 'cT3'. Represented as 'T' or 'cT' in the 'TNM assessment'."
+          },
+          "at0004.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004.0.1",
+            "text" : "N stage",
+            "description" : "Assessment of the the absence or presence and extent of regional lymph node metastasis.",
+            "comment" : "Coding with an N code appropriate for the tumour type and anatomical site is expected. For example: 'NX'; or 'cN2'. Represented as 'N' or 'cN' within the 'TNM assessment'."
+          },
+          "at0005.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.0.1",
+            "text" : "M stage",
+            "description" : "Assessment of the absence or presence of distant metastasis.",
+            "comment" : "Coding with an M code appropriate for the tumour type and anatomical site is expected. For example: 'M1'; 'cM1a'; 'M1 PUL'; or 'cM0'. Represented as 'M' or 'cM' within the 'TNM assessment'."
+          },
+          "at0.1.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0.1.1",
+            "text" : "S stage",
+            "description" : ""
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "TNM clinical classification",
+            "description" : "A framework for the clinical classification and stage grouping of malignancies using the TNM system.",
+            "comment" : "Designated as TNM or cTNM."
+          },
+          "at0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0.1",
+            "text" : "Serum tumour markers (S)",
+            "description" : ""
+          },
+          "at0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0.2",
+            "text" : "Pathological staging",
+            "description" : ""
+          },
+          "at0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0.4",
+            "text" : "TNM edition code",
+            "description" : ""
+          },
+          "at0032.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0032.1",
+            "text" : "TNM edition",
+            "description" : "The edition of the TNM classification system used for the assessment."
+          },
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "TNM clinical classification",
+            "description" : "A framework for the clinical classification and stage grouping of malignancies using the TNM system.",
+            "comment" : "Designated as TNM or cTNM."
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Anatomical site",
+            "description" : "The anatomical site where the assessed tumour is situated.",
+            "comment" : "Use the value from the TNM variant for each type of cancer. For example: stomach; or small intestine."
+          },
+          "at0002" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Anatomical subsite",
+            "description" : "The anatomical subsite where the assessed tumour is situated.",
+            "comment" : "Use the value from the TNM variant for each type of cancer. For example: cardia, fundus, corpus, antrum and pylorus (stomach); or duodenum, jejunum or ileum (small intestine)."
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Primary tumour (T)",
+            "description" : "Assessment of the the extent of the primary tumour.",
+            "comment" : "Coding with a T code appropriate for the tumour type and anatomical site is expected. For example: 'T1'; or 'cT3'. Represented as 'T' or 'cT' in the 'TNM assessment'."
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Regional lymph nodes (N)",
+            "description" : "Assessment of the the absence or presence and extent of regional lymph node metastasis.",
+            "comment" : "Coding with an N code appropriate for the tumour type and anatomical site is expected. For example: 'NX'; or 'cN2'. Represented as 'N' or 'cN' within the 'TNM assessment'."
+          },
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Distant metastasis (M)",
+            "description" : "Assessment of the absence or presence of distant metastasis.",
+            "comment" : "Coding with an M code appropriate for the tumour type and anatomical site is expected. For example: 'M1'; 'cM1a'; 'M1 PUL'; or 'cM0'. Represented as 'M' or 'cM' within the 'TNM assessment'."
+          },
+          "at0006" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Histopathological grade (G)",
+            "description" : "Histopathological grading of the tumour.",
+            "comment" : "Pretreatment histopathological assessment may be determined from a limited biopsy prior to formal resection. Coding with a G code appropriate for the identified tumour type and anatomical site is expected. For example: 'G2'; 'GX'; or 'low grade' for bone and soft tissue sarcoma classification. Represented as 'G' within the 'TNM assessment'."
+          },
+          "at0007" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007",
+            "text" : "Residual tumour (R)",
+            "description" : "Assessment of the presence of residual tumour after treatment.",
+            "comment" : "For example: 'R2 (Macroscopic residual tumour)'. Represented as 'R' within the 'TNM assessment'."
+          },
+          "at0008" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0008",
+            "text" : "RX",
+            "description" : "Presence of residual tumour cannot be assessed."
+          },
+          "at0009" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009",
+            "text" : "R0",
+            "description" : "No residual tumour."
+          },
+          "at0010" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0010",
+            "text" : "R1",
+            "description" : "Microscopic residual tumour."
+          },
+          "at0011" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0011",
+            "text" : "R2",
+            "description" : "Macroscopic residual tumour."
+          },
+          "at0012" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0012",
+            "text" : "Lymphatic invasion (L)",
+            "description" : "Assessment of invasion into the lymphatic system.",
+            "comment" : "For example: 'L0 (No lymphatic invasion)'. Represented as 'L' within the 'TNM assessment'."
+          },
+          "at0013" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0013",
+            "text" : "LX",
+            "description" : "Lymphatic invasion cannot be assessed."
+          },
+          "at0014" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014",
+            "text" : "L0",
+            "description" : "No lymphatic invasion."
+          },
+          "at0015" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0015",
+            "text" : "L1",
+            "description" : "Lymphatic invasion."
+          },
+          "at0016" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0016",
+            "text" : "Venous invasion (V)",
+            "description" : "Assessment of invasion into the venous system.",
+            "comment" : "For example: 'V1 (Microscopic venous invasion)'. Represented as 'V' within the 'TNM assessment'."
+          },
+          "at0017" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0017",
+            "text" : "VX",
+            "description" : "Venous invasion cannot be assessed."
+          },
+          "at0018" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0018",
+            "text" : "V0",
+            "description" : "No venous invasion."
+          },
+          "at0019" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0019",
+            "text" : "V1",
+            "description" : "Microscopic venous invasion."
+          },
+          "at0020" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0020",
+            "text" : "V2",
+            "description" : "Macroscopic venous invasion."
+          },
+          "at0021" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021",
+            "text" : "Perineural invasion (Pn)",
+            "description" : "Assessment of invasion into the space surrounding nerves.",
+            "comment" : "For example: 'Pn0 (No perineural invasion)'. Represented as 'Pn' within the 'TNM assessment'."
+          },
+          "at0022" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "PnX",
+            "description" : "Perineural invasion cannot be assessed."
+          },
+          "at0023" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0023",
+            "text" : "Pn0",
+            "description" : "No perineural invasion."
+          },
+          "at0024" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "Pn1",
+            "description" : "Perineural invasion."
+          },
+          "at0025" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Multiple primary tumours (m)",
+            "description" : "Presence of multiple simultaneous primary tumours at a single site.",
+            "comment" : "Represented by the suffix, either as '(m)' or the number of primary tumours added to the T code in brackets . For example: 'T2(m)' or 'cT2(4)'."
+          },
+          "at0026" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Multimodality therapy (y)",
+            "description" : "Record as True if assessment is performed during or following initial multimodal therapy.",
+            "comment" : "Represented by the prefix 'y' added to the 'TNM assessment'."
+          },
+          "at0027" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Recurrent (r)",
+            "description" : "Record as True if assessment is performed for a recurring cancer after a disease-free interval.",
+            "comment" : "Represented by the prefix 'r' added to the 'TNM assessment'."
+          },
+          "at0028" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "Autopsy (a)",
+            "description" : "Record as True if assessment is performed at postmortem examination.",
+            "comment" : "Represented by the prefix 'a' added to the 'TNM assessment'."
+          },
+          "at0029" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0029",
+            "text" : "Carcinoma in situ (is)",
+            "description" : "Record as True if presence of carcinoma in situ associated with the primary tumour.",
+            "comment" : "Represented by the prefix 'is' added to the 'TNM assessment'."
+          },
+          "at0030" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0030",
+            "text" : "TNM assessment",
+            "description" : "Concatenation of 'T', 'N' and 'M' assessments plus any optional assessments of 'G', 'R', 'L', 'V', prefixes and/or suffixes, as applicable."
+          },
+          "at0031" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0031",
+            "text" : "Stage grouping",
+            "description" : "The categorisation of the anatomical stage of the tumour, usually based on TNM assessment.",
+            "comment" : "For example: carcinoma in situ is categorised as stage 0; or tumours with distant metastasis are categorised as stage IV."
+          },
+          "at0032" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0032",
+            "text" : "TNM Edition",
+            "description" : "The edition of the TNM classification system used for the assessment."
+          },
+          "at0007.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007",
+            "text" : "Residual tumour (R)",
+            "description" : "Assessment of the presence of residual tumour after treatment.",
+            "comment" : "For example: 'R2 (Macroscopic residual tumour)'. Represented as 'R' within the 'TNM assessment'."
+          },
+          "at0002.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Anatomical subsite",
+            "description" : "The anatomical subsite where the assessed tumour is situated.",
+            "comment" : "Use the value from the TNM variant for each type of cancer. For example: cardia, fundus, corpus, antrum and pylorus (stomach); or duodenum, jejunum or ileum (small intestine)."
+          },
+          "at0021.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021",
+            "text" : "Perineural invasion (Pn)",
+            "description" : "Assessment of invasion into the space surrounding nerves.",
+            "comment" : "For example: 'Pn0 (No perineural invasion)'. Represented as 'Pn' within the 'TNM assessment'."
+          },
+          "at0026.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Multimodality therapy (y)",
+            "description" : "Record as True if assessment is performed during or following initial multimodal therapy.",
+            "comment" : "Represented by the prefix 'y' added to the 'TNM assessment'."
+          },
+          "at0028.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "Autopsy (a)",
+            "description" : "Record as True if assessment is performed at postmortem examination.",
+            "comment" : "Represented by the prefix 'a' added to the 'TNM assessment'."
+          },
+          "at0006.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Histopathological grade (G)",
+            "description" : "Histopathological grading of the tumour.",
+            "comment" : "Pretreatment histopathological assessment may be determined from a limited biopsy prior to formal resection. Coding with a G code appropriate for the identified tumour type and anatomical site is expected. For example: 'G2'; 'GX'; or 'low grade' for bone and soft tissue sarcoma classification. Represented as 'G' within the 'TNM assessment'."
+          },
+          "at0001.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Anatomical site",
+            "description" : "The anatomical site where the assessed tumour is situated.",
+            "comment" : "Use the value from the TNM variant for each type of cancer. For example: stomach; or small intestine."
+          },
+          "at0012.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0012",
+            "text" : "Lymphatic invasion (L)",
+            "description" : "Assessment of invasion into the lymphatic system.",
+            "comment" : "For example: 'L0 (No lymphatic invasion)'. Represented as 'L' within the 'TNM assessment'."
+          },
+          "at0027.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Recurrent (r)",
+            "description" : "Record as True if assessment is performed for a recurring cancer after a disease-free interval.",
+            "comment" : "Represented by the prefix 'r' added to the 'TNM assessment'."
+          },
+          "at0025.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Multiple primary tumours (m)",
+            "description" : "Presence of multiple simultaneous primary tumours at a single site.",
+            "comment" : "Represented by the suffix, either as '(m)' or the number of primary tumours added to the T code in brackets . For example: 'T2(m)' or 'cT2(4)'."
+          },
+          "at0016.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0016",
+            "text" : "Venous invasion (V)",
+            "description" : "Assessment of invasion into the venous system.",
+            "comment" : "For example: 'V1 (Microscopic venous invasion)'. Represented as 'V' within the 'TNM assessment'."
+          },
+          "at0029.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0029",
+            "text" : "Carcinoma in situ (is)",
+            "description" : "Record as True if presence of carcinoma in situ associated with the primary tumour.",
+            "comment" : "Represented by the prefix 'is' added to the 'TNM assessment'."
+          },
+          "at0031.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0031",
+            "text" : "Stage grouping",
+            "description" : "The categorisation of the anatomical stage of the tumour, usually based on TNM assessment.",
+            "comment" : "For example: carcinoma in situ is categorised as stage 0; or tumours with distant metastasis are categorised as stage IV."
+          }
+        },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "TNM-klassifikasjon klinisk",
+            "description" : "Et rammeverk for klinisk klassifikasjon og gradering av maligne tumorer før behandling, i henhold til TNM-systemet.",
+            "comment" : "Betegnes som TNM eller cTNM."
+          },
+          "at0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0.1",
+            "text" : "*Serum tumour markers (S) (en)",
+            "description" : ""
+          },
+          "at0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0.2",
+            "text" : "*Pathological staging (en)",
+            "description" : ""
+          },
+          "at0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0.4",
+            "text" : "*TNM edition code (en)",
+            "description" : ""
+          },
+          "at0032.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0032.1",
+            "text" : "*TNM edition (en)",
+            "description" : "TNM-utgaven som er brukt for å bestemme TNM-klassifiseringen."
+          },
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "TNM-klassifikasjon klinisk",
+            "description" : "Et rammeverk for klinisk klassifikasjon og gradering av maligne tumorer før behandling, i henhold til TNM-systemet.",
+            "comment" : "Betegnes som TNM eller cTNM."
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Anatomisk lokalisering",
+            "description" : "Den anatomiske lokaliseringen til tumoren.",
+            "comment" : "Bruk verdien fra TNM for den enkelte typen tumor, for eksempel \"Magesekk\" eller \"Tynntarm\"."
+          },
+          "at0002" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Underordnet anatomisk lokalisasjon",
+            "description" : "Den underordnede anatomiske lokaliseringer til tumoren.",
+            "comment" : "Bruk verdien fra TNM for den enkelte typen tumor, for eksempel: cardia, fundus, corpus, antrum og pylorus (mage), eller duodenum, jejunum eller ileum (tynntarm)."
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Primærtumor (T)",
+            "description" : "Vurdering av primærtumor.",
+            "comment" : "Kodes med en T-kode som passer for tumortypen og den anatomiske lokaliseringen, for eksempel \"T1\" eller \"T3\". Fremkommer i \"TNM-vurdering\" som \"T\" eller \"cT\"."
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Regionale lymfeknuter (N)",
+            "description" : "Vurdering av hvorvidt det er metastaser i regionale lymfeknuter eller ikke, og i så fall i hvilken grad.",
+            "comment" : "Kodes med en N-kode som passer for tumortypen og den anatomiske lokaliseringen, for eksempel \"NX\" eller \"cN2\". Fremkommer i \"TNM-vurdering\" som \"N\" eller \"cN\"."
+          },
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Fjernmetastase (M)",
+            "description" : "Vurdering av hvorvidt det er fjernmetastaser eller ikke.",
+            "comment" : "Kodes med en M-kode som passer for tumortypen og den anatomiske lokaliseringen, for eksempel \"M1\", \"cM1a\", \"M1 PUL\" eller or \"cM0\". Fremkommer i \"TNM-vurdering\" som \"M\" eller \"cM\"."
+          },
+          "at0006" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Histopatologisk gradering (G)",
+            "description" : "Histopatologisk gradering av tumoren.",
+            "comment" : "Histopatologisk vurdering før annen behandling er gitt, kan gjøres på grunnlag av en biopsi før kirurgisk reseksjon. Kodes med en G-kode som passer for tumortypen og den anatomiske lokaliseringen. For eksempel: \"G2\", \"GX\", eller \"Lavgradig\" klassifisering av ben- eller bløtvevssarkom\". Fremkommer i \"TNM-vurdering\" som \"G\"."
+          },
+          "at0007" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007",
+            "text" : "Residualtumor (R)",
+            "description" : "Vurdering av tilstedeværelse av resttumor etter behandling.",
+            "comment" : "For eksempel \"R2 (Makroskopisk resttumor)\". Fremkommer i \"TNM-vurdering\" som \"R\"."
+          },
+          "at0008" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0008",
+            "text" : "RX",
+            "description" : "Det kan ikke vurderes om resttumor er til stede."
+          },
+          "at0009" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009",
+            "text" : "R0",
+            "description" : "Ingen resttumor"
+          },
+          "at0010" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0010",
+            "text" : "R1",
+            "description" : "Mikroskopisk resttumor."
+          },
+          "at0011" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0011",
+            "text" : "R2",
+            "description" : "Makroskopisk resttumor."
+          },
+          "at0012" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0012",
+            "text" : "Infiltrasjon i lymfekar (L)",
+            "description" : "Vurdering av infiltrasjon inn i lymfekar.",
+            "comment" : "For eksempel \"L0 (Ingen infiltrasjon i lymfekar)\". Fremkommer i \"TNM-vurdering\" som \"L\"."
+          },
+          "at0013" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0013",
+            "text" : "LX",
+            "description" : "Det kan ikke vurderes om infiltrasjon i lymfekar er tilstede."
+          },
+          "at0014" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014",
+            "text" : "L0",
+            "description" : "Ingen infiltrasjon i lymfekar."
+          },
+          "at0015" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0015",
+            "text" : "L1",
+            "description" : "Infiltrasjon i lymfekar."
+          },
+          "at0016" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0016",
+            "text" : "Veneinfiltrasjon (V)",
+            "description" : "Vurdering av veneinfiltrasjon.",
+            "comment" : "For eksempel \"V1 (Mikroskopisk veneinfiltrasjon)\". Fremkommer i \"TNM-vurdering\" som \"V\"."
+          },
+          "at0017" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0017",
+            "text" : "VX",
+            "description" : "Veneinfiltrasjon kan ikke vurderes."
+          },
+          "at0018" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0018",
+            "text" : "V0",
+            "description" : "Ingen veneinfiltrasjon."
+          },
+          "at0019" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0019",
+            "text" : "V1",
+            "description" : "Mikroskopisk veneinfiltrasjon."
+          },
+          "at0020" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0020",
+            "text" : "V2",
+            "description" : "Makroskopisk veneinfiltrasjon."
+          },
+          "at0021" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021",
+            "text" : "Perineural infiltrasjon (Pn)",
+            "description" : "Vurdering av infiltrasjon inn i vev som ligger i tilslutning til nerver.",
+            "comment" : "For eksempel \"Pn0 (Ingen perineural infiltrasjon)\". Fremkommer i \"TNM-vurdering\" som \"Pn\"."
+          },
+          "at0022" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "PnX",
+            "description" : "Det kan ikke vurderes om perineural infiltrasjon er tilstede."
+          },
+          "at0023" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0023",
+            "text" : "Pn0",
+            "description" : "Ingen perineural infiltrasjon."
+          },
+          "at0024" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "Pn1",
+            "description" : "Perineural infiltrasjon."
+          },
+          "at0025" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Multiple primærtumorer (m)",
+            "description" : "Tilstedeværelse av multiple samtidige primærtumorer på ett enkelt sted.",
+            "comment" : "Angis med en tilføyelse, enten bokstaven \"m\" eller antallet av primærsvulster, i parantes bak T-koden, for eksempel \"T2(m)\" eller \"cT2(4)\"."
+          },
+          "at0026" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Multimodal behandling (y)",
+            "description" : "Registreres som 'Sann' hvis vurdering er utført under eller etter den første multimodale behandlingen.",
+            "comment" : "Angis ved å legge til prefikset \"y\" i \"TNM-vurdering\"."
+          },
+          "at0027" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Residiv (r)",
+            "description" : "Registreres som 'Sann' hvis vurdering er utført for en tilbakevendende kreft etter en kreftfri periode.",
+            "comment" : "Angis ved å legge til prefikset \"r\" i \"TNM-vurdering\"."
+          },
+          "at0028" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "Obduksjon (a)",
+            "description" : "Registreres som 'Sann' hvis vurderingen er gjort ved en undersøkelse post mortem.",
+            "comment" : "Angis ved å legge til prefikset \"a\" i \"TNM-vurdering\"."
+          },
+          "at0029" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0029",
+            "text" : "Carcinoma in situ (is)",
+            "description" : "Registreres som 'Sann' hvis tilstedeværelse av carcinoma in situ i tilknytning til primærsvulsten.",
+            "comment" : "Angis ved å legge til prefikset \"is\" i \"TNM-vurdering\"."
+          },
+          "at0030" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0030",
+            "text" : "TNM-vurdering",
+            "description" : "Sammentrekning av vurdering av \"T\", \"N\" og \"M\", pluss eventuelle tilleggsvurderinger av \"G\", \"R\", \"L\", \"V\", prefiks og/eller tillegg der det er passende."
+          },
+          "at0031" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0031",
+            "text" : "Stadium",
+            "description" : "Kategorisering av tumorens stadium, vanligvis basert på TNM vurderingen.",
+            "comment" : "For eksempel: Karsinom in situ er kategorisert som stadium 0, tumorer med fjernmetastaser er kategorisert som stadium IV."
+          },
+          "at0032" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0032",
+            "text" : "TNM-utgave",
+            "description" : "TNM-utgaven som er brukt for å bestemme TNM-klassifiseringen."
+          },
+          "at0007.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007",
+            "text" : "Residualtumor (R)",
+            "description" : "Vurdering av tilstedeværelse av resttumor etter behandling.",
+            "comment" : "For eksempel \"R2 (Makroskopisk resttumor)\". Fremkommer i \"TNM-vurdering\" som \"R\"."
+          },
+          "at0002.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Underordnet anatomisk lokalisasjon",
+            "description" : "Den underordnede anatomiske lokaliseringer til tumoren.",
+            "comment" : "Bruk verdien fra TNM for den enkelte typen tumor, for eksempel: cardia, fundus, corpus, antrum og pylorus (mage), eller duodenum, jejunum eller ileum (tynntarm)."
+          },
+          "at0021.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021",
+            "text" : "Perineural infiltrasjon (Pn)",
+            "description" : "Vurdering av infiltrasjon inn i vev som ligger i tilslutning til nerver.",
+            "comment" : "For eksempel \"Pn0 (Ingen perineural infiltrasjon)\". Fremkommer i \"TNM-vurdering\" som \"Pn\"."
+          },
+          "at0000.1.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "TNM-klassifikasjon klinisk",
+            "description" : "Et rammeverk for klinisk klassifikasjon og gradering av maligne tumorer før behandling, i henhold til TNM-systemet.",
+            "comment" : "Betegnes som TNM eller cTNM."
+          },
+          "at0026.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Multimodal behandling (y)",
+            "description" : "Registreres som 'Sann' hvis vurdering er utført under eller etter den første multimodale behandlingen.",
+            "comment" : "Angis ved å legge til prefikset \"y\" i \"TNM-vurdering\"."
+          },
+          "at0004.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Regionale lymfeknuter (N)",
+            "description" : "Vurdering av hvorvidt det er metastaser i regionale lymfeknuter eller ikke, og i så fall i hvilken grad.",
+            "comment" : "Kodes med en N-kode som passer for tumortypen og den anatomiske lokaliseringen, for eksempel \"NX\" eller \"cN2\". Fremkommer i \"TNM-vurdering\" som \"N\" eller \"cN\"."
+          },
+          "at0028.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "Obduksjon (a)",
+            "description" : "Registreres som 'Sann' hvis vurderingen er gjort ved en undersøkelse post mortem.",
+            "comment" : "Angis ved å legge til prefikset \"a\" i \"TNM-vurdering\"."
+          },
+          "at0.1.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0.1",
+            "text" : "*Serum tumour markers (S) (en)",
+            "description" : ""
+          },
+          "at0006.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Histopatologisk gradering (G)",
+            "description" : "Histopatologisk gradering av tumoren.",
+            "comment" : "Histopatologisk vurdering før annen behandling er gitt, kan gjøres på grunnlag av en biopsi før kirurgisk reseksjon. Kodes med en G-kode som passer for tumortypen og den anatomiske lokaliseringen. For eksempel: \"G2\", \"GX\", eller \"Lavgradig\" klassifisering av ben- eller bløtvevssarkom\". Fremkommer i \"TNM-vurdering\" som \"G\"."
+          },
+          "at0001.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Anatomisk lokalisering",
+            "description" : "Den anatomiske lokaliseringen til tumoren.",
+            "comment" : "Bruk verdien fra TNM for den enkelte typen tumor, for eksempel \"Magesekk\" eller \"Tynntarm\"."
+          },
+          "at0012.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0012",
+            "text" : "Infiltrasjon i lymfekar (L)",
+            "description" : "Vurdering av infiltrasjon inn i lymfekar.",
+            "comment" : "For eksempel \"L0 (Ingen infiltrasjon i lymfekar)\". Fremkommer i \"TNM-vurdering\" som \"L\"."
+          },
+          "at0027.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Residiv (r)",
+            "description" : "Registreres som 'Sann' hvis vurdering er utført for en tilbakevendende kreft etter en kreftfri periode.",
+            "comment" : "Angis ved å legge til prefikset \"r\" i \"TNM-vurdering\"."
+          },
+          "at0025.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Multiple primærtumorer (m)",
+            "description" : "Tilstedeværelse av multiple samtidige primærtumorer på ett enkelt sted.",
+            "comment" : "Angis med en tilføyelse, enten bokstaven \"m\" eller antallet av primærsvulster, i parantes bak T-koden, for eksempel \"T2(m)\" eller \"cT2(4)\"."
+          },
+          "at0016.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0016",
+            "text" : "Veneinfiltrasjon (V)",
+            "description" : "Vurdering av veneinfiltrasjon.",
+            "comment" : "For eksempel \"V1 (Mikroskopisk veneinfiltrasjon)\". Fremkommer i \"TNM-vurdering\" som \"V\"."
+          },
+          "at0029.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0029",
+            "text" : "Carcinoma in situ (is)",
+            "description" : "Registreres som 'Sann' hvis tilstedeværelse av carcinoma in situ i tilknytning til primærsvulsten.",
+            "comment" : "Angis ved å legge til prefikset \"is\" i \"TNM-vurdering\"."
+          },
+          "at0003.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Primærtumor (T)",
+            "description" : "Vurdering av primærtumor.",
+            "comment" : "Kodes med en T-kode som passer for tumortypen og den anatomiske lokaliseringen, for eksempel \"T1\" eller \"T3\". Fremkommer i \"TNM-vurdering\" som \"T\" eller \"cT\"."
+          },
+          "at0031.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0031",
+            "text" : "Stadium",
+            "description" : "Kategorisering av tumorens stadium, vanligvis basert på TNM vurderingen.",
+            "comment" : "For eksempel: Karsinom in situ er kategorisert som stadium 0, tumorer med fjernmetastaser er kategorisert som stadium IV."
+          },
+          "at0005.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Fjernmetastase (M)",
+            "description" : "Vurdering av hvorvidt det er fjernmetastaser eller ikke.",
+            "comment" : "Kodes med en M-kode som passer for tumortypen og den anatomiske lokaliseringen, for eksempel \"M1\", \"cM1a\", \"M1 PUL\" eller or \"cM0\". Fremkommer i \"TNM-vurdering\" som \"M\" eller \"cM\"."
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Klinische TNM-Klassifikation",
+            "description" : "Ein Archetyp für die klinische Klassifikation und die Einteilung der Malignität in Stadien anhand des TNM-Systems.",
+            "comment" : "Bezeichnet als TNM oder cTNM."
+          },
+          "at0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0.1",
+            "text" : "*Serum tumour markers (S) (en)",
+            "description" : ""
+          },
+          "at0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0.2",
+            "text" : "*Pathological staging (en)",
+            "description" : ""
+          },
+          "at0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0.4",
+            "text" : "*TNM edition code (en)",
+            "description" : ""
+          },
+          "at0032.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0032.1",
+            "text" : "*TNM edition (en)",
+            "description" : "Die Auflage, auf der die TNM-Klassifikation basiert, die für die Beurteilung verwendet wurde."
+          },
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Klinische TNM-Klassifikation",
+            "description" : "Ein Archetyp für die klinische Klassifikation und die Einteilung der Malignität in Stadien anhand des TNM-Systems.",
+            "comment" : "Bezeichnet als TNM oder cTNM."
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Anatomische Lokalisation",
+            "description" : "Die anatomische Stelle, an der sich der beurteilte Tumor befindet.",
+            "comment" : "Verwenden Sie für jede Krebsart den Wert aus der TNM-Variante. Zum Beispiel: Magen oder Dünndarm."
+          },
+          "at0002" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Anatomischer Unterbereich der Lokalisation",
+            "description" : "Der anatomische Unterbereich der Lokalisation, an der sich der beurteilte Tumor befindet.",
+            "comment" : "Verwenden Sie für jede Krebsart den Wert aus der TNM-Variante. Zum Beispiel: Kardia, Fundus, Corpus, Antrum und Pylorus (Magen); oder Zwölffingerdarm, Jejunum oder Ileum (Dünndarm)."
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Primärtumor (T)",
+            "description" : "Die Beurteilung des Ausmaßes des Primärtumors.",
+            "comment" : "Die Codierung mit einem T-Code, der der Art des Tumors und der anatomischen Lokalisation entspricht, wird erwartet. Zum Beispiel: \"T1\" oder \"cT3\". Dargestellt als \"T\" oder \"cT\" in der \"TNM-Bewertung\"."
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Regionäre Lymphknoten (N)",
+            "description" : "Die Beurteilung des Fehlens oder Vorhandenseins und des Ausmaßes regionären Lymphknotenmetastasen.",
+            "comment" : "Die Codierung mit einem N-Code, der der Art des Tumors und der anatomischen Lokalisation entspricht, wird erwartet. Zum Beispiel: \"NX\" oder \"cN2\". Dargestellt als \"N\" oder \"cN\" in der \"TNM-Bewertung\"."
+          },
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Fernmetastasierung (M)",
+            "description" : "Beurteilung des Fehlens oder Vorhandenseins von Fernmetastasen.",
+            "comment" : "Die Codierung mit einem M-Code, der der Art des Tumors und der anatomischen Lokalisation entspricht, wird erwartet. Zum Beispiel: \"M1\"; \"cM1a\"; \"M1 PUL\" oder \"cM0\". Dargestellt als \"M\" oder \"cM\" in der \"TNM-Bewertung\"."
+          },
+          "at0006" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Histopathologisches Grading (G)",
+            "description" : "Histopathologisches Grading des Tumors.",
+            "comment" : "Die prätherapeutische histopathologische Beurteilung kann aus einer begrenzten Biopsie vor der formalen Resektion bestimmt werden. Die Codierung mit einem G-Code, der der identifizierten Art des Tumors und der anatomischen Lokalisation entspricht, wird erwartet. Zum Beispiel: \"G2\"; \"GX\" oder \"niedriges Grading\" zur Klassifizierung von Knochen- und Weichteilsarkomen. Dargestellt als \"G\" in der \"TNM-Bewertung\".\r\n\r\n"
+          },
+          "at0007" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007",
+            "text" : "Residualtumor (R)",
+            "description" : "Die Beurteilung des Vorhandenseins eines Resttumors nach der Behandlung.",
+            "comment" : "Zum Beispiel: \"R2 (Makroskopischer Residualtumor)\". Dargestellt als \"R\" in der \"TNM-Bewertung\"."
+          },
+          "at0008" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0008",
+            "text" : "RX",
+            "description" : "Das Vorhandensein von Residualtumor kann nicht beurteilt werden."
+          },
+          "at0009" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009",
+            "text" : "R0",
+            "description" : "Kein Residualtumor."
+          },
+          "at0010" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0010",
+            "text" : "R1",
+            "description" : "Mikroskopischer Residualtumor."
+          },
+          "at0011" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0011",
+            "text" : "R2",
+            "description" : "Makroskopischer Residualtumor."
+          },
+          "at0012" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0012",
+            "text" : "Lymphgefäßinvasion (L)",
+            "description" : "Die Beurteilung der Invasion in das lymphathische System.",
+            "comment" : "Zum Beispiel: \"L0 (Keine Lymphgefäßinvasion)\". Dargestellt als \"L\" in der \"TNM-Bewertung\".\r\n"
+          },
+          "at0013" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0013",
+            "text" : "LX",
+            "description" : "Die Lymphgefäßinvasion kann nicht beurteilt werden."
+          },
+          "at0014" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014",
+            "text" : "L0",
+            "description" : "Keine Lymphgefäßinvasion."
+          },
+          "at0015" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0015",
+            "text" : "L1",
+            "description" : "Lymphgefäßinvasion."
+          },
+          "at0016" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0016",
+            "text" : "Veneninvasion (V)",
+            "description" : "Die Beurteilung der Invasion in das venöse System.",
+            "comment" : "Zum Beispiel: \"V1 (Mikroskopische Veneninvasion)\". Dargestellt als \"V\" in der \"TNM-Bewertung\"."
+          },
+          "at0017" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0017",
+            "text" : "VX",
+            "description" : "Die Veneninvasion kann nicht beurteilt werden."
+          },
+          "at0018" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0018",
+            "text" : "V0",
+            "description" : "Keine Veneninvasion."
+          },
+          "at0019" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0019",
+            "text" : "V1",
+            "description" : "Mikroskopische Veneninvasion."
+          },
+          "at0020" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0020",
+            "text" : "V2",
+            "description" : "Makroskopische Veneninvasion."
+          },
+          "at0021" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021",
+            "text" : "Perineurale Invasion (Pn)",
+            "description" : "Die Beurteilung der Invasion in den Bereich, der die Nerven umgibt.",
+            "comment" : "Zum Beispiel: \"Pn0 (keine Perineurale Invasion)\". Dargestellt als \"Pn\" in der \"TNM-Bewertung\"."
+          },
+          "at0022" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "PnX",
+            "description" : "Die Perineurale Invasion kann nicht beurteilt werden."
+          },
+          "at0023" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0023",
+            "text" : "Pn0",
+            "description" : "Keine Perineurale Invasion."
+          },
+          "at0024" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "Pn1",
+            "description" : "Perineurale Invasion."
+          },
+          "at0025" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Multiple Primärtumoren (m)",
+            "description" : "Das Vorhandensein multipler simultaner Primärtumoren mit einer Lokalisation.",
+            "comment" : "Dargestellt durch das Suffix, entweder als \"(m)\" oder als Anzahl der Primärtumoren, die dem T-Code in Klammern hinzugefügt wurden. Zum Beispiel: \"T2(m)\" oder \"cT2(4)\"."
+          },
+          "at0026" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Multimodale Therapie (y)",
+            "description" : "Als WAHR darzustellen, wenn die Beurteilung während oder nach einer initialen multimodalen Therapie erfolgt.",
+            "comment" : "Dargestellt durch das Präfix \"y\", das der \"TNM-Bewertung\" hinzugefügt wurde."
+          },
+          "at0027" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Rezidiv (r)",
+            "description" : "Als WAHR darzustellen, wenn die Beurteilung für einen rezidivierenden Tumor nach einem tumorfreien Zeitintervall erfolgt.",
+            "comment" : "Dargestellt durch das Präfix \"r\", das der \"TNM-Bewertung\" hinzugefügt wurde."
+          },
+          "at0028" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "Autopsie (a)",
+            "description" : "Als WAHR darzustellen, wenn die Beurteilung bei der postmortalen Untersuchung erfolgt.",
+            "comment" : "Dargestellt durch das Präfix \"a\", das der \"TNM-Bewertung\" hinzugefügt wurde."
+          },
+          "at0029" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0029",
+            "text" : "Carcinoma in situ (is)",
+            "description" : "Als WAHR darzustellen, wenn ein mit primärtumor-assoziiertes Karzinom in situ vorhanden ist.",
+            "comment" : "Dargestellt durch das Präfix \"is\", das der \"TNM-Bewertung\" hinzugefügt wurde."
+          },
+          "at0030" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0030",
+            "text" : "TNM-Bewertung",
+            "description" : "Verknüpfung von Bewertungen \"T\", \"N\" und \"M\" sowie ggf. optionale Bewertungen von „G“, „R“, „L“, „V“, Präfixen und / oder Suffixen."
+          },
+          "at0031" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0031",
+            "text" : "Stadiumeinteilung",
+            "description" : "Die Kategorisierung des anatomischen Stadiums des Tumors, in der Regel basierend auf die TNM-Bewertung.",
+            "comment" : "Zum Beispiel: Carcinoma in situ wird in das Stadium 0 eingeteilt; oder Tumoren mit Fernmetastasen werden in das Stadium IV eingruppiert."
+          },
+          "at0032" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0032",
+            "text" : "TNM Auflage",
+            "description" : "Die Auflage, auf der die TNM-Klassifikation basiert, die für die Beurteilung verwendet wurde."
+          },
+          "at0007.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007",
+            "text" : "Residualtumor (R)",
+            "description" : "Die Beurteilung des Vorhandenseins eines Resttumors nach der Behandlung.",
+            "comment" : "Zum Beispiel: \"R2 (Makroskopischer Residualtumor)\". Dargestellt als \"R\" in der \"TNM-Bewertung\"."
+          },
+          "at0002.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Anatomischer Unterbereich der Lokalisation",
+            "description" : "Der anatomische Unterbereich der Lokalisation, an der sich der beurteilte Tumor befindet.",
+            "comment" : "Verwenden Sie für jede Krebsart den Wert aus der TNM-Variante. Zum Beispiel: Kardia, Fundus, Corpus, Antrum und Pylorus (Magen); oder Zwölffingerdarm, Jejunum oder Ileum (Dünndarm)."
+          },
+          "at0021.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021",
+            "text" : "Perineurale Invasion (Pn)",
+            "description" : "Die Beurteilung der Invasion in den Bereich, der die Nerven umgibt.",
+            "comment" : "Zum Beispiel: \"Pn0 (keine Perineurale Invasion)\". Dargestellt als \"Pn\" in der \"TNM-Bewertung\"."
+          },
+          "at0000.1.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Klinische TNM-Klassifikation",
+            "description" : "Ein Archetyp für die klinische Klassifikation und die Einteilung der Malignität in Stadien anhand des TNM-Systems.",
+            "comment" : "Bezeichnet als TNM oder cTNM."
+          },
+          "at0026.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Multimodale Therapie (y)",
+            "description" : "Als WAHR darzustellen, wenn die Beurteilung während oder nach einer initialen multimodalen Therapie erfolgt.",
+            "comment" : "Dargestellt durch das Präfix \"y\", das der \"TNM-Bewertung\" hinzugefügt wurde."
+          },
+          "at0004.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Regionäre Lymphknoten (N)",
+            "description" : "Die Beurteilung des Fehlens oder Vorhandenseins und des Ausmaßes regionären Lymphknotenmetastasen.",
+            "comment" : "Die Codierung mit einem N-Code, der der Art des Tumors und der anatomischen Lokalisation entspricht, wird erwartet. Zum Beispiel: \"NX\" oder \"cN2\". Dargestellt als \"N\" oder \"cN\" in der \"TNM-Bewertung\"."
+          },
+          "at0028.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "Autopsie (a)",
+            "description" : "Als WAHR darzustellen, wenn die Beurteilung bei der postmortalen Untersuchung erfolgt.",
+            "comment" : "Dargestellt durch das Präfix \"a\", das der \"TNM-Bewertung\" hinzugefügt wurde."
+          },
+          "at0.1.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0.1",
+            "text" : "*Serum tumour markers (S) (en)",
+            "description" : ""
+          },
+          "at0006.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Histopathologisches Grading (G)",
+            "description" : "Histopathologisches Grading des Tumors.",
+            "comment" : "Die prätherapeutische histopathologische Beurteilung kann aus einer begrenzten Biopsie vor der formalen Resektion bestimmt werden. Die Codierung mit einem G-Code, der der identifizierten Art des Tumors und der anatomischen Lokalisation entspricht, wird erwartet. Zum Beispiel: \"G2\"; \"GX\" oder \"niedriges Grading\" zur Klassifizierung von Knochen- und Weichteilsarkomen. Dargestellt als \"G\" in der \"TNM-Bewertung\".\r\n\r\n"
+          },
+          "at0001.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Anatomische Lokalisation",
+            "description" : "Die anatomische Stelle, an der sich der beurteilte Tumor befindet.",
+            "comment" : "Verwenden Sie für jede Krebsart den Wert aus der TNM-Variante. Zum Beispiel: Magen oder Dünndarm."
+          },
+          "at0012.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0012",
+            "text" : "Lymphgefäßinvasion (L)",
+            "description" : "Die Beurteilung der Invasion in das lymphathische System.",
+            "comment" : "Zum Beispiel: \"L0 (Keine Lymphgefäßinvasion)\". Dargestellt als \"L\" in der \"TNM-Bewertung\".\r\n"
+          },
+          "at0027.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Rezidiv (r)",
+            "description" : "Als WAHR darzustellen, wenn die Beurteilung für einen rezidivierenden Tumor nach einem tumorfreien Zeitintervall erfolgt.",
+            "comment" : "Dargestellt durch das Präfix \"r\", das der \"TNM-Bewertung\" hinzugefügt wurde."
+          },
+          "at0025.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Multiple Primärtumoren (m)",
+            "description" : "Das Vorhandensein multipler simultaner Primärtumoren mit einer Lokalisation.",
+            "comment" : "Dargestellt durch das Suffix, entweder als \"(m)\" oder als Anzahl der Primärtumoren, die dem T-Code in Klammern hinzugefügt wurden. Zum Beispiel: \"T2(m)\" oder \"cT2(4)\"."
+          },
+          "at0016.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0016",
+            "text" : "Veneninvasion (V)",
+            "description" : "Die Beurteilung der Invasion in das venöse System.",
+            "comment" : "Zum Beispiel: \"V1 (Mikroskopische Veneninvasion)\". Dargestellt als \"V\" in der \"TNM-Bewertung\"."
+          },
+          "at0029.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0029",
+            "text" : "Carcinoma in situ (is)",
+            "description" : "Als WAHR darzustellen, wenn ein mit primärtumor-assoziiertes Karzinom in situ vorhanden ist.",
+            "comment" : "Dargestellt durch das Präfix \"is\", das der \"TNM-Bewertung\" hinzugefügt wurde."
+          },
+          "at0003.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Primärtumor (T)",
+            "description" : "Die Beurteilung des Ausmaßes des Primärtumors.",
+            "comment" : "Die Codierung mit einem T-Code, der der Art des Tumors und der anatomischen Lokalisation entspricht, wird erwartet. Zum Beispiel: \"T1\" oder \"cT3\". Dargestellt als \"T\" oder \"cT\" in der \"TNM-Bewertung\"."
+          },
+          "at0031.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0031",
+            "text" : "Stadiumeinteilung",
+            "description" : "Die Kategorisierung des anatomischen Stadiums des Tumors, in der Regel basierend auf die TNM-Bewertung.",
+            "comment" : "Zum Beispiel: Carcinoma in situ wird in das Stadium 0 eingeteilt; oder Tumoren mit Fernmetastasen werden in das Stadium IV eingruppiert."
+          },
+          "at0005.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Fernmetastasierung (M)",
+            "description" : "Beurteilung des Fehlens oder Vorhandenseins von Fernmetastasen.",
+            "comment" : "Die Codierung mit einem M-Code, der der Art des Tumors und der anatomischen Lokalisation entspricht, wird erwartet. Zum Beispiel: \"M1\"; \"cM1a\"; \"M1 PUL\" oder \"cM0\". Dargestellt als \"M\" oder \"cM\" in der \"TNM-Bewertung\"."
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "412f5cad-ddad-4fe4-87ac-21d21bddc86c",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Natalia Strauch, Vebjørn Arntzen",
+        "organisation" : "Medizinische Hochschule Hannover, Oslo University Hospital",
+        "email" : "Strauch.Natalia@mh-hannover.de, varntzen@ous-hf.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Vebjørn Arntzen, Sabine Leh",
+        "organisation" : "Oslo University Hospital HF, Helse Bergen HF",
+        "email" : "varntzen@ous-hf.no"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "fc848700-d6cc-4a31-8e70-774b54870c05",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : { },
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.ann_arbor_stage.v0",
+    "differential" : false,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-ann_arbor_stage-002.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "occurrences" : "1..1",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "existence" : "1..1",
+        "cardinality" : {
+          "@type" : "CARDINALITY",
+          "interval" : "1..*",
+          "ordered" : false,
+          "unique" : false
+        },
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "1..1",
+          "nodeId" : "at0001.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0002.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0004.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0005.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Ann Arbor stage detail",
+            "description" : "Ann Arbor stage_Heather"
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Ann Arbor Stage",
+            "description" : ""
+          },
+          "at0002" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Symptoms indicator",
+            "description" : ""
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Extranodal indicator",
+            "description" : ""
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Bulky disease indicator",
+            "description" : ""
+          },
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Splenic involvement indicator",
+            "description" : ""
+          },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Symptoms indicator",
+            "description" : ""
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Extranodal indicator",
+            "description" : ""
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Bulky disease indicator",
+            "description" : ""
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Splenic involvement indicator",
+            "description" : ""
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Ann Arbor stage detail",
+            "description" : "Ann Arbor stage_Heather"
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Ann Arbor Stage",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "057679a7-6ff9-343b-a7d5-573e1a60c0e0",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "d7b6a46a-ca0d-4c09-8368-0e2a8ae3b2d1",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : { },
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.simple_tumour_stage.v0",
+    "differential" : false,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-simple_tumour_stage-003.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "occurrences" : "1..1",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "existence" : "1..1",
+        "cardinality" : {
+          "@type" : "CARDINALITY",
+          "interval" : "1..*",
+          "ordered" : false,
+          "unique" : false
+        },
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "1..1",
+          "nodeId" : "at0001.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Simple stage detail",
+            "description" : "Simple tumour stage_Heather"
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "System stage",
+            "description" : ""
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Simple stage detail",
+            "description" : "Simple tumour stage_Heather"
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "System stage",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "6b8324c3-62cc-37ff-af86-76ae6a433c00",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "9e04126a-77e5-4b53-ba6a-65bb34df1623",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : { },
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.tumour_metastasis.v0",
+    "differential" : false,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-tumour_metastasis-004.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "occurrences" : "1..1",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "existence" : "1..1",
+        "cardinality" : {
+          "@type" : "CARDINALITY",
+          "interval" : "1..*",
+          "ordered" : false,
+          "unique" : false
+        },
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0002",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..*",
+          "nodeId" : "at0003",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0004",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Metastasis",
+            "description" : "Tumour metastasis_Heather"
+          },
+          "at0002" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Metastatic type",
+            "description" : ""
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Metastatic site",
+            "description" : ""
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Other metastatic site",
+            "description" : ""
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Metastasis",
+            "description" : "Tumour metastasis_Heather"
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "ed02a84f-c5d8-353d-b7c9-08df68888391",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  } ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "en"
+  },
+  "translations" : [ {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nb"
+    },
+    "author" : {
+      "name" : "Mikkel Johan Gaup Grønmo",
+      "organisation" : "Helse Nord IKT",
+      "email" : "mikkel.johan.gaup.gronmo@hnikt.no"
+    },
+    "accreditation" : "Nasjonal IKT",
+    "otherDetails" : { }
+  } ]
+}
