@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"14a53ff0f6ed43790f486652a9f888fd">
+		["MD5-CAM-1.0.1"] = <"c6c632bc126912c1b31afa1669607414">
 		["build_uid"] = <"788e5c7a-9125-3a29-93a8-3b4179901166">
 	>
 
@@ -57,12 +57,6 @@ definition
 				value matches {
 					DV_CODED_TEXT matches {*}
 					DV_QUANTITY matches {*}
-				}
-			}
-			ELEMENT[at0029] occurrences matches {0..1} matches {    -- Healthy tissue rim
-				value matches {
-					DV_QUANTITY matches {*}
-					DV_CODED_TEXT matches {*}
 				}
 			}
 			CLUSTER[at0024] occurrences matches {0..1} matches {    -- Extent (organ)
@@ -264,11 +258,6 @@ Proximal margin vs lateral margin, etc.
 					text = <"Dysplasia/In situ neoplasia classification">
 					description = <"">
 					comment = <"ie CIN, CGIN, VAIN, etc.">
-				>
-				["at0029"] = <
-					text = <"Healthy tissue rim">
-					description = <"Description of healthy tissue.">
-					comment = <"For example thickness of uninvolved cervical stroma in cervical neoplasias.">
 				>
 				["at0033"] = <
 					text = <"Necrosis">
