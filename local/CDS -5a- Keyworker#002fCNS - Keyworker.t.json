@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.3.1",
+      "sem_ver" : "0.3.2",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "1768130a59f70fa2600b5bd7f7600542",
+      "MD5-CAM-1.0.1" : "bb495ca28247dc7107b06cb60ed31539",
       "PARENT:MD5-CAM-1.0.1" : "0C1037F00E6AB5E87D9E386095D23D57"
     },
     "details" : {
@@ -412,7 +412,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "CNS-Key worker team",
+            "text" : "Key worker details",
             "description" : "Care team details aligned with FHIR resource."
           }
         }
