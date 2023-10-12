@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.2",
+      "sem_ver" : "0.2.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "1ca83bab422b82d1744bbb68e45f98ae",
+      "MD5-CAM-1.0.1" : "9173fd7dfc3f0449a801186336fbec38",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -253,7 +253,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "CDS - HNA",
+          "text" : "CDS -10- HNA & Rehab - HNA",
           "description" : "Interaction, contact or care event between a subject of care and healthcare provider(s)."
         }
       },
