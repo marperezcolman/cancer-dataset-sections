@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.2.1",
+      "sem_ver" : "0.3.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "427390f3d2cfadd8e47a2cf2b88466e8",
+      "MD5-CAM-1.0.1" : "f09a65c4182d17ee5be5f963200e9ff9",
       "PARENT:MD5-CAM-1.0.1" : "0C1037F00E6AB5E87D9E386095D23D57"
     },
     "details" : {
@@ -106,7 +106,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "CDS -5- Keyworker/CNS - Keyworker",
+          "text" : "CDS -5b- Keyworker/CNS - CNS",
           "description" : "A persistent and managed list of any combination of archetypes that will support the accurate recording of a Care plan."
         }
       },
@@ -177,7 +177,6 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
               "nodeId" : "at0005.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -190,12 +189,13 @@
                     "rmAttributeName" : "defining_code",
                     "children" : [ {
                       "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "CODE_PHRASE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
                       "occurrences" : "1..1",
                       "terminologyId" : {
                         "value" : "local"
                       },
-                      "constraint" : [ "at0006", "at0007", "at0008", "at0009", "at0010" ]
+                      "constraint" : [ "ac0.1" ],
+                      "selectedTerminologies" : [ ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -250,108 +250,6 @@
               "occurrences" : "0..0",
               "nodeId" : "at0020.1",
               "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0021.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "items",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..1",
-                  "nodeId" : "at0022.1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_CODED_TEXT",
-                      "occurrences" : "1..1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0025.1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_DATE_TIME",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_DATE_TIME",
-                          "rmTypeName" : "DATE_TIME",
-                          "patternedConstraint" : "yyyy-mm-ddTXX:XX:XX",
-                          "constraint" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0026.1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_DATE_TIME",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_DATE_TIME",
-                          "rmTypeName" : "DATE_TIME",
-                          "patternedConstraint" : "yyyy-mm-ddTXX:XX:XX",
-                          "constraint" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..1",
-                  "nodeId" : "at0030.4",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_CODED_TEXT",
-                      "occurrences" : "1..1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_ARCHETYPE_ROOT",
-                  "rmTypeName" : "CLUSTER",
-                  "occurrences" : "0..1",
-                  "nodeId" : "at0023.3",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ],
-                  "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-participations_dhcw-001.v1",
-                  "referenceType" : "archetypeOverlay"
-                } ]
-              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -482,30 +380,6 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "at0022.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022.1",
-            "text" : "Role of key worker",
-            "description" : "Indicates specific responsibility of an individual within the care team, such as \"Primary care physician\", \"Trained social worker counselor\", \"Caregiver\", etc."
-          },
-          "at0025.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0025.1",
-            "text" : "Date key worker allocated",
-            "description" : "The start of the period. The boundary is inclusive."
-          },
-          "at0026.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.1",
-            "text" : "End date of key worker",
-            "description" : "The end of the period. If the end of the period is missing, it means that the period is ongoing. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time."
-          },
-          "at0021.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021.1",
-            "text" : "Key worker",
-            "description" : "Identifies all people and organizations who are expected to be involved in the care team."
-          },
           "at0021.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0021.2",
@@ -518,12 +392,6 @@
             "text" : "Additional information",
             "description" : "Comments made about the participant."
           },
-          "at0030.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0030.4",
-            "text" : "Key worker allocation point in pathway",
-            "description" : "Comments made about the participant."
-          },
           "at0025.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0025.2",
@@ -533,14 +401,32 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "CNS-Key worker team",
+            "text" : "Clinical Nurse Specialist (CNS) at diagnosis",
             "description" : "Care team details aligned with FHIR resource."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "CNS seen",
+            "description" : "The current state of the care team."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
           }
         }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
-      "valueSets" : { }
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0006", "at0007", "at0008", "at0009", "at0010" ]
+        }
+      }
     },
     "adlVersion" : "1.4",
     "buildUid" : "b4813378-d2eb-46a6-92e6-92b0cb77d6d8",
@@ -1325,6 +1211,22 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0006.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
               "occurrences" : "0..1",
               "nodeId" : "at0007.1",
               "attributes" : [ {
@@ -1346,11 +1248,40 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0002.1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "SCT"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "SCT" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "SCT",
+                        "code" : "224570006",
+                        "value" : "Clinical nurse specialist (occupation)"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
               "nodeId" : "at0003.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -1401,7 +1332,7 @@
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0003.1",
-            "text" : "Clinical Nurse Specialist seen",
+            "text" : "Mode of interaction",
             "description" : ""
           }
         }
