@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.3.2",
+      "sem_ver" : "0.3.3",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "08cf0c853412732dcdfc5759f3170dd3",
+      "MD5-CAM-1.0.1" : "2e56a08127c37ceffa734505a8fd9fce",
       "PARENT:MD5-CAM-1.0.1" : "A0DA8D01B967B2B05FC941F6E389A94B"
     },
     "details" : {
@@ -158,7 +158,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "CDS -6a- Molecular & Biomarkers - Germline",
+          "text" : "CDS -6b- Molecular & Biomarkers - Molecular",
           "description" : "Generic document containing a summary of health information about an individual."
         }
       },
