@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.2.17",
+      "sem_ver" : "0.2.18",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "8f3352e5bdd8126fa6407ff9015c08c9",
+      "MD5-CAM-1.0.1" : "0f07917b29783d8394ff1d02c2449972",
       "PARENT:MD5-CAM-1.0.1" : "A0DA8D01B967B2B05FC941F6E389A94B"
     },
     "details" : {
@@ -5352,7 +5352,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "fa9b0601d4bcadb7b52f8a421a731ad1"
+        "PARENT:MD5-CAM-1.0.1" : "7a20ec9bee49ee65bbab2c9e138b616c"
       },
       "details" : {
         "en" : {
@@ -8773,7 +8773,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "fa9b0601d4bcadb7b52f8a421a731ad1"
+        "PARENT:MD5-CAM-1.0.1" : "7a20ec9bee49ee65bbab2c9e138b616c"
       },
       "details" : {
         "en" : {
@@ -10075,7 +10075,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "fa9b0601d4bcadb7b52f8a421a731ad1"
+        "PARENT:MD5-CAM-1.0.1" : "7a20ec9bee49ee65bbab2c9e138b616c"
       },
       "details" : {
         "en" : {
@@ -10130,20 +10130,6 @@
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0004.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0005.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0006.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
         } ]
@@ -14279,16 +14265,7 @@
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0002.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -14302,16 +14279,7 @@
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0004.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         } ]
       } ],
