@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"fa9b0601d4bcadb7b52f8a421a731ad1">
+		["MD5-CAM-1.0.1"] = <"7a20ec9bee49ee65bbab2c9e138b616c">
 		["build_uid"] = <"ef5b2519-3289-3bb1-9869-124ae7944298">
 	>
 
@@ -53,14 +53,14 @@ definition
 					DV_CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Number of cycles planned
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- Number of cycles planned
 				value matches {
-					DV_QUANTITY matches {*}
+					DV_COUNT matches {*}
 				}
 			}
-			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Number of cycles given
+			ELEMENT[at0008] occurrences matches {0..1} matches {    -- Number of cycles given
 				value matches {
-					DV_QUANTITY matches {*}
+					DV_COUNT matches {*}
 				}
 			}
 		}
@@ -90,11 +90,11 @@ ontology
 					text = <"Adjunctive threapy">
 					description = <"">
 				>
-				["at0005"] = <
+				["at0007"] = <
 					text = <"Number of cycles planned">
 					description = <"">
 				>
-				["at0006"] = <
+				["at0008"] = <
 					text = <"Number of cycles given">
 					description = <"">
 				>
