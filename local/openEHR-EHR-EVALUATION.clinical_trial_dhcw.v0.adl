@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8e973457571a15423ac9b95734ab688e">
+		["MD5-CAM-1.0.1"] = <"d72ec03baba2e389770f168a1b322b94">
 		["build_uid"] = <"8728f1d7-db37-3170-81e3-e0a3844ed37a">
 	>
 
@@ -48,6 +48,11 @@ definition
 					ELEMENT[at0020] occurrences matches {0..1} matches {    -- Written consent obtained
 						value matches {
 							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0021] occurrences matches {0..1} matches {    -- Date consent obtained
+						value matches {
+							DV_DATE_TIME matches {*}
 						}
 					}
 					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Date trial started
@@ -209,6 +214,10 @@ ontology
 				>
 				["at0020"] = <
 					text = <"Written consent obtained">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Date consent obtained">
 					description = <"">
 				>
 			>
