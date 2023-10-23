@@ -22,10 +22,10 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.2.2",
+      "sem_ver" : "0.2.3",
       "build_uid" : "",
       "PARENT:MD5-CAM-1.0.1" : "A0DA8D01B967B2B05FC941F6E389A94B",
-      "MD5-CAM-1.0.1" : "acdce29427373499429f44bc808c0a1d"
+      "MD5-CAM-1.0.1" : "667084cccbf75437b29b190f7485cfb0"
     },
     "details" : {
       "sv" : {
@@ -199,7 +199,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "ab499152454d246d662678f6f777bf96"
+        "PARENT:MD5-CAM-1.0.1" : "b30995c7e9cf46ed1db9a3c5f77aa9d9"
       },
       "details" : {
         "en" : {
@@ -232,6 +232,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0020",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -402,6 +403,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0021",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
