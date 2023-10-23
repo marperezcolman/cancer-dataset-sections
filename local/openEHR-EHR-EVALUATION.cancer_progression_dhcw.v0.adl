@@ -26,14 +26,14 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ab499152454d246d662678f6f777bf96">
+		["MD5-CAM-1.0.1"] = <"b30995c7e9cf46ed1db9a3c5f77aa9d9">
 		["build_uid"] = <"cafc7c55-f873-3c33-aa09-86aae0ba4708">
 	>
 
 definition
 	EVALUATION[at0000] matches {    -- Cancer progression DHCW
 		data matches {
-			ITEM_TREE matches {
+			ITEM_TREE[at0020] matches {    -- ITEM_TREE
 				items cardinality matches {0..*; unordered} matches {
 					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Type
 						value matches {
@@ -103,7 +103,7 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE matches {
+			ITEM_TREE[at0021] matches {    -- ITEM_TREE
 				items cardinality matches {0..*; unordered} matches {
 					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Referral
 						value matches {
@@ -220,6 +220,14 @@ ontology
 				>
 				["at0019"] = <
 					text = <"Treating clinician">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"ITEM_TREE">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"ITEM_TREE">
 					description = <"">
 				>
 			>
