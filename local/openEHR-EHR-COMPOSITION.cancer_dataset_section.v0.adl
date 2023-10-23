@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"47ce5c8c37f9d86b3561d5bcde924448">
+		["MD5-CAM-1.0.1"] = <"974c48708339d1c875cfab0d5cf0e809">
 		["build_uid"] = <"048f9574-f7b4-35bf-a592-ff9411257611">
 	>
 
@@ -39,9 +39,13 @@ definition
 		context matches {
 			EVENT_CONTEXT matches {
 				other_context matches {
-					ITEM_TREE matches {
+					ITEM_TREE[at0002] matches {    -- ITEM_TREE
 						items cardinality matches {0..*; unordered} matches {
 							allow_archetype ELEMENT[at0001] occurrences matches {0..*} matches {    -- Site where diagnosis was made
+								include
+									archetype_id/value matches {/.*/}
+							}
+							allow_archetype CLUSTER[at0004] occurrences matches {0..*} matches {    -- Site
 								include
 									archetype_id/value matches {/.*/}
 							}
@@ -49,6 +53,9 @@ definition
 					}
 				}
 			}
+		}
+		content cardinality matches {1..*; unordered} matches {
+			ENTRY[at0003] occurrences matches {0..1} matches {*}    -- Data
 		}
 	}
 
@@ -63,6 +70,18 @@ ontology
 				["at0001"] = <
 					text = <"Site where diagnosis was made">
 					description = <"Site/Location where a diagnosis was made">
+				>
+				["at0002"] = <
+					text = <"ITEM_TREE">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Data">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Site">
+					description = <"">
 				>
 			>
 		>
