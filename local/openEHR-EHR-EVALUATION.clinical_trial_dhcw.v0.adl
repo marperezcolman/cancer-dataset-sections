@@ -26,14 +26,14 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ae471906058e1c79b29a713165737245">
+		["MD5-CAM-1.0.1"] = <"8e973457571a15423ac9b95734ab688e">
 		["build_uid"] = <"8728f1d7-db37-3170-81e3-e0a3844ed37a">
 	>
 
 definition
 	EVALUATION[at0000] matches {    -- Clinical trial DHCW
 		data matches {
-			ITEM_TREE matches {
+			ITEM_TREE[at0001] matches {    -- ITEM_TREE
 				items cardinality matches {0..*; unordered} matches {
 					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Clinical trial decision date
 						value matches {
@@ -41,6 +41,11 @@ definition
 						}
 					}
 					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Patient trial status
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0020] occurrences matches {0..1} matches {    -- Written consent obtained
 						value matches {
 							DV_CODED_TEXT matches {*}
 						}
@@ -94,7 +99,7 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE matches {
+			ITEM_TREE[at0004] matches {    -- ITEM_TREE
 				items cardinality matches {0..*; unordered} matches {
 					allow_archetype CLUSTER[at0013] occurrences matches {0..*} matches {    -- Referring organisation/site
 						include
@@ -192,6 +197,18 @@ ontology
 				>
 				["at0019"] = <
 					text = <"Evaluation date">
+					description = <"">
+				>
+				["at0001"] = <
+					text = <"ITEM_TREE">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"ITEM_TREE">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Written consent obtained">
 					description = <"">
 				>
 			>
