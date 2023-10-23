@@ -22,10 +22,10 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.8",
+      "sem_ver" : "0.1.9",
       "build_uid" : "",
       "PARENT:MD5-CAM-1.0.1" : "A0DA8D01B967B2B05FC941F6E389A94B",
-      "MD5-CAM-1.0.1" : "83a1c2c881944d082e3bb34e5c5c02b7"
+      "MD5-CAM-1.0.1" : "cf3aaa7cc78379faaff0fec8d99b78bd"
     },
     "details" : {
       "sv" : {
@@ -208,7 +208,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "ab499152454d246d662678f6f777bf96"
+        "PARENT:MD5-CAM-1.0.1" : "b30995c7e9cf46ed1db9a3c5f77aa9d9"
       },
       "details" : {
         "en" : {
@@ -241,6 +241,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0020",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -422,6 +423,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0021",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -668,7 +670,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "ab499152454d246d662678f6f777bf96"
+        "PARENT:MD5-CAM-1.0.1" : "b30995c7e9cf46ed1db9a3c5f77aa9d9"
       },
       "details" : {
         "en" : {
@@ -701,6 +703,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0020",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -871,6 +874,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0021",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -1786,7 +1790,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "ab499152454d246d662678f6f777bf96"
+        "PARENT:MD5-CAM-1.0.1" : "b30995c7e9cf46ed1db9a3c5f77aa9d9"
       },
       "details" : {
         "en" : {
@@ -1819,6 +1823,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0020",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -1996,6 +2001,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0021",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -2092,7 +2098,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "ab499152454d246d662678f6f777bf96"
+        "PARENT:MD5-CAM-1.0.1" : "b30995c7e9cf46ed1db9a3c5f77aa9d9"
       },
       "details" : {
         "en" : {
@@ -2125,6 +2131,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0020",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -2301,6 +2308,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0021",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -2418,7 +2426,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "ab499152454d246d662678f6f777bf96"
+        "PARENT:MD5-CAM-1.0.1" : "b30995c7e9cf46ed1db9a3c5f77aa9d9"
       },
       "details" : {
         "en" : {
@@ -2451,6 +2459,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0020",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -2618,6 +2627,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0021",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
