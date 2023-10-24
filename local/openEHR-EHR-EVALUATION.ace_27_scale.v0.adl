@@ -1,0 +1,105 @@
+archetype (adl_version=1.4; uid=acd549e4-4142-4319-b081-3b03426e1ee5)
+	openEHR-EHR-EVALUATION.ace_27_scale.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-08-01">
+		["name"] = <"Marlene Pérez Colman">
+		["organisation"] = <"Digital Health and Care Wales">
+		["email"] = <"marlene.perezcolman@wales.nhs.uk">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["current_contact"] = <"marlene.perezcolman@wales.nhs.uk">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"d17b42f3d0a5aaaf906daeab007543cc">
+		["build_uid"] = <"1ecb2312-bc17-3d95-b0c1-702575159747">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- ACE 27 scale
+		data matches {
+			ITEM_TREE matches {
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- ACE 27 score
+						value matches {
+							0|[local::at0004],
+							1|[local::at0005],
+							2|[local::at0006],
+							3|[local::at0007]
+						}
+					}
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE matches {
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0001] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"ACE 27 scale">
+					description = <"The Adult Comorbidity Evaluation 27 (ACE-27) is a validated comorbidity instrument that provides a score (0–3) based on the number and severity of medical comorbidities.">
+				>
+				["at0001"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Comment">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"ACE 27 score">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"None">
+					description = <"No comorbidity">
+				>
+				["at0005"] = <
+					text = <"Mild">
+					description = <"Mild comorbidity">
+				>
+				["at0006"] = <
+					text = <"Moderate">
+					description = <"Moderate comorbidity">
+				>
+				["at0007"] = <
+					text = <"Severe">
+					description = <"Severe comorbidity">
+				>
+			>
+		>
+	>
