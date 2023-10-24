@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.2.18",
+      "sem_ver" : "0.2.19",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "0f07917b29783d8394ff1d02c2449972",
+      "MD5-CAM-1.0.1" : "7f8cba2f8e664573f541900c372b30dd",
       "PARENT:MD5-CAM-1.0.1" : "A0DA8D01B967B2B05FC941F6E389A94B"
     },
     "details" : {
@@ -11437,7 +11437,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "ae471906058e1c79b29a713165737245"
+        "PARENT:MD5-CAM-1.0.1" : "d72ec03baba2e389770f168a1b322b94"
       },
       "details" : {
         "en" : {
@@ -11470,6 +11470,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -11490,6 +11491,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0004",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -12791,7 +12793,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "ae471906058e1c79b29a713165737245"
+        "PARENT:MD5-CAM-1.0.1" : "d72ec03baba2e389770f168a1b322b94"
       },
       "details" : {
         "en" : {
@@ -12824,6 +12826,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -12923,6 +12926,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0004",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
