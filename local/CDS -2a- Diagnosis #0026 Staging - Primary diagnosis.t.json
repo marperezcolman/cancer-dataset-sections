@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.8",
+      "sem_ver" : "0.1.9",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "9f5e3cd8a071bdf15048cf674472be50",
+      "MD5-CAM-1.0.1" : "94bbc3441ce19ca8eeff2fb90db0fc7e",
       "PARENT:MD5-CAM-1.0.1" : "043881f92aa1b5803ed98e0bee08ead6"
     },
     "details" : {
@@ -644,7 +644,7 @@
           "at0012.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0012.1",
-            "text" : "NET primary site code (only NET)",
+            "text" : "Primary site (NET, Haem, Sarcoma)",
             "description" : "Identification of a simple body site for the location of the problem or diagnosis.",
             "comment" : "Coding of the name of the anatomical location with a terminology is preferred, where possible.\r\nUse this data element to record precoordinated anatomical locations. If the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations then use the CLUSTER.anatomical_location or CLUSTER.relative_location within the 'Structured anatomical location' SLOT in this archetype. Occurrences for this data element are unbounded to allow for clinical scenarios such as describing a rash in multiple locations but where all of the other attributes are identical. If the anatomical location is included in the Problem/diagnosis name via precoordinated codes, this data element becomes redundant."
           }
