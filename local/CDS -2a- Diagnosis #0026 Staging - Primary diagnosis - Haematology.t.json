@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.2.1",
+      "sem_ver" : "0.2.2",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "ab9cda5a6106cb4d0fe0fbad18b7d11e",
+      "MD5-CAM-1.0.1" : "1bab957ce1bbb91cf559d58c983345e7",
       "PARENT:MD5-CAM-1.0.1" : "043881f92aa1b5803ed98e0bee08ead6"
     },
     "details" : {
@@ -660,7 +660,7 @@
           "at0079.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0079.1",
-            "text" : "ALK Fusion Status for ALCL",
+            "text" : "ALK Fusion Status for ALCL/FAB Classification",
             "description" : "Specific variant or subtype of the Diagnosis, if relevant.",
             "comment" : "For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible. "
           }
