@@ -27,7 +27,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"78ba1c1406415654cc499ea2b5057722">
+		["MD5-CAM-1.0.1"] = <"cf841d928893138aa683bfd6feeeb4a9">
 		["build_uid"] = <"40c95698-7fab-33c3-b6d8-8a66f6d1a641">
 	>
 
@@ -64,6 +64,11 @@ definition
 					DV_DATE_TIME matches {*}
 				}
 			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- Eligible for CWT
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
 		}
 	}
 
@@ -97,6 +102,10 @@ ontology
 				>
 				["at0006"] = <
 					text = <"Date first seen (cancer specialist)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Eligible for CWT">
 					description = <"">
 				>
 			>
